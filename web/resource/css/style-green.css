@@ -387,7 +387,7 @@ a:focus {
 .mega-menu-title h3:after {
     content: "";
     display: inline-block;
-    background: #57af85 url(../images/icon-mega.png) no-repeat 50% 50%;
+    background: #57af85 url(..//ShopOnline/resources/images/icon-mega.png) no-repeat 50% 50%;
     width: 52px;
     height: 40px;
     position: absolute;

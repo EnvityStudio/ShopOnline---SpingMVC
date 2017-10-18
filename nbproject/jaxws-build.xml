@@ -28,7 +28,7 @@
     </target>
     <target name="wsimport-client-Product" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/Product"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Product" destdir="${build.generated.dir}/jax-wsCache/Product" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineServices/Product.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ShopOnlineServices/Product?wsdl" xnocompile="true" xendorsed="true" package="productservices">
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Product" destdir="${build.generated.dir}/jax-wsCache/Product" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineServices/Product.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ShopOnlineServices/Product?wsdl" xnocompile="true" xendorsed="true">
             <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineServices/Product.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/Product"/>
         </wsimport>
@@ -39,8 +39,24 @@
         </copy>
     </target>
     <target name="wsimport-client-clean-Product" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/productservices"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/product"/>
         <delete dir="${build.generated.dir}/jax-wsCache/Product"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-Product"/>
+    <target name="wsimport-client-BrandServices" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/BrandServices"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/BrandServices" destdir="${build.generated.dir}/jax-wsCache/BrandServices" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/BrandServices/wsdl/localhost_8080/ShopOnlineServices/BrandServices.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ShopOnlineServices/BrandServices?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/BrandServices/wsdl/localhost_8080/ShopOnlineServices/BrandServices.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/BrandServices"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/BrandServices">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-BrandServices" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/brand"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/BrandServices"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-Product, wsimport-client-BrandServices"/>
 </project>

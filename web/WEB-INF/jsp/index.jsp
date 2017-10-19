@@ -134,8 +134,8 @@
                                     </div>
                                 </div>
                             </div><!-- /.support-client -->
-                            <form class="form-search">
-                                <input type="text" class="input-text" name="q" id="search" placeholder="Search products...">
+                          <form class="form-search" action="/ShopOnline/search/.html">
+                                <input type="text" class="input-text" name="product" id="search" placeholder="Search products..." value="${key}">
                                 <div class="dropdown">
                                     <button type="button" class="btn" data-toggle="dropdown">All category <span class="fa fa-angle-down"></span></button>
                                     <ul class="dropdown-menu dropdown-menu-right">
@@ -425,11 +425,8 @@
                         <div class="col-md-9">
                             <ul class="menu clearfix visible-lg visible-md">
                                 <li class="active"><a href="#">Home</a></li>
-                                <li><a href="#">Computer</a></li>
-                                <li><a href="#">camera</a></li>
-                                <li><a href="#">smart phone</a></li>
-                                <li><a href="#">electtronic</a></li>
-                                <li><a href="#">new arrivals</a></li>
+                                <li><a href="#">Best seller</a></li>
+                                <li><a href="/ShopOnline/home/grid.html">Product</a></li>
                             </ul>
                         </div>
                     </div>

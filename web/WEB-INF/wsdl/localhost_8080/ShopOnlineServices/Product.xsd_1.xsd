@@ -20,6 +20,10 @@
 
 <xs:element name="productsResponse" type="tns:productsResponse"/>
 
+<xs:element name="search" type="tns:search"/>
+
+<xs:element name="searchResponse" type="tns:searchResponse"/>
+
 <xs:complexType name="hello">
 <xs:sequence>
 <xs:element name="name" type="xs:string" minOccurs="0"/>
@@ -50,6 +54,19 @@
 </xs:complexType>
 
 <xs:complexType name="productsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="search">
+<xs:sequence>
+<xs:element name="key" type="xs:string" minOccurs="0"/>
+<xs:element name="idbrand" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>

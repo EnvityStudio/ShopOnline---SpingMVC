@@ -5,7 +5,10 @@
  */
 package controller;
 
+import com.google.gson.reflect.TypeToken;
+import java.util.List;
 import javax.websocket.server.PathParam;
+import model.Brand;
 import model.Product;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -28,6 +31,10 @@ public class ProductController {
         String stringProduct = ProductController.productDetail_1(Integer.parseInt(idproduct));
         Product product = GsonUtil.newInstance().gson().fromJson(stringProduct, Product.class);
         mm.addAttribute("product", product);
+        String related = ProductController.filterbrand(product.getIdBrand());
+        List<Product> listRelated = GsonUtil.newInstance().gson().fromJson(related, new TypeToken<List<Product>>() {
+        }.getType());
+        mm.addAttribute("listRelated",listRelated);
         return "detail";
     }
 
@@ -40,6 +47,12 @@ public class ProductController {
         product.Product service = new product.Product();
         product.ProductService port = service.getProductServicePort();
         return port.productDetail(idproduct);
+    }
+
+    private static String filterbrand(int idbrand) {
+        product.Product service = new product.Product();
+        product.ProductService port = service.getProductServicePort();
+        return port.filterbrand(idbrand);
     }
     
     

@@ -131,28 +131,15 @@
                                 </div>
                             </div><!-- /.support-client -->
                             <form class="form-search" action="/ShopOnline/search/.html">
-                                <input type="text" class="input-text" name="product" id="search" placeholder="Search products...">
-                                <div class="dropdown">
-                                    <button type="button" class="btn" data-toggle="dropdown" id="btn-dropdown-search">All category <span class="fa fa-angle-down"></span></button>
-                                    <ul id="demolist" class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="#">Computer</a></li>
-                                        <li><a href="#">Camera</a></li>
-                                        <li><a href="#">Smart Phone</a></li>
-                                        <li><a href="#">Electronic</a></li>
+                                <input type="text" class="input-text" name="product" id="search" placeholder="Search products..." value="${key}">
+                                <div class="dropdown" id="category-search">
+                                    <button type="button" class="btn" data-toggle="dropdown" value="0">All brand <span class="fa fa-angle-down"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li value="0"><a href="#">All brand</a></li>
+                                        <c:forEach items="${allbrand}" var="brand">
+                                            <li value="${brand.getIdbrand()}"><a href="#">${brand.getName()}</a></li>
+                                        </c:forEach>
                                     </ul>
-                                    <script type="text/javascript">
-                                        $(document).ready(function () {
-                                               alert("ádds");
-                                            $('#demolist li a').on('click', function () {
-//                                                $('#datebox').val($(this).text());
-                                                alert($(this).text());
-                                            });    
-                                            $('#btn-dropdown-search').on('click', function () {
-//                                                $('#datebox').val($(this).text());
-                                                alert($(this).text());
-                                            });  
-                                            });
-                                    </script>
                                 </div>
                                 <button type="submit" class="btn btn-danger"><span class="fa fa-search"></span></button>
                             </form>
@@ -1238,54 +1225,54 @@
         <!-- Jquery ui Js -->
         <script src="<c:url value="js/jquery-ui.min.js"/>"></script>
         <!-- Custom Js -->
+                
+        <script src="<c:url value="/resources/js/dropdown.js"/>"></script>
         <script src="<c:url value="/resources/js/custom.js"/>"></script>
 
         <script type="text/javascript">
-                                            /* slider price */
-                                            var currencies = "$";
-                                            var toolbar_status = "1";
-                                            var rate = "1";
-                                            var min = "99"
-                                            min = Number(min);
-                                            var max = "999"
-                                            max = Number(max);
-                                            var currentMinPrice = "99"
-                                            currentMinPrice = Number(currentMinPrice);
-                                            var currentMaxPrice = "999"
-                                            //alert('min: '+min+'--max: '+ max+ 'currentMin: '+currentMinPrice);
-                                            currentMaxPrice = Number(currentMaxPrice);
-                                            var params = "";
-                                            params = $.trim(params);
-                                            //slider
-                                            $("#slider-range").slider({
-                                                range: true,
+
+                                        /* slider price */
+                                        var currencies = "$";
+                                        var toolbar_status = "1";
+                                        var rate = "1";
+                                        var min = "99"
+                                                min = Number(min);
+                                        var max = "999"
+                                                max = Number(max);
+                                        var currentMinPrice = "99"
+                                                currentMinPrice = Number(currentMinPrice);
+                                        var currentMaxPrice = "999"
+                                                //alert('min: '+min+'--max: '+ max+ 'currentMin: '+currentMinPrice);
+                                                currentMaxPrice = Number(currentMaxPrice);
+                                        var params = "";
+                                        params = $.trim(params);
+                                        //slider
+                                        $("#slider-range").slider({
+                                        range: true,
                                                 min: min,
                                                 max: max,
                                                 values: [currentMinPrice, currentMaxPrice],
                                                 slide: function (event, ui) {
-                                                    $("#amount").val(currencies + ui.values[ 0 ] + " - " + currencies + ui.values[ 1 ]);
-                                                    $('input[name="first_price"]').val(ui.values[0]);
-                                                    $('input[name="last_price"]').val(ui.values[1]);
+                                                $("#amount").val(currencies + ui.values[ 0 ] + " - " + currencies + ui.values[ 1 ]);
+                                                $('input[name="first_price"]').val(ui.values[0]);
+                                                $('input[name="last_price"]').val(ui.values[1]);
                                                 },
                                                 stop: function (event, ui) {
                                                 }
-                                            });
+                                        });
+                                        $("#amount").val(currencies + $("#slider-range").slider("values", 0) +
+                                                " - " + currencies + $("#slider-range").slider("values", 1));
+                                        $('input[name="first_price"]').val($("#slider-range").slider("values", 0));
+                                        $('input[name="last_price"]').val($("#slider-range").slider("values", 1));
+                                        //search price from input box
+                                        $('#search_price').each(function () {
+                                        $(this).live('click', function () {
 
-                                            $("#amount").val(currencies + $("#slider-range").slider("values", 0) +
-                                                    " - " + currencies + $("#slider-range").slider("values", 1));
-                                            $('input[name="first_price"]').val($("#slider-range").slider("values", 0));
-                                            $('input[name="last_price"]').val($("#slider-range").slider("values", 1));
-
-                                            //search price from input box
-                                            $('#search_price').each(function () {
-                                                $(this).live('click', function () {
-
-                                                    return false;
-                                                })
-                                            });
-                                            $('#slider-range a:first').addClass('first_item');
-                                            $('#slider-range a:last').addClass('last_item');
-
+                                        return false;
+                                        })
+                                        });
+                                        $('#slider-range a:first').addClass('first_item');
+                                        $('#slider-range a:last').addClass('last_item');
                                         });
         </script>
     </body>

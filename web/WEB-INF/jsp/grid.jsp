@@ -85,10 +85,10 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="language dropdown-toggle" data-toggle="dropdown"><img src="images/flag-us.png" alt=""> English</a>
+                                <a href="#" class="language dropdown-toggle" data-toggle="dropdown"><img src="/ShopOnline/resources/images/flag-us.png" alt=""> English</a>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><img src="images/flag-us.png" alt=""> &nbsp;English</a></li>
-                                    <li><a href="#"><img src="images/flag-spain.png" alt=""> &nbsp;Spanish</a></li>
+                                    <li><a href="#"><img src="/ShopOnline/resources/images/flag-us.png" alt=""> &nbsp;English</a></li>
+                                    <li><a href="#"><img src="/ShopOnline/resources/images/flag-spain.png" alt=""> &nbsp;Spanish</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -99,7 +99,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+                            <a href="/ShopOnline/home/index.html" class="logo"><img src="/ShopOnline/resources/images/logo.png" alt=""></a>
                         </div>
                         <div class="col-md-9">
                             <div class="support-client">
@@ -130,16 +130,29 @@
                                     </div>
                                 </div>
                             </div><!-- /.support-client -->
-                            <form class="form-search">
-                                <input type="text" class="input-text" name="q" id="search" placeholder="Search products...">
+                            <form class="form-search" action="/ShopOnline/search/.html">
+                                <input type="text" class="input-text" name="product" id="search" placeholder="Search products...">
                                 <div class="dropdown">
-                                    <button type="button" class="btn" data-toggle="dropdown">All category <span class="fa fa-angle-down"></span></button>
-                                    <ul class="dropdown-menu dropdown-menu-right">
+                                    <button type="button" class="btn" data-toggle="dropdown" id="btn-dropdown-search">All category <span class="fa fa-angle-down"></span></button>
+                                    <ul id="demolist" class="dropdown-menu dropdown-menu-right">
                                         <li><a href="#">Computer</a></li>
                                         <li><a href="#">Camera</a></li>
                                         <li><a href="#">Smart Phone</a></li>
                                         <li><a href="#">Electronic</a></li>
                                     </ul>
+                                    <script type="text/javascript">
+                                        $(document).ready(function () {
+                                               alert("ádds");
+                                            $('#demolist li a').on('click', function () {
+//                                                $('#datebox').val($(this).text());
+                                                alert($(this).text());
+                                            });    
+                                            $('#btn-dropdown-search').on('click', function () {
+//                                                $('#datebox').val($(this).text());
+                                                alert($(this).text());
+                                            });  
+                                            });
+                                    </script>
                                 </div>
                                 <button type="submit" class="btn btn-danger"><span class="fa fa-search"></span></button>
                             </form>
@@ -152,7 +165,7 @@
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <div class="cart-listing">
                                             <div class="media">
-                                                <div class="media-left"><a href="#"><img src="images/products/11.jpg" class="img-responsive" alt=""></a></div>
+                                                <div class="media-left"><a href="#"><img src="/ShopOnline/resources/images/products/11.jpg" class="img-responsive" alt=""></a></div>
                                                 <div class="media-body">
                                                     <button type="button" class="remove-cart-item" >&times;</button>
                                                     <h4>Accumsan elit</h4>
@@ -161,7 +174,7 @@
                                                 </div>
                                             </div>
                                             <div class="media">
-                                                <div class="media-left"><a href="#"><img src="images/products/13.jpg" class="img-responsive" alt=""></a></div>
+                                                <div class="media-left"><a href="#"><img src="/ShopOnline/resources/images/products/13.jpg" class="img-responsive" alt=""></a></div>
                                                 <div class="media-body">
                                                     <button type="button" class="remove-cart-item" >&times;</button>
                                                     <h4>Accumsan elit</h4>
@@ -226,7 +239,7 @@
                                                                             <div class="price-sale">40 <sup>%</sup><sub>off</sub></div>
                                                                             <a href="http://www.plazathemes.com/">&gt;shop now</a>
                                                                         </div>
-                                                                        <div class="media-right"><img src="images/products/img-01.jpg" alt=""></div>
+                                                                        <div class="media-right"><img src="/ShopOnline/resources/images/products/img-01.jpg" alt=""></div>
                                                                     </div>
                                                                     <div class="box-banner media">
                                                                         <div class="media-body">
@@ -234,7 +247,7 @@
                                                                             <div class="price-sale">50 <sup>%</sup><sub>off</sub></div>
                                                                             <a href="http://www.plazathemes.com/">&gt;shop now</a>
                                                                         </div>
-                                                                        <div class="media-right"><img src="images/products/img-02.jpg" alt=""></div>
+                                                                        <div class="media-right"><img src="/ShopOnline/resources/images/products/img-02.jpg" alt=""></div>
                                                                     </div>
                                                                     <div class="box-banner media">
                                                                         <div class="media-body">
@@ -242,13 +255,13 @@
                                                                             <div class="price-sale">30 <sup>%</sup><sub>off</sub></div>
                                                                             <a href="http://www.plazathemes.com/">&gt;shop now</a>
                                                                         </div>
-                                                                        <div class="media-right"><img src="images/products/img-03.jpg" alt=""></div>
+                                                                        <div class="media-right"><img src="/ShopOnline/resources/images/products/img-03.jpg" alt=""></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <br>
-                                                        <a href="#" class="ads"><img alt="" src="images/ads/ads-08.jpg" class="img-responsive"></a>
+                                                        <a href="#" class="ads"><img alt="" src="/ShopOnline/resources/images/ads/ads-08.jpg" class="img-responsive"></a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -291,7 +304,7 @@
                                                                             <div class="price-sale">40 <sup>%</sup><sub>off</sub></div>
                                                                             <a href="http://www.plazathemes.com/">&gt;shop now</a>
                                                                         </div>
-                                                                        <div class="media-right"><img src="images/products/img-01.jpg" alt=""></div>
+                                                                        <div class="media-right"><img src="/ShopOnline/resources/images/products/img-01.jpg" alt=""></div>
                                                                     </div>
                                                                     <div class="box-banner media">
                                                                         <div class="media-body">
@@ -299,7 +312,7 @@
                                                                             <div class="price-sale">50 <sup>%</sup><sub>off</sub></div>
                                                                             <a href="http://www.plazathemes.com/">&gt;shop now</a>
                                                                         </div>
-                                                                        <div class="media-right"><img src="images/products/img-02.jpg" alt=""></div>
+                                                                        <div class="media-right"><img src="/ShopOnline/resources/images/products/img-02.jpg" alt=""></div>
                                                                     </div>
                                                                     <div class="box-banner media">
                                                                         <div class="media-body">
@@ -307,13 +320,13 @@
                                                                             <div class="price-sale">30 <sup>%</sup><sub>off</sub></div>
                                                                             <a href="http://www.plazathemes.com/">&gt;shop now</a>
                                                                         </div>
-                                                                        <div class="media-right"><img src="images/products/img-03.jpg" alt=""></div>
+                                                                        <div class="media-right"><img src="/ShopOnline/resources/images/products/img-03.jpg" alt=""></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <br>
-                                                        <a href="#" class="ads"><img alt="" src="images/ads/ads-08.jpg" class="img-responsive"></a>
+                                                        <a href="#" class="ads"><img alt="" src="/ShopOnline/resources/images/ads/ads-08.jpg" class="img-responsive"></a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -418,12 +431,9 @@
                         </div>
                         <div class="col-md-9">
                             <ul class="menu clearfix visible-lg visible-md">
-                                <li class="active"><a href="#">Home</a></li>
-                                <li><a href="#">Computer</a></li>
-                                <li><a href="#">camera</a></li>
-                                <li><a href="#">smart phone</a></li>
-                                <li><a href="#">electtronic</a></li>
-                                <li><a href="#">new arrivals</a></li>
+                                <li><a href="/ShopOnline/home/index.html">Home</a></li>
+                                <li><a href="#">Best seller</a></li>
+                                <li class="active"><a href="#">Product</a></li>
                             </ul>
                         </div>
                     </div>
@@ -489,7 +499,7 @@
             <div class="container">
                 <ul class="breadcrumb">
                     <li><a href="#">Home</a></li>
-                    <li class="active">Category Grid</li>
+                    <li class="active">Product Grid</li>
                	</ul>
             </div>
         </div>
@@ -509,10 +519,10 @@
                                         <h2>Brand</h2>
                                         <div class="content-shopby">
                                             <ol>
-                                                 <li> <a href="<c:url value="/home/index.html" />" >All</a></li>
-                                                <c:forEach items="${allbrand}" var="brand">
-                                                   <li> <a href="<c:url value="/home/brand/${brand.getIdbrand()}.html" />" >${brand.getName()}</a></li>
-                                                </c:forEach>
+                                                <li> <a href="<c:url value="/home/grid.html" />" >All</a></li>
+                                                    <c:forEach items="${allbrand}" var="brand">
+                                                    <li> <a href="<c:url value="/home/brand/${brand.getIdbrand()}.html" />" >${brand.getName()}</a></li>
+                                                    </c:forEach>
                                             </ol>
                                         </div>
                                     </div>
@@ -521,36 +531,12 @@
                                         <div class="content-shopby">
                                             <div id="slider-range"></div>
                                             <div id="search_pr">
-                                                 <form method="POST" action="price.html">
-                                                    <input type="text" name="first_price" class="form-control">
-                                                    <input type="text" name="last_price" class="form-control">
+                                                <form method="POST" action="price.html">
+                                                    <input type="text" name="first_price" class="form-control" value="${first_price}">
+                                                    <input type="text" name="last_price" class="form-control" value="${last_price}">
                                                     <button id="search_price" name="search_price" type="submit" class="btn btn-default">SHOW</button>
                                                 </form>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="layered layered-Manufacturer">
-                                        <h2>Manufacturer</h2>
-                                        <div class="content-shopby">
-                                            <ol>
-                                                <li><a href="#">Aliquam</a></li>
-                                                <li><a href="#">Duis tempus id </a></li>
-                                                <li><a href="#">Leo quis molestie. </a></li>
-                                                <li><a href="#">Suspendisse </a></li>
-                                                <li><a href="#">Nunc gravida </a></li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                    <div class="layered layered-Color">
-                                        <h2>Color</h2>
-                                        <div class="content-shopby">
-                                            <ol>
-                                                <li><a href="#">Red</a></li>
-                                                <li><a href="#">Orange</a></li>
-                                                <li><a href="#">Blue</a></li>
-                                                <li><a href="#">Black</a></li>
-                                                <li><a href="#">Green</a></li>
-                                            </ol>
                                         </div>
                                     </div>
                                 </div>
@@ -564,7 +550,7 @@
                                 <p class="empty">You have no items to compare.</p>
                             </div>
                         </div><!-- /.compare -->
-                        <div class="banner-left"><a href="#"><img src="images/ads/ads-01.jpg" alt=""></a>
+                        <div class="banner-left"><a href="#"><img src="/ShopOnline/resources/images/ads/ads-01.jpg" alt=""></a>
                             <div class="banner-content">
                                 <h1>sale up to</h1>
                                 <h2>20% off</h2>
@@ -572,317 +558,317 @@
                                 <a href="#">buy now</a>
                             </div>
                         </div>
-                        <div class="block">
-                            <div class="title-group"><h2>Special Offer</h2></div>
-                            <div id="special-offer" class="owl-container">
-                                <div class="owl">
-                                    <div class='sepecialoffer-item item'>
-                                        <div class="item-inner first">
-                                            <div class="images-container">
-                                                <a href="#" title="Primis in faucibus" class="product-image">
-                                                    <img src="images/products/15.jpg" alt="Primis in faucibus" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Primis in faucibus">Primis in faucibus</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:87%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <a href="#" title="Accumsan elit " class="product-image">
-                                                    <img src="images/products/14.jpg" alt="Accumsan elit " />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Accumsan elit ">Accumsan elit </a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="images/products/5.jpg" alt="Nunc facilisis" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Nunc facilisis</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner last">
-                                            <div class="images-container">
-                                                <a href="#" title="Fusce aliquam" class="product-image">
-                                                    <img src="images/products/8.jpg" alt="Fusce aliquam" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Fusce aliquam">Fusce aliquam</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='sepecialoffer-item item'>
-                                        <div class="item-inner first">
-                                            <div class="images-container">
-                                                <a href="h#" title="consequences" class="product-image">
-                                                    <img src="images/products/9.jpg" alt="consequences" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="consequences">consequences</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:73%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <a href="#" title="Cras neque metus" class="product-image">
-                                                    <img src="images/products/12.jpg" alt="Cras neque metus" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Cras neque metus">Cras neque metus</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner ">
-                                            <div class="images-container">
-                                                <a href="#" title="Etiam gravida" class="product-image">
-                                                    <img src="images/products/4.jpg" alt="Etiam gravida" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Etiam gravida">Etiam gravida</a></h2>
-                                                <div class="price-box">
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span><span class="price">$432.00</span>
-                                                    </p>
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$321.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner last">
-                                            <div class="images-container">
-                                                <a href="#" title="Donec non est" class="product-image">
-                                                    <img src="images/products/9.jpg" alt="Donec non est" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Donec non est">Donec non est</a></h2>
-                                                <div class="price-box">
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span><span class="price">$721.00</span>
-                                                    </p>
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$631.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:73%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='sepecialoffer-item item'>
-                                        <div class="item-inner first">
-                                            <div class="images-container">
-                                                <a href="#" title="pleasure rationally" class="product-image">
-                                                    <img src="images/products/10.jpg" alt="pleasure rationally" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="pleasure rationally">pleasure rationally</a></h2>
-                                                <div class="price-box">
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span><span class="price">$333.00</span>
-                                                    </p>
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$222.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner ">
-                                            <div class="images-container">
-                                                <a href="#" title="Aliquam consequat" class="product-image">
-                                                    <img src="images/products/5.jpg" alt="Aliquam consequat" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Aliquam consequat">Aliquam consequat</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:60%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner ">
-                                            <div class="images-container">
-                                                <a href="#" title=" Donec ac tempus " class="product-image">
-                                                    <img src="images/products/11.jpg" alt=" Donec ac tempus " />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title=" Donec ac tempus "> Donec ac tempus </a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:80%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner last">
-                                            <div class="images-container">
-                                                <a href="#" title="occaecati cupiditate" class="product-image">
-                                                    <img src="images/products/6.jpg" alt="occaecati cupiditate" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="occaecati cupiditate">occaecati cupiditate</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- /.owl-container -->
-                        </div><!-- /.block - Special offer -->
+                        <!--                        <div class="block">
+                                                    <div class="title-group"><h2>Special Offer</h2></div>
+                                                    <div id="special-offer" class="owl-container">
+                                                        <div class="owl">
+                                                            <div class='sepecialoffer-item item'>
+                                                                <div class="item-inner first">
+                                                                    <div class="images-container">
+                                                                        <a href="#" title="Primis in faucibus" class="product-image">
+                                                                            <img src="/ShopOnline/resources/images/products/15.jpg" alt="Primis in faucibus" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="des-container">
+                                                                        <h2 class="product-name"><a href="#" title="Primis in faucibus">Primis in faucibus</a></h2>
+                                                                        <div class="price-box">
+                                                                            <p class="special-price">
+                                                                                <span class="price">$169.99</span>
+                                                                            </p>
+                                                                            <p class="old-price">
+                                                                                <span class="price">$189.00</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ratings">
+                                                                            <div class="rating-box">
+                                                                                <div class="rating" style="width:87%"></div>
+                                                                            </div>
+                                                                            <span class="amount"><a href="#">1 Review(s)</a></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-inner">
+                                                                    <div class="images-container">
+                                                                        <a href="#" title="Accumsan elit " class="product-image">
+                                                                            <img src="/ShopOnline/resources/images/products/14.jpg" alt="Accumsan elit " />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="des-container">
+                                                                        <h2 class="product-name"><a href="#" title="Accumsan elit ">Accumsan elit </a></h2>
+                                                                        <div class="price-box">
+                                                                            <p class="special-price">
+                                                                                <span class="price">$169.99</span>
+                                                                            </p>
+                                                                            <p class="old-price">
+                                                                                <span class="price">$189.00</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ratings">
+                                                                            <div class="rating-box">
+                                                                                <div class="rating" style="width:67%"></div>
+                                                                            </div>
+                                                                            <span class="amount"><a href="#">1 Review(s)</a></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-inner">
+                                                                    <div class="images-container">
+                                                                        <a href="#" title="Nunc facilisis" class="product-image">
+                                                                            <img src="/ShopOnline/resources/images/products/5.jpg" alt="Nunc facilisis" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="des-container">
+                                                                        <h2 class="product-name"><a href="#" title="Nunc facilisis">Nunc facilisis</a></h2>
+                                                                        <div class="price-box">
+                                                                            <p class="special-price">
+                                                                                <span class="price">$169.99</span>
+                                                                            </p>
+                                                                            <p class="old-price">
+                                                                                <span class="price">$189.00</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ratings">
+                                                                            <div class="rating-box">
+                                                                                <div class="rating" style="width:67%"></div>
+                                                                            </div>
+                                                                            <span class="amount"><a href="#">1 Review(s)</a></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-inner last">
+                                                                    <div class="images-container">
+                                                                        <a href="#" title="Fusce aliquam" class="product-image">
+                                                                            <img src="/ShopOnline/resources/images/products/8.jpg" alt="Fusce aliquam" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="des-container">
+                                                                        <h2 class="product-name"><a href="#" title="Fusce aliquam">Fusce aliquam</a></h2>
+                                                                        <div class="price-box">
+                                                                            <p class="special-price">
+                                                                                <span class="price">$169.99</span>
+                                                                            </p>
+                                                                            <p class="old-price">
+                                                                                <span class="price">$189.00</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ratings">
+                                                                            <div class="rating-box">
+                                                                                <div class="rating" style="width:67%"></div>
+                                                                            </div>
+                                                                            <span class="amount"><a href="#">1 Review(s)</a></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class='sepecialoffer-item item'>
+                                                                <div class="item-inner first">
+                                                                    <div class="images-container">
+                                                                        <a href="h#" title="consequences" class="product-image">
+                                                                            <img src="/ShopOnline/resources/images/products/9.jpg" alt="consequences" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="des-container">
+                                                                        <h2 class="product-name"><a href="#" title="consequences">consequences</a></h2>
+                                                                        <div class="price-box">
+                                                                            <p class="special-price">
+                                                                                <span class="price">$169.99</span>
+                                                                            </p>
+                                                                            <p class="old-price">
+                                                                                <span class="price">$189.00</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ratings">
+                                                                            <div class="rating-box">
+                                                                                <div class="rating" style="width:73%"></div>
+                                                                            </div>
+                                                                            <span class="amount"><a href="#">1 Review(s)</a></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-inner">
+                                                                    <div class="images-container">
+                                                                        <a href="#" title="Cras neque metus" class="product-image">
+                                                                            <img src="/ShopOnline/resources/images/products/12.jpg" alt="Cras neque metus" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="des-container">
+                                                                        <h2 class="product-name"><a href="#" title="Cras neque metus">Cras neque metus</a></h2>
+                                                                        <div class="price-box">
+                                                                            <p class="special-price">
+                                                                                <span class="price">$169.99</span>
+                                                                            </p>
+                                                                            <p class="old-price">
+                                                                                <span class="price">$189.00</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ratings">
+                                                                            <div class="rating-box">
+                                                                                <div class="rating" style="width:67%"></div>
+                                                                            </div>
+                                                                            <span class="amount"><a href="#">1 Review(s)</a></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-inner ">
+                                                                    <div class="images-container">
+                                                                        <a href="#" title="Etiam gravida" class="product-image">
+                                                                            <img src="/ShopOnline/resources/images/products/4.jpg" alt="Etiam gravida" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="des-container">
+                                                                        <h2 class="product-name"><a href="#" title="Etiam gravida">Etiam gravida</a></h2>
+                                                                        <div class="price-box">
+                                                                            <p class="old-price">
+                                                                                <span class="price-label">Regular Price: </span><span class="price">$432.00</span>
+                                                                            </p>
+                                                                            <p class="special-price">
+                                                                                <span class="price-label">Special Price</span>
+                                                                                <span class="price">$321.00</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ratings">
+                                                                            <div class="rating-box">
+                                                                                <div class="rating" style="width:67%"></div>
+                                                                            </div>
+                                                                            <span class="amount"><a href="#">1 Review(s)</a></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-inner last">
+                                                                    <div class="images-container">
+                                                                        <a href="#" title="Donec non est" class="product-image">
+                                                                            <img src="/ShopOnline/resources/images/products/9.jpg" alt="Donec non est" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="des-container">
+                                                                        <h2 class="product-name"><a href="#" title="Donec non est">Donec non est</a></h2>
+                                                                        <div class="price-box">
+                                                                            <p class="old-price">
+                                                                                <span class="price-label">Regular Price: </span><span class="price">$721.00</span>
+                                                                            </p>
+                                                                            <p class="special-price">
+                                                                                <span class="price-label">Special Price</span>
+                                                                                <span class="price">$631.00</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ratings">
+                                                                            <div class="rating-box">
+                                                                                <div class="rating" style="width:73%"></div>
+                                                                            </div>
+                                                                            <span class="amount"><a href="#">1 Review(s)</a></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class='sepecialoffer-item item'>
+                                                                <div class="item-inner first">
+                                                                    <div class="images-container">
+                                                                        <a href="#" title="pleasure rationally" class="product-image">
+                                                                            <img src="/ShopOnline/resources/images/products/10.jpg" alt="pleasure rationally" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="des-container">
+                                                                        <h2 class="product-name"><a href="#" title="pleasure rationally">pleasure rationally</a></h2>
+                                                                        <div class="price-box">
+                                                                            <p class="old-price">
+                                                                                <span class="price-label">Regular Price: </span><span class="price">$333.00</span>
+                                                                            </p>
+                                                                            <p class="special-price">
+                                                                                <span class="price-label">Special Price</span>
+                                                                                <span class="price">$222.00</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ratings">
+                                                                            <div class="rating-box">
+                                                                                <div class="rating" style="width:67%"></div>
+                                                                            </div>
+                                                                            <span class="amount"><a href="#">1 Review(s)</a></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-inner ">
+                                                                    <div class="images-container">
+                                                                        <a href="#" title="Aliquam consequat" class="product-image">
+                                                                            <img src="/ShopOnline/resources/images/products/5.jpg" alt="Aliquam consequat" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="des-container">
+                                                                        <h2 class="product-name"><a href="#" title="Aliquam consequat">Aliquam consequat</a></h2>
+                                                                        <div class="price-box">
+                                                                            <p class="special-price">
+                                                                                <span class="price">$169.99</span>
+                                                                            </p>
+                                                                            <p class="old-price">
+                                                                                <span class="price">$189.00</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ratings">
+                                                                            <div class="rating-box">
+                                                                                <div class="rating" style="width:60%"></div>
+                                                                            </div>
+                                                                            <span class="amount"><a href="#">1 Review(s)</a></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-inner ">
+                                                                    <div class="images-container">
+                                                                        <a href="#" title=" Donec ac tempus " class="product-image">
+                                                                            <img src="/ShopOnline/resources/images/products/11.jpg" alt=" Donec ac tempus " />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="des-container">
+                                                                        <h2 class="product-name"><a href="#" title=" Donec ac tempus "> Donec ac tempus </a></h2>
+                                                                        <div class="price-box">
+                                                                            <p class="special-price">
+                                                                                <span class="price">$169.99</span>
+                                                                            </p>
+                                                                            <p class="old-price">
+                                                                                <span class="price">$189.00</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ratings">
+                                                                            <div class="rating-box">
+                                                                                <div class="rating" style="width:80%"></div>
+                                                                            </div>
+                                                                            <span class="amount"><a href="#">1 Review(s)</a></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-inner last">
+                                                                    <div class="images-container">
+                                                                        <a href="#" title="occaecati cupiditate" class="product-image">
+                                                                            <img src="/ShopOnline/resources/images/products/6.jpg" alt="occaecati cupiditate" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="des-container">
+                                                                        <h2 class="product-name"><a href="#" title="occaecati cupiditate">occaecati cupiditate</a></h2>
+                                                                        <div class="price-box">
+                                                                            <p class="special-price">
+                                                                                <span class="price">$169.99</span>
+                                                                            </p>
+                                                                            <p class="old-price">
+                                                                                <span class="price">$189.00</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="ratings">
+                                                                            <div class="rating-box">
+                                                                                <div class="rating" style="width:67%"></div>
+                                                                            </div>
+                                                                            <span class="amount"><a href="#">1 Review(s)</a></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> /.owl-container 
+                                                </div> /.block - Special offer -->
                     </div><!-- /.col-left -->
                     <div class="col-sm-9 col-right">
                         <div class="banner">
-                            <a href="#"><img alt="" src="images/ads/ads-17.jpg"></a>
+                            <a href="#"><img alt="" src="/ShopOnline/resources/images/ads/ads-17.jpg"></a>
                         </div>
                         <div class="page-title">
-                            <h1>CATEGORY GRID</h1>
+                            <h1>PRODUCT GRID</h1>
                         </div>
                         <div class="toolbar">
                             <div class="sorter">
@@ -924,7 +910,7 @@
                                                 <div class="product_icon">
                                                     <div class='new-icon'><span>new</span></div>
                                                 </div>
-                                                <a href="#" title="Nunc facilisis" class="product-image">
+                                                <a class="product-image" href="<c:url value="/home/product/${product.getId()}.html" />">
                                                     <img src="${product.getImage1()}" alt="Nunc facilisis" />
                                                 </a>
                                                 <div class="box-hover">
@@ -1006,7 +992,7 @@
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="images/products/img-05.jpg"></a>
+                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources/images/products/img-05.jpg"></a>
                                 </div>
                             </div>
                             <div class="col-xs-6">
@@ -1027,7 +1013,7 @@
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="images/products/img-06.jpg"></a>
+                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources/images/products/img-06.jpg"></a>
                                 </div>
                             </div>
                             <div class="col-xs-6">
@@ -1048,7 +1034,7 @@
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="images/products/img-07.jpg"></a>
+                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources/images/products/img-07.jpg"></a>
                                 </div>
                             </div>
                             <div class="col-xs-6">
@@ -1069,7 +1055,7 @@
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="images/products/img-08.jpg"></a>
+                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources/images/products/img-08.jpg"></a>
                                 </div>
                             </div>
                             <div class="col-xs-6">
@@ -1090,47 +1076,47 @@
             </div>
         </div><!-- /.catlist -->
 
-        <div class="brands">
-            <div class="container">
-                <div class="title-group1">
-                    <h2>popular brand</h2>
-                </div>
-                <div id="brands" class="owl-container">
-                    <div class="owl">
-                        <div class='item'>
-                            <div class="item-innner">
-                                <a href="#" title=""><img src="images/brand/logo_brand5.png" alt="" /></a>
-                            </div>
+        <!--        <div class="brands">
+                    <div class="container">
+                        <div class="title-group1">
+                            <h2>popular brand</h2>
                         </div>
-                        <div class='item'>
-                            <div class="item-innner">
-                                <a href="#" title=""><img src="images/brand/logo_brand4.png" alt="" /></a>
+                        <div id="brands" class="owl-container">
+                            <div class="owl">
+                                <div class='item'>
+                                    <div class="item-innner">
+                                        <a href="#" title=""><img src="/ShopOnline/resources/images/brand/logo_brand5.png" alt="" /></a>
+                                    </div>
+                                </div>
+                                <div class='item'>
+                                    <div class="item-innner">
+                                        <a href="#" title=""><img src="/ShopOnline/resources/images/brand/logo_brand4.png" alt="" /></a>
+                                    </div>
+                                </div>
+                                <div class='item'>
+                                    <div class="item-innner">
+                                        <a href="#" title=""><img src="/ShopOnline/resources/images/brand/logo_brand3.png" alt="" /></a>
+                                    </div>
+                                </div>
+                                <div class='item'>
+                                    <div class="item-innner">
+                                        <a href="#" title=""><img src="/ShopOnline/resources/images/brand/logo_brand2.png" alt="" /></a>
+                                    </div>
+                                </div>
+                                <div class='item'>
+                                    <div class="item-innner">
+                                        <a href="#" title=""><img src="/ShopOnline/resources/images/brand/logo_brand1.png" alt="" /></a>
+                                    </div>
+                                </div>
+                                <div class='item'>
+                                    <div class="item-innner">
+                                        <a href="#" title=""><img src="/ShopOnline/resources/images/brand/logo_brand3.png" alt="" /></a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class='item'>
-                            <div class="item-innner">
-                                <a href="#" title=""><img src="images/brand/logo_brand3.png" alt="" /></a>
-                            </div>
-                        </div>
-                        <div class='item'>
-                            <div class="item-innner">
-                                <a href="#" title=""><img src="images/brand/logo_brand2.png" alt="" /></a>
-                            </div>
-                        </div>
-                        <div class='item'>
-                            <div class="item-innner">
-                                <a href="#" title=""><img src="images/brand/logo_brand1.png" alt="" /></a>
-                            </div>
-                        </div>
-                        <div class='item'>
-                            <div class="item-innner">
-                                <a href="#" title=""><img src="images/brand/logo_brand3.png" alt="" /></a>
-                            </div>
-                        </div>
+                        </div> /#brands 
                     </div>
-                </div><!-- /#brands -->
-            </div>
-        </div><!-- /.brands -->
+                </div> /.brands -->
 
         <div class="footer">
             <div class="footer-top">
@@ -1236,7 +1222,7 @@
                             <div class="copy">Copyright &copy; 2015 Plazathemes. All Rights Reserved</div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="payment"><img src="images/payment.png" alt="" class="img-responsive"></div>
+                            <div class="payment"><img src="/ShopOnline/resources/images/payment.png" alt="" class="img-responsive"></div>
                         </div>
                     </div>
                 </div>
@@ -1255,54 +1241,52 @@
         <script src="<c:url value="/resources/js/custom.js"/>"></script>
 
         <script type="text/javascript">
-            jQuery(document).ready(function () {
+                                            /* slider price */
+                                            var currencies = "$";
+                                            var toolbar_status = "1";
+                                            var rate = "1";
+                                            var min = "99"
+                                            min = Number(min);
+                                            var max = "999"
+                                            max = Number(max);
+                                            var currentMinPrice = "99"
+                                            currentMinPrice = Number(currentMinPrice);
+                                            var currentMaxPrice = "999"
+                                            //alert('min: '+min+'--max: '+ max+ 'currentMin: '+currentMinPrice);
+                                            currentMaxPrice = Number(currentMaxPrice);
+                                            var params = "";
+                                            params = $.trim(params);
+                                            //slider
+                                            $("#slider-range").slider({
+                                                range: true,
+                                                min: min,
+                                                max: max,
+                                                values: [currentMinPrice, currentMaxPrice],
+                                                slide: function (event, ui) {
+                                                    $("#amount").val(currencies + ui.values[ 0 ] + " - " + currencies + ui.values[ 1 ]);
+                                                    $('input[name="first_price"]').val(ui.values[0]);
+                                                    $('input[name="last_price"]').val(ui.values[1]);
+                                                },
+                                                stop: function (event, ui) {
+                                                }
+                                            });
 
-                /* slider price */
-                var currencies = "$";
-                var toolbar_status = "1";
-                var rate = "1";
-                var min = "99"
-                min = Number(min);
-                var max = "999"
-                max = Number(max);
-                var currentMinPrice = "99"
-                currentMinPrice = Number(currentMinPrice);
-                var currentMaxPrice = "999"
-                //alert('min: '+min+'--max: '+ max+ 'currentMin: '+currentMinPrice);
-                currentMaxPrice = Number(currentMaxPrice);
-                var params = "";
-                params = $.trim(params);
-                //slider
-                $("#slider-range").slider({
-                    range: true,
-                    min: min,
-                    max: max,
-                    values: [currentMinPrice, currentMaxPrice],
-                    slide: function (event, ui) {
-                        $("#amount").val(currencies + ui.values[ 0 ] + " - " + currencies + ui.values[ 1 ]);
-                        $('input[name="first_price"]').val(ui.values[0]);
-                        $('input[name="last_price"]').val(ui.values[1]);
-                    },
-                    stop: function (event, ui) {
-                    }
-                });
+                                            $("#amount").val(currencies + $("#slider-range").slider("values", 0) +
+                                                    " - " + currencies + $("#slider-range").slider("values", 1));
+                                            $('input[name="first_price"]').val($("#slider-range").slider("values", 0));
+                                            $('input[name="last_price"]').val($("#slider-range").slider("values", 1));
 
-                $("#amount").val(currencies + $("#slider-range").slider("values", 0) +
-                        " - " + currencies + $("#slider-range").slider("values", 1));
-                $('input[name="first_price"]').val($("#slider-range").slider("values", 0));
-                $('input[name="last_price"]').val($("#slider-range").slider("values", 1));
+                                            //search price from input box
+                                            $('#search_price').each(function () {
+                                                $(this).live('click', function () {
 
-                //search price from input box
-                $('#search_price').each(function () {
-                    $(this).live('click', function () {
-                        
-                        return false;
-                    })
-                });
-                $('#slider-range a:first').addClass('first_item');
-                $('#slider-range a:last').addClass('last_item');
+                                                    return false;
+                                                })
+                                            });
+                                            $('#slider-range a:first').addClass('first_item');
+                                            $('#slider-range a:last').addClass('last_item');
 
-            });
+                                        });
         </script>
     </body>
 </html>

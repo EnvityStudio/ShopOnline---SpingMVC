@@ -12,6 +12,10 @@
 
 <xs:element name="helloResponse" type="tns:helloResponse"/>
 
+<xs:element name="productDetail" type="tns:productDetail"/>
+
+<xs:element name="productDetailResponse" type="tns:productDetailResponse"/>
+
 <xs:element name="products" type="tns:products"/>
 
 <xs:element name="productsResponse" type="tns:productsResponse"/>
@@ -23,16 +27,6 @@
 </xs:complexType>
 
 <xs:complexType name="helloResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="products">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="productsResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
@@ -51,6 +45,16 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="products">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="productsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="filterbrand">
 <xs:sequence>
 <xs:element name="idbrand" type="xs:int"/>
@@ -58,6 +62,18 @@
 </xs:complexType>
 
 <xs:complexType name="filterbrandResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productDetail">
+<xs:sequence>
+<xs:element name="idproduct" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productDetailResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>

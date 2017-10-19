@@ -4,12 +4,6 @@
 <xsd:import namespace="http://product/" schemaLocation="http://localhost:8080/ShopOnlineServices/Product?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="products">
-<part name="parameters" element="tns:products"/>
-</message>
-<message name="productsResponse">
-<part name="parameters" element="tns:productsResponse"/>
-</message>
 <message name="filterprice">
 <part name="parameters" element="tns:filterprice"/>
 </message>
@@ -22,6 +16,18 @@
 <message name="filterbrandResponse">
 <part name="parameters" element="tns:filterbrandResponse"/>
 </message>
+<message name="products">
+<part name="parameters" element="tns:products"/>
+</message>
+<message name="productsResponse">
+<part name="parameters" element="tns:productsResponse"/>
+</message>
+<message name="productDetail">
+<part name="parameters" element="tns:productDetail"/>
+</message>
+<message name="productDetailResponse">
+<part name="parameters" element="tns:productDetailResponse"/>
+</message>
 <message name="hello">
 <part name="parameters" element="tns:hello"/>
 </message>
@@ -29,10 +35,6 @@
 <part name="parameters" element="tns:helloResponse"/>
 </message>
 <portType name="ProductService">
-<operation name="products">
-<input wsam:Action="http://product/ProductService/productsRequest" message="tns:products"/>
-<output wsam:Action="http://product/ProductService/productsResponse" message="tns:productsResponse"/>
-</operation>
 <operation name="filterprice">
 <input wsam:Action="http://product/ProductService/filterpriceRequest" message="tns:filterprice"/>
 <output wsam:Action="http://product/ProductService/filterpriceResponse" message="tns:filterpriceResponse"/>
@@ -41,6 +43,14 @@
 <input wsam:Action="http://product/ProductService/filterbrandRequest" message="tns:filterbrand"/>
 <output wsam:Action="http://product/ProductService/filterbrandResponse" message="tns:filterbrandResponse"/>
 </operation>
+<operation name="products">
+<input wsam:Action="http://product/ProductService/productsRequest" message="tns:products"/>
+<output wsam:Action="http://product/ProductService/productsResponse" message="tns:productsResponse"/>
+</operation>
+<operation name="productDetail">
+<input wsam:Action="http://product/ProductService/productDetailRequest" message="tns:productDetail"/>
+<output wsam:Action="http://product/ProductService/productDetailResponse" message="tns:productDetailResponse"/>
+</operation>
 <operation name="hello">
 <input wsam:Action="http://product/ProductService/helloRequest" message="tns:hello"/>
 <output wsam:Action="http://product/ProductService/helloResponse" message="tns:helloResponse"/>
@@ -48,15 +58,6 @@
 </portType>
 <binding name="ProductServicePortBinding" type="tns:ProductService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="products">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="filterprice">
 <soap:operation soapAction=""/>
 <input>
@@ -67,6 +68,24 @@
 </output>
 </operation>
 <operation name="filterbrand">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="products">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="productDetail">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

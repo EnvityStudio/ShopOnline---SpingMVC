@@ -91,10 +91,10 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="language dropdown-toggle" data-toggle="dropdown"><img src="/ShopOnline/resources/images/flag-us.png" alt=""> English</a>
+                                <a href="#" class="language dropdown-toggle" data-toggle="dropdown"><img src="/ShopOnline/resources//ShopOnline/resources/images/flag-us.png" alt=""> English</a>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><img src="/ShopOnline/resources/images/flag-us.png" alt=""> &nbsp;English</a></li>
-                                    <li><a href="#"><img src="/ShopOnline/resources/images/flag-spain.png" alt=""> &nbsp;Spanish</a></li>
+                                    <li><a href="#"><img src="/ShopOnline/resources//ShopOnline/resources/images/flag-us.png" alt=""> &nbsp;English</a></li>
+                                    <li><a href="#"><img src="/ShopOnline/resources//ShopOnline/resources/images/flag-spain.png" alt=""> &nbsp;Spanish</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -103,7 +103,7 @@
                 <div class="header-bottom">
                     <div class="row">
                         <div class="col-md-3">
-                            <a href="#" class="logo"><img src="/ShopOnline/resources/images/logo.png" alt=""></a>
+                            <a href="#" class="logo"><img src="/ShopOnline/resources//ShopOnline/resources/images/logo.png" alt=""></a>
                         </div>
                         <div class="col-md-9">
                             <div class="support-client">
@@ -156,7 +156,7 @@
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <div class="cart-listing">
                                             <div class="media">
-                                                <div class="media-left"><a href="#"><img src="<c:url value="/ShopOnline/resources/images/products/11.jpg"/>" class="img-responsive" alt=""></a></div>
+                                                <div class="media-left"><a href="#"><img src="<c:url value="/ShopOnline/resources//ShopOnline/resources/images/products/11.jpg"/>" class="img-responsive" alt=""></a></div>
                                                 <div class="media-body">
                                                     <button type="button" class="remove-cart-item" >&times;</button>
                                                     <h4>Accumsan elit</h4>
@@ -165,7 +165,7 @@
                                                 </div>
                                             </div>
                                             <div class="media">
-                                                <div class="media-left"><a href="#"><img src="<c:url value="/ShopOnline/resources/images/products/13.jpg"/>" class="img-responsive" alt=""></a></div>
+                                                <div class="media-left"><a href="#"><img src="<c:url value="/ShopOnline/resources//ShopOnline/resources/images/products/13.jpg"/>" class="img-responsive" alt=""></a></div>
                                                 <div class="media-body">
                                                     <button type="button" class="remove-cart-item" >&times;</button>
                                                     <h4>Accumsan elit</h4>
@@ -230,8 +230,8 @@
                                                                             <div class="price-sale">40 <sup>%</sup><sub>off</sub></div>
                                                                             <a href="http://www.plazathemes.com/">&gt;shop now</a>
                                                                         </div>
-                                                                        <!--<div class="media-right"><img src="../resources//ShopOnline/resources/images/products/img-01.jpg" alt=""></div>-->
-                                                                        <div class="media-right"><img src="/ShopOnline/ShopOnline/resources/images/products/img-01.jpg"></div>
+                                                                        <!--<div class="media-right"><img src="../resources//ShopOnline/resources//ShopOnline/resources/images/products/img-01.jpg" alt=""></div>-->
+                                                                        <div class="media-right"><img src="/ShopOnline/ShopOnline/resources//ShopOnline/resources/images/products/img-01.jpg"></div>
 
                                                                     </div>
                                                                     <div class="box-banner media">
@@ -240,7 +240,7 @@
                                                                             <div class="price-sale">50 <sup>%</sup><sub>off</sub></div>
                                                                             <a href="http://www.plazathemes.com/">&gt;shop now</a>
                                                                         </div>
-                                                                        <div class="media-right"><img src="/ShopOnline/ShopOnline/resources/images/products/img-02.jpg" alt=""></div>
+                                                                        <div class="media-right"><img src="/ShopOnline/ShopOnline/resources//ShopOnline/resources/images/products/img-02.jpg" alt=""></div>
                                                                     </div>
                                                                     <div class="box-banner media">
                                                                         <div class="media-body">
@@ -248,13 +248,13 @@
                                                                             <div class="price-sale">30 <sup>%</sup><sub>off</sub></div>
                                                                             <a href="http://www.plazathemes.com/">&gt;shop now</a>
                                                                         </div>
-                                                                        <div class="media-right"><img src="/ShopOnline/resources/images/products/img-03.jpg" alt=""></div>
+                                                                        <div class="media-right"><img src="/ShopOnline/resources//ShopOnline/resources/images/products/img-03.jpg" alt=""></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <br>
-                                                        <a href="#" class="ads"><img alt="" src="/ShopOnline/ShopOnline/resources/images/ads/ads-08.jpg" class="img-responsive"></a>
+                                                        <a href="#" class="ads"><img alt="" src="/ShopOnline/ShopOnline/resources//ShopOnline/resources/images/ads/ads-08.jpg" class="img-responsive"></a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -297,7 +297,7 @@
                                                                             <div class="price-sale">40 <sup>%</sup><sub>off</sub></div>
                                                                             <a href="http://www.plazathemes.com/">&gt;shop now</a>
                                                                         </div>
-                                                                        <div class="media-right"><img src="/ShopOnline/resources/images/products/img-01.jpg" alt=""></div>
+                                                                        <div class="media-right"><img src="/ShopOnline/resources//ShopOnline/resources/images/products/img-01.jpg" alt=""></div>
                                                                     </div>
                                                                     <div class="box-banner media">
                                                                         <div class="media-body">
@@ -305,7 +305,7 @@
                                                                             <div class="price-sale">50 <sup>%</sup><sub>off</sub></div>
                                                                             <a href="http://www.plazathemes.com/">&gt;shop now</a>
                                                                         </div>
-                                                                        <div class="media-right"><img src="/ShopOnline/resources/images/products/img-02.jpg" alt=""></div>
+                                                                        <div class="media-right"><img src="/ShopOnline/resources//ShopOnline/resources/images/products/img-02.jpg" alt=""></div>
                                                                     </div>
                                                                     <div class="box-banner media">
                                                                         <div class="media-body">
@@ -313,13 +313,13 @@
                                                                             <div class="price-sale">30 <sup>%</sup><sub>off</sub></div>
                                                                             <a href="http://www.plazathemes.com/">&gt;shop now</a>
                                                                         </div>
-                                                                        <div class="media-right"><img src="/ShopOnline/resources/images/products/img-03.jpg" alt=""></div>
+                                                                        <div class="media-right"><img src="/ShopOnline/resources//ShopOnline/resources/images/products/img-03.jpg" alt=""></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <br>
-                                                        <a href="#" class="ads"><img alt="" src="/ShopOnline/resources/images/ads/ads-08.jpg" class="img-responsive"></a>
+                                                        <a href="#" class="ads"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-08.jpg" class="img-responsive"></a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -496,8 +496,8 @@
                         <div class="flexslider ma-nivoslider">
                             <div class="ma-loading"></div>
                             <div id="ma-inivoslider-banner7" class="slides">
-                                <img src="/ShopOnline/resources/images/slider/slide-01.jpg" class="dn" alt="" title="#banner7-caption1"  />                           
-                                <img src="/ShopOnline/resources/images/slider/slide-02.jpg" class="dn" alt="" title="#banner7-caption2"  />
+                                <img src="/ShopOnline/resources//ShopOnline/resources/images/slider/slide-01.jpg" class="dn" alt="" title="#banner7-caption1"  />                           
+                                <img src="/ShopOnline/resources//ShopOnline/resources/images/slider/slide-02.jpg" class="dn" alt="" title="#banner7-caption2"  />
                             </div>
                             <div id="banner7-caption1" class="banner7-caption nivo-html-caption nivo-caption">
                                 <div class="timethai"></div>
@@ -518,7 +518,7 @@
                                             </div>
                                         </div>
                                     </div>																								
-                                    <img class="img1" src="/ShopOnline/resources/images/slider/img-04.png" alt="" />																				
+                                    <img class="img1" src="/ShopOnline/resources//ShopOnline/resources/images/slider/img-04.png" alt="" />																				
                                 </div>
                             </div>						
                             <div id="banner7-caption2" class="banner7-caption nivo-html-caption nivo-caption">
@@ -534,7 +534,7 @@
                                             <h2>50% off</h2>
                                         </div>
                                     </div>																								
-                                    <img class="img1" src="/ShopOnline/resources/images/slider/img-05.png" alt="" />																					
+                                    <img class="img1" src="/ShopOnline/resources//ShopOnline/resources/images/slider/img-05.png" alt="" />																					
                                 </div>
                             </div>
                         </div><!-- /.flexslider -->
@@ -542,7 +542,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-3">
-                        <div class="banner-left"><a href="#"><img src="/ShopOnline/resources/images/ads/ads-01.jpg" alt=""></a>
+                        <div class="banner-left"><a href="#"><img src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-01.jpg" alt=""></a>
                             <div class="banner-content">
                                 <h1>sale up to</h1>
                                 <h2>20% off</h2>
@@ -552,11 +552,11 @@
                         </div>
                     </div>
                     <div class="col-sm-5">
-                        <div class="banner banner-double"><a href="#"><img alt="" src="/ShopOnline/resources/images/ads/ads-02.jpg"></a></div>
-                        <div class="banner banner-double"><a href="#"><img alt="" src="/ShopOnline/resources/images/ads/ads-03.jpg"></a></div>
+                        <div class="banner banner-double"><a href="#"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-02.jpg"></a></div>
+                        <div class="banner banner-double"><a href="#"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-03.jpg"></a></div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="banner"><a href="#"><img alt="" src="/ShopOnline/resources/images/ads/ads-04.jpg"></a></div>
+                        <div class="banner"><a href="#"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-04.jpg"></a></div>
                     </div>
                 </div><!-- /advertisement -->
                 <div class="row">
@@ -568,7 +568,7 @@
                                     <div class='timer-item item'>
                                         <div class="item-inner">
                                             <div class="images-container">
-                                                <a href="#" title="Fusce aliquam" class="product-image"><img src="/ShopOnline/resources/images/products/1.jpg" alt="Fusce aliquam" /></a>
+                                                <a href="#" title="Fusce aliquam" class="product-image"><img src="/ShopOnline/resources//ShopOnline/resources/images/products/1.jpg" alt="Fusce aliquam" /></a>
                                                 <div class="box-timer">
                                                     <div class="countbox_1 timer-grid"></div>
                                                 </div>
@@ -597,7 +597,7 @@
                                     <div class='timer-item item'>
                                         <div class="item-inner">
                                             <div class="images-container">
-                                                <a href="#" title="Quisque in arcu" class="product-image"><img src="/ShopOnline/resources/images/products/2.jpg" alt="Quisque in arcu" /></a>
+                                                <a href="#" title="Quisque in arcu" class="product-image"><img src="/ShopOnline/resources//ShopOnline/resources/images/products/2.jpg" alt="Quisque in arcu" /></a>
                                                 <div class="box-timer">
                                                     <div class="countbox_2 timer-grid"></div>
                                                 </div>
@@ -626,7 +626,7 @@
                                     <div class='timer-item item'>
                                         <div class="item-inner">
                                             <div class="images-container">
-                                                <a href="#" title="pleasure rationally" class="product-image"><img src="/ShopOnline/resources/images/products/20.jpg" alt="pleasure rationally" /></a>
+                                                <a href="#" title="pleasure rationally" class="product-image"><img src="/ShopOnline/resources//ShopOnline/resources/images/products/20.jpg" alt="pleasure rationally" /></a>
                                                 <div class="box-timer">
                                                     <div class="countbox_3 timer-grid"></div>
                                                 </div>
@@ -661,7 +661,7 @@
                                         <div class="item-inner first">
                                             <div class="images-container">
                                                 <a href="#" title="Primis in faucibus" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/15.jpg" alt="Primis in faucibus" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/15.jpg" alt="Primis in faucibus" />
                                                 </a>
                                             </div>
                                             <div class="des-container">
@@ -685,7 +685,7 @@
                                         <div class="item-inner">
                                             <div class="images-container">
                                                 <a href="#" title="Accumsan elit " class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/14.jpg" alt="Accumsan elit " />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/14.jpg" alt="Accumsan elit " />
                                                 </a>
                                             </div>
                                             <div class="des-container">
@@ -709,7 +709,7 @@
                                         <div class="item-inner">
                                             <div class="images-container">
                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/5.jpg" alt="Nunc facilisis" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/5.jpg" alt="Nunc facilisis" />
                                                 </a>
                                             </div>
                                             <div class="des-container">
@@ -733,8 +733,8 @@
                                         <div class="item-inner last">
                                             <div class="images-container">
                                                 <a href="#" title="Fusce aliquam" class="product-image">
-                                                    <img src="/resources//ShopOnline/resources/images/products/8.jpg" alt="Fusce aliquam" />
-                                                    <!--<img src="<c:url value="/ShopOnline/resources/images/products/8.jpg"/>">-->
+                                                    <img src="/resources//ShopOnline/resources//ShopOnline/resources/images/products/8.jpg" alt="Fusce aliquam" />
+                                                    <!--<img src="<c:url value="/ShopOnline/resources//ShopOnline/resources/images/products/8.jpg"/>">-->
                                                 </a>
                                             </div>
                                             <div class="des-container">
@@ -760,7 +760,7 @@
                                         <div class="item-inner first">
                                             <div class="images-container">
                                                 <a href="h#" title="consequences" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/9.jpg" alt="consequences" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/9.jpg" alt="consequences" />
                                                 </a>
                                             </div>
                                             <div class="des-container">
@@ -784,7 +784,7 @@
                                         <div class="item-inner">
                                             <div class="images-container">
                                                 <a href="#" title="Cras neque metus" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/12.jpg" alt="Cras neque metus" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/12.jpg" alt="Cras neque metus" />
                                                 </a>
                                             </div>
                                             <div class="des-container">
@@ -808,7 +808,7 @@
                                         <div class="item-inner ">
                                             <div class="images-container">
                                                 <a href="#" title="Etiam gravida" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/4.jpg" alt="Etiam gravida" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/4.jpg" alt="Etiam gravida" />
                                                 </a>
                                             </div>
                                             <div class="des-container">
@@ -833,7 +833,7 @@
                                         <div class="item-inner last">
                                             <div class="images-container">
                                                 <a href="#" title="Donec non est" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/9.jpg" alt="Donec non est" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/9.jpg" alt="Donec non est" />
                                                 </a>
                                             </div>
                                             <div class="des-container">
@@ -860,7 +860,7 @@
                                         <div class="item-inner first">
                                             <div class="images-container">
                                                 <a href="#" title="pleasure rationally" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/10.jpg" alt="pleasure rationally" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/10.jpg" alt="pleasure rationally" />
                                                 </a>
                                             </div>
                                             <div class="des-container">
@@ -885,7 +885,7 @@
                                         <div class="item-inner ">
                                             <div class="images-container">
                                                 <a href="#" title="Aliquam consequat" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/5.jpg" alt="Aliquam consequat" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/5.jpg" alt="Aliquam consequat" />
                                                 </a>
                                             </div>
                                             <div class="des-container">
@@ -909,7 +909,7 @@
                                         <div class="item-inner ">
                                             <div class="images-container">
                                                 <a href="#" title=" Donec ac tempus " class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/11.jpg" alt=" Donec ac tempus " />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/11.jpg" alt=" Donec ac tempus " />
                                                 </a>
                                             </div>
                                             <div class="des-container">
@@ -933,7 +933,7 @@
                                         <div class="item-inner last">
                                             <div class="images-container">
                                                 <a href="#" title="occaecati cupiditate" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/6.jpg" alt="occaecati cupiditate" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/6.jpg" alt="occaecati cupiditate" />
                                                 </a>
                                             </div>
                                             <div class="des-container">
@@ -965,7 +965,7 @@
                                     <div>
                                         <div class="item-inner">
                                             <div class="images-container">
-                                                <a href="#"> <img alt="" src="/ShopOnline/resources/images/blog/blog-01.jpg" /> </a>
+                                                <a href="#"> <img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/blog/blog-01.jpg" /> </a>
                                             </div>
                                             <div class="des-container">
                                                 <div class="date-comments">
@@ -981,7 +981,7 @@
                                     <div>
                                         <div class="item-inner">
                                             <div class="images-container">
-                                                <a href="#"> <img alt="" src="/ShopOnline/resources/images/blog/blog-02.jpg" /> </a>
+                                                <a href="#"> <img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/blog/blog-02.jpg" /> </a>
                                             </div>
                                             <div class="des-container">
                                                 <div class="date-comments">
@@ -997,7 +997,7 @@
                                     <div>
                                         <div class="item-inner">
                                             <div class="images-container">
-                                                <a href="#"> <img alt="" src="/ShopOnline/resources/images/blog/blog-01.jpg" /> </a>
+                                                <a href="#"> <img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/blog/blog-01.jpg" /> </a>
                                             </div>
                                             <div class="des-container">
                                                 <div class="date-comments">
@@ -1024,7 +1024,7 @@
                                             </div>
                                             <div class="post-by">
                                                 <div class="testimonial-content-avatar">
-                                                    <img src="/ShopOnline/resources/images/avatar/avatar-01.jpg" alt="test" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/avatar/avatar-01.jpg" alt="test" />
                                                 </div>
                                                 <div class="box-author">
                                                     <span class="testimonial-author">Mr rooney</span>
@@ -1040,7 +1040,7 @@
                                             </div>
                                             <div class="post-by">
                                                 <div class="testimonial-content-avatar">
-                                                    <img src="/ShopOnline/resources/images/avatar/avatar-02.jpg" alt="test" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/avatar/avatar-02.jpg" alt="test" />
                                                 </div>
                                                 <div class="box-author">
                                                     <span class="testimonial-author">Robert Carlo</span>
@@ -1056,7 +1056,7 @@
                                             </div>
                                             <div class="post-by">
                                                 <div class="testimonial-content-avatar">
-                                                    <img src="/ShopOnline/resources/images/avatar/avatar-03.jpg" alt="test" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/avatar/avatar-03.jpg" alt="test" />
                                                 </div>
                                                 <div class="box-author">
                                                     <span class="testimonial-author">mr Lee</span>
@@ -1122,7 +1122,7 @@
                                                                                     <div class='new-icon'><span>new</span></div>
                                                                                 </div>
                                                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                                                    <img src="/ShopOnline/resources/images/products/3.jpg" alt="Nunc facilisis" />
+                                                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/3.jpg" alt="Nunc facilisis" />
                                                                                 </a>
                                                                                 <div class="box-hover">
                                                                                     <ul class="add-to-links">
@@ -1161,7 +1161,7 @@
                                                                                     <div class='new-icon'><span>new</span></div>
                                                                                 </div>
                                                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                                                    <img src="/ShopOnline/resources/images/products/21.jpg" alt="Nunc facilisis" />
+                                                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/21.jpg" alt="Nunc facilisis" />
                                                                                 </a>
                                                                                 <div class="box-hover">
                                                                                     <ul class="add-to-links">
@@ -1200,7 +1200,7 @@
                                                                                     <div class='new-icon'><span>new</span></div>
                                                                                 </div>
                                                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                                                    <img src="/ShopOnline/resources/images/products/6.jpg" alt="Nunc facilisis" />
+                                                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/6.jpg" alt="Nunc facilisis" />
                                                                                 </a>
                                                                                 <div class="box-hover">
                                                                                     <ul class="add-to-links">
@@ -1239,7 +1239,7 @@
                                                                                     <div class='new-icon'><span>new</span></div>
                                                                                 </div>
                                                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                                                    <img src="/ShopOnline/resources/images/products/10.jpg" alt="Nunc facilisis" />
+                                                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/10.jpg" alt="Nunc facilisis" />
                                                                                 </a>
                                                                                 <div class="box-hover">
                                                                                     <ul class="add-to-links">
@@ -1278,7 +1278,7 @@
                                                                                     <div class='new-icon'><span>new</span></div>
                                                                                 </div>
                                                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                                                    <img src="/ShopOnline/resources/images/products/14.jpg" alt="Nunc facilisis" />
+                                                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/14.jpg" alt="Nunc facilisis" />
                                                                                 </a>
                                                                                 <div class="box-hover">
                                                                                     <ul class="add-to-links">
@@ -1317,7 +1317,7 @@
                                                                                     <div class='new-icon'><span>new</span></div>
                                                                                 </div>
                                                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                                                    <img src="/ShopOnline/resources/images/products/20.jpg" alt="Nunc facilisis" />
+                                                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/20.jpg" alt="Nunc facilisis" />
                                                                                 </a>
                                                                                 <div class="box-hover">
                                                                                     <ul class="add-to-links">
@@ -1353,7 +1353,7 @@
                             </div>
                         </div><!-- /.featuredproductslider-container -->
                         <div class="banner">
-                            <a href="#"><img alt="" src="/ShopOnline/resources/images/ads/ads-05.jpg"></a>
+                            <a href="#"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-05.jpg"></a>
                         </div>
                         <div class="newproductslider-container"> 
                             <div class="title-group1"><h2>New Arrivals</h2></div>
@@ -1367,7 +1367,7 @@
                                                     <div class="sale-icon"><span>sale</span></div>
                                                 </div>
                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/1.jpg" alt="Nunc facilisis" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/1.jpg" alt="Nunc facilisis" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -1407,7 +1407,7 @@
                                                     <div class="sale-icon"><span>sale</span></div>
                                                 </div>
                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/2.jpg" alt="Nunc facilisis" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/2.jpg" alt="Nunc facilisis" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -1447,7 +1447,7 @@
                                                     <div class="sale-icon"><span>sale</span></div>
                                                 </div>
                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/3.jpg" alt="Nunc facilisis" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/3.jpg" alt="Nunc facilisis" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -1487,7 +1487,7 @@
                                                     <div class="sale-icon"><span>sale</span></div>
                                                 </div>
                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/4.jpg" alt="Nunc facilisis" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/4.jpg" alt="Nunc facilisis" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -1527,7 +1527,7 @@
                                                     <div class="sale-icon"><span>sale</span></div>
                                                 </div>
                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/5.jpg" alt="Nunc facilisis" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/5.jpg" alt="Nunc facilisis" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -1566,7 +1566,7 @@
                                                     <div class='new-icon'><span>new</span></div>
                                                 </div>
                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/6.jpg" alt="Nunc facilisis" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/6.jpg" alt="Nunc facilisis" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -1605,7 +1605,7 @@
                                                     <div class='new-icon'><span>new</span></div>
                                                 </div>
                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources/images/products/7.jpg" alt="Nunc facilisis" />
+                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/7.jpg" alt="Nunc facilisis" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -1643,12 +1643,12 @@
                         <div class="row">
                             <div class="col-smc-7">
                                 <div class="banner">
-                                    <a href="#"><img alt="" src="/ShopOnline/resources/images/ads/ads-06.jpg"></a>
+                                    <a href="#"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-06.jpg"></a>
                                 </div>
                             </div>
                             <div class="col-smc-5">
                                 <div class="banner">
-                                    <a href="#"><img alt="" src="/ShopOnline/resources/images/ads/ads-07.jpg"></a>
+                                    <a href="#"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-07.jpg"></a>
                                 </div>
                             </div>
                         </div>
@@ -1658,7 +1658,7 @@
                                 <div class="product-list">
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources/images/products/21.jpg"></a>
+                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/21.jpg"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">Accumsan elit </a></h2>
@@ -1680,7 +1680,7 @@
                                     </div>
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources/images/products/20.jpg"></a>
+                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/20.jpg"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">Accumsan elit </a></h2>
@@ -1702,7 +1702,7 @@
                                     </div>
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources/images/products/19.jpg"></a>
+                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/19.jpg"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">Accumsan elit </a></h2>
@@ -1729,7 +1729,7 @@
                                 <div class="product-list">
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources/images/products/18.jpg"></a>
+                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/18.jpg"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">Demonstraverunt lectores</a></h2>
@@ -1751,7 +1751,7 @@
                                     </div>
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources/images/products/17.jpg"></a>
+                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/17.jpg"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">Demonstraverunt lectores</a></h2>
@@ -1773,7 +1773,7 @@
                                     </div>
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources/images/products/16.jpg"></a>
+                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/16.jpg"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">Demonstraverunt lectores</a></h2>
@@ -1800,7 +1800,7 @@
                                 <div class="product-list">
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources/images/products/15.jpg"></a>
+                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/15.jpg"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">Accumsan elit </a></h2>
@@ -1822,7 +1822,7 @@
                                     </div>
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources/images/products/14.jpg"></a>
+                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/14.jpg"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">Accumsan elit </a></h2>
@@ -1844,7 +1844,7 @@
                                     </div>
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources/images/products/13.jpg"></a>
+                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/13.jpg"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">Accumsan elit </a></h2>
@@ -1880,7 +1880,7 @@
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources/images/products/img-05.jpg"></a>
+                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources//ShopOnline/resources/images/products/img-05.jpg"></a>
                                 </div>
                             </div>
                             <div class="col-xs-6">
@@ -1901,7 +1901,7 @@
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources/images/products/img-06.jpg"></a>
+                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources//ShopOnline/resources/images/products/img-06.jpg"></a>
                                 </div>
                             </div>
                             <div class="col-xs-6">
@@ -1922,7 +1922,7 @@
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources/images/products/img-07.jpg"></a>
+                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources//ShopOnline/resources/images/products/img-07.jpg"></a>
                                 </div>
                             </div>
                             <div class="col-xs-6">
@@ -1943,7 +1943,7 @@
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources/images/products/img-08.jpg"></a>
+                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources//ShopOnline/resources/images/products/img-08.jpg"></a>
                                 </div>
                             </div>
                             <div class="col-xs-6">
@@ -1971,32 +1971,32 @@
                     <div class="owl">
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="/ShopOnline/resources/images/brand/logo_brand5.png" alt="" /></a>
+                                <a href="#" title=""><img src="/ShopOnline/resources//ShopOnline/resources/images/brand/logo_brand5.png" alt="" /></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="/ShopOnline/resources/images/brand/logo_brand4.png" alt="" /></a>
+                                <a href="#" title=""><img src="/ShopOnline/resources//ShopOnline/resources/images/brand/logo_brand4.png" alt="" /></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="/ShopOnline/resources/images/brand/logo_brand3.png" alt="" /></a>
+                                <a href="#" title=""><img src="/ShopOnline/resources//ShopOnline/resources/images/brand/logo_brand3.png" alt="" /></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="/ShopOnline/resources/images/brand/logo_brand2.png" alt="" /></a>
+                                <a href="#" title=""><img src="/ShopOnline/resources//ShopOnline/resources/images/brand/logo_brand2.png" alt="" /></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="/ShopOnline/resources/images/brand/logo_brand1.png" alt="" /></a>
+                                <a href="#" title=""><img src="/ShopOnline/resources//ShopOnline/resources/images/brand/logo_brand1.png" alt="" /></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="/ShopOnline/resources/images/brand/logo_brand3.png" alt="" /></a>
+                                <a href="#" title=""><img src="/ShopOnline/resources//ShopOnline/resources/images/brand/logo_brand3.png" alt="" /></a>
                             </div>
                         </div>
                     </div>
@@ -2104,7 +2104,7 @@
                             <div class="copy">Copyright &copy; 2015 Plazathemes. All Rights Reserved</div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="payment"><img src="/ShopOnline/resources/images/payment.png" alt="" class="img-responsive"></div>
+                            <div class="payment"><img src="/ShopOnline/resources//ShopOnline/resources/images/payment.png" alt="" class="img-responsive"></div>
                         </div>
                     </div>
                 </div>

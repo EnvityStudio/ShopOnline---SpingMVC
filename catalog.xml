@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="http://localhost:8080/ShopOnlineServices/Product?wsdl" uri="src/conf/xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineServices/Product.wsdl"/>
-    <system systemId="http://localhost:8080/ShopOnlineServices/Product?xsd=1" uri="src/conf/xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineServices/Product.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/ShopOnlineServices/BrandServices?wsdl" uri="src/conf/xml-resources/web-service-references/BrandServices/wsdl/localhost_8080/ShopOnlineServices/BrandServices.wsdl"/>
     <system systemId="http://localhost:8080/ShopOnlineServices/BrandServices?xsd=1" uri="src/conf/xml-resources/web-service-references/BrandServices/wsdl/localhost_8080/ShopOnlineServices/BrandServices.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ShopOnlineServices/Product?wsdl" uri="src/conf/xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineServices/Product.wsdl"/>
+    <system systemId="http://localhost:8080/ShopOnlineServices/Product?xsd=1" uri="src/conf/xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineServices/Product.xsd_1.xsd"/>
 </catalog>

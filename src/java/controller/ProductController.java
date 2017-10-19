@@ -43,6 +43,15 @@ public class ProductController {
          return "forward:/home/grid.html";
     }
     
+    @RequestMapping(value = "/bestSeller" , method = RequestMethod.GET)
+    public String getBestSeller(ModelMap mm){
+        String stringProducts = ProductController.bestSeller();
+        List<Product> list = GsonUtil.newInstance().gson().fromJson(stringProducts, new TypeToken<List<Product>>() {
+        }.getType());
+            mm.addAttribute("allproduct", list);
+        return "best_seller";
+    }
+    
     private static String productDetail_1(int idproduct) {
         product.Product service = new product.Product();
         product.ProductService port = service.getProductServicePort();
@@ -53,6 +62,12 @@ public class ProductController {
         product.Product service = new product.Product();
         product.ProductService port = service.getProductServicePort();
         return port.filterbrand(idbrand);
+    }
+
+    private static String bestSeller() {
+        product.Product service = new product.Product();
+        product.ProductService port = service.getProductServicePort();
+        return port.bestSeller();
     }
     
     

@@ -10,6 +10,12 @@
 <message name="searchResponse">
 <part name="parameters" element="tns:searchResponse"/>
 </message>
+<message name="bestSeller">
+<part name="parameters" element="tns:bestSeller"/>
+</message>
+<message name="bestSellerResponse">
+<part name="parameters" element="tns:bestSellerResponse"/>
+</message>
 <message name="hello">
 <part name="parameters" element="tns:hello"/>
 </message>
@@ -45,6 +51,10 @@
 <input wsam:Action="http://product/ProductService/searchRequest" message="tns:search"/>
 <output wsam:Action="http://product/ProductService/searchResponse" message="tns:searchResponse"/>
 </operation>
+<operation name="bestSeller">
+<input wsam:Action="http://product/ProductService/bestSellerRequest" message="tns:bestSeller"/>
+<output wsam:Action="http://product/ProductService/bestSellerResponse" message="tns:bestSellerResponse"/>
+</operation>
 <operation name="hello">
 <input wsam:Action="http://product/ProductService/helloRequest" message="tns:hello"/>
 <output wsam:Action="http://product/ProductService/helloResponse" message="tns:helloResponse"/>
@@ -69,6 +79,15 @@
 <binding name="ProductServicePortBinding" type="tns:ProductService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
 <operation name="search">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="bestSeller">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

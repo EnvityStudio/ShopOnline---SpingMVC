@@ -419,8 +419,8 @@
                         <div class="col-md-9">
                             <ul class="menu clearfix visible-lg visible-md">
                                 <li><a href="/ShopOnline/home/index.html">Home</a></li>
-                                <li><a href="/ShopOnline/product/bestSeller.html">Best seller</a></li>
-                                <li class="active"><a href="#">Product</a></li>
+                                <li class="active"><a href="#">Best seller</a></li>
+                                <li><a href="/ShopOnline/home/grid.html">Product</a></li>
                             </ul>
                         </div>
                     </div>
@@ -486,7 +486,7 @@
             <div class="container">
                 <ul class="breadcrumb">
                     <li><a href="#">Home</a></li>
-                    <li class="active">Product Grid</li>
+                    <li class="active">Best seller</li>
                	</ul>
             </div>
         </div>
@@ -855,7 +855,7 @@
                             <a href="#"><img alt="" src="/ShopOnline/resources/images/ads/ads-17.jpg"></a>
                         </div>
                         <div class="page-title">
-                            <h1>PRODUCT GRID</h1>
+                            <h1>BEST SELLER</h1>
                         </div>
                         <div class="toolbar">
                             <div class="sorter">

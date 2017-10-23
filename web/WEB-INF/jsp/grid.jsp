@@ -133,11 +133,12 @@
                             <form class="form-search" action="/ShopOnline/search/.html">
                                 <input type="text" class="input-text" name="product" id="search" placeholder="Search products..." value="${key}">
                                 <div class="dropdown" id="category-search">
-                                    <button type="button" class="btn" data-toggle="dropdown" value="0">All brand <span class="fa fa-angle-down"></span></button>
+                                    <input type="hidden" name="idbrand" id="idbrand2" value="${idbrand}">
+                                    <button type="button" class="btn" data-toggle="dropdown" value="0">${namebrand}<span class="fa fa-angle-down"></span></button>
                                     <ul class="dropdown-menu dropdown-menu-right">
-                                        <li value="0"><a href="#">All brand</a></li>
+                                        <li data-value="0"><a href="#">All brand</a></li>
                                         <c:forEach items="${allbrand}" var="brand">
-                                            <li value="${brand.getIdbrand()}"><a href="#">${brand.getName()}</a></li>
+                                            <li data-value="${brand.getIdbrand()}"><a href="#">${brand.getName()}</a></li>
                                         </c:forEach>
                                     </ul>
                                 </div>
@@ -420,7 +421,7 @@
                             <ul class="menu clearfix visible-lg visible-md">
                                 <li><a href="/ShopOnline/home/index.html">Home</a></li>
                                 <li><a href="/ShopOnline/product/bestSeller.html">Best seller</a></li>
-                                <li class="active"><a href="#">Product</a></li>
+                                <li class="active"><a href="/ShopOnline/home/grid.html">Product</a></li>
                             </ul>
                         </div>
                     </div>

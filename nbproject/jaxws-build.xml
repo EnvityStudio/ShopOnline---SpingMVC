@@ -28,8 +28,8 @@
     </target>
     <target name="wsimport-client-Product" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/Product"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Product" destdir="${build.generated.dir}/jax-wsCache/Product" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineServices/Product.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ShopOnlineServices/Product?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineServices/Product.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Product" destdir="${build.generated.dir}/jax-wsCache/Product" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineService/Product.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ShopOnlineService/Product?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineService/Product.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/Product"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
@@ -44,8 +44,8 @@
     </target>
     <target name="wsimport-client-BrandServices" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/BrandServices"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/BrandServices" destdir="${build.generated.dir}/jax-wsCache/BrandServices" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/BrandServices/wsdl/localhost_8080/ShopOnlineServices/BrandServices.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ShopOnlineServices/BrandServices?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/BrandServices/wsdl/localhost_8080/ShopOnlineServices/BrandServices.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/BrandServices" destdir="${build.generated.dir}/jax-wsCache/BrandServices" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/BrandServices/wsdl/localhost_8080/ShopOnlineService/BrandServices.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ShopOnlineService/BrandServices?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/BrandServices/wsdl/localhost_8080/ShopOnlineService/BrandServices.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/BrandServices"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">

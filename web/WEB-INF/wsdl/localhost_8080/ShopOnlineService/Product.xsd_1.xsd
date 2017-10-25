@@ -50,6 +50,16 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="products">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="productsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="filterprice">
 <xs:sequence>
 <xs:element name="first_price" type="xs:string" minOccurs="0"/>
@@ -58,16 +68,6 @@
 </xs:complexType>
 
 <xs:complexType name="filterpriceResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="products">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="productsResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>

@@ -92,16 +92,26 @@ public class HomeController {
     }
     
 
+ 
+
+    private static String filterprice(java.lang.String firstPrice, java.lang.String lastPrice) {
+        product.Product service = new product.Product();
+        product.ProductService port = service.getProductServicePort();
+        return port.filterprice(firstPrice, lastPrice);
+    }
+
+ 
+
     private static String products() {
         product.Product service = new product.Product();
         product.ProductService port = service.getProductServicePort();
         return port.products();
     }
 
-    private static String filterprice(java.lang.String firstPrice, java.lang.String lastPrice) {
-        product.Product service = new product.Product();
-        product.ProductService port = service.getProductServicePort();
-        return port.filterprice(firstPrice, lastPrice);
+    private static String brands() {
+        brand.BrandServices_Service service = new brand.BrandServices_Service();
+        brand.BrandServices port = service.getBrandServicesPort();
+        return port.brands();
     }
 
     private static String filterbrand(int idbrand) {
@@ -110,9 +120,9 @@ public class HomeController {
         return port.filterbrand(idbrand);
     }
 
-    private static String brands() {
-        brand.BrandServices_Service service = new brand.BrandServices_Service();
-        brand.BrandServices port = service.getBrandServicesPort();
-        return port.brands();
-    }
+   
+
+  
+
+    
 }

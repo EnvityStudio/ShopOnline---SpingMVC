@@ -6,6 +6,8 @@
 package model;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -13,6 +15,7 @@ import java.math.BigDecimal;
  */
 public class Product {
 
+    
     private int id;
     private String name;
     private int state;
@@ -25,7 +28,7 @@ public class Product {
     private int idBrand;
     private int quantity;
     private BigDecimal price;
-
+    
     public Product() {
     }
 
@@ -139,5 +142,8 @@ public class Product {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+
+   
+  
 
 }

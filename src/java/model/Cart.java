@@ -8,6 +8,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 import model.ItemCart;
+import model.Product;
 
 /**
  *
@@ -16,6 +17,7 @@ import model.ItemCart;
 public class Cart {
 
     List<ItemCart> listItem = new ArrayList<ItemCart>();
+    
 
     public void addItem(int id, String name, int amount, double price, String image) {
         Boolean check = false;
@@ -78,5 +80,4 @@ public class Cart {
     {
         return listItem;
     }
-
 }

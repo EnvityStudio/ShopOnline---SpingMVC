@@ -5,13 +5,20 @@
  */
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author thuan
  */
 public class ItemCart {
 public ItemCart()
-{}
+{
+super();}
+    Product product = new Product();
+
+    
     public int getId() {
         return id;
     }
@@ -57,7 +64,14 @@ public ItemCart()
     private double price;
     private String image;
     
-   
+   public ItemCart(int id,String name,int amount,double price,String image)
+   {
+       this.id=id;
+       this.name=name;
+       this.amount=amount;
+       this.price = price;
+       this.image=image;
+   }
 
 
     public double getTotal()
@@ -65,5 +79,23 @@ public ItemCart()
     return amount*price;
     }
     
-    
+    public Product getProduct()
+    {
+        return product;
+    }
+    public void setProduct(Product product)
+    {
+        this.product = product;
+    }
+     List<ItemCart> listItem = new ArrayList<ItemCart>();
+     public double getTotalCart()
+    {
+        double total =0;
+        for (ItemCart i: listItem)
+        {
+            total +=i.getTotal();
+        }
+        return total;
+        
+    }
 }

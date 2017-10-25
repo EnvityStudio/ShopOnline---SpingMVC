@@ -5,6 +5,16 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="controller.CartController"%>
+<%@page import="model.Cart"%>
+<%@page import="model.ItemCart"%>
+<%@page import="model.Product"%>
+<%@page import="model.Brand"%>
+<%@page import="controller.HomeController" %>
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -35,29 +45,17 @@
 
         <!-- Font Awesome CSS -->
         <link href="<c:url value="/resources/css/font-awesome.min.css" />" rel="stylesheet">
-              <!-- Bootstrap CSS -->
-              <!--<link href="../resource/css/bootstrap.min.css" rel="stylesheet">-->
-              <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
-              <!-- Nivo Slider CSS -->
-              <!--<link href="../resource/css/nivo-slider.css" rel="stylesheet">-->
-              <link href="<c:url value="/resources/css/nivo-slider.css"/>" rel="stylesheet">
-              <!-- Animate CSS -->
-              <!--<link href="../resource/css/animate.css" rel="stylesheet">-->
-              <link href="<c:url value="/resources/css/animate.css" />" rel="stylesheet">
-              <!-- Owl Carousel CSS -->
-              <!--<link href="../resource/css/owl.carousel.css" rel="stylesheet">-->
-              <link href="<c:url value="/resources/css/owl.carousel.css" />" rel="stylesheet">
-              <!-- Main Style CSS -->
-              <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
-              <!--<link href="../web/resource/css/style.css" rel="stylesheet">-->
-              <!-- Boxed Style CSS -->
-              <!--<link href="../resource/css/style-boxed.css" rel="stylesheet">-->
-              <link href="<c:url value="/resources/css/style-boxed.css" />" rel="stylesheet">
-              <!-- Responsive CSS -->
-              <!--<link href="../resource/css/responsive.css" rel="stylesheet">-->
-              <link href="<c:url value="/resources/css/responsive.css" />" rel="stylesheet">
-              <!--[if lt IE 9]>
-                <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<!-- Bootstrap CSS -->
+		 <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+		<!-- Animate CSS -->
+		   <link href="<c:url value="/resources/css/animate.css" />" rel="stylesheet">
+      <!-- Owl Carousel CSS -->
+	  <link href="<c:url value="/resources/css/owl.carousel.css" />" rel="stylesheet">
+      	<!-- Main Style CSS -->
+	   <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
+        <!-- Responsive CSS -->
+        <link href="<c:url value="/resources/css/responsive.css" />" rel="stylesheet">
+             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
               <![endif]-->
     </head>
@@ -91,14 +89,39 @@
                                         <th>Grandtotal</th>
                                     </tr>
                                 </thead>
+                                
+                                <%
+                                     double totalMoney=0;
+                                  List<ItemCart> cart =  (List<ItemCart>)(session.getAttribute("cart"));;
+                                            if(cart!=null)
+                                             {
+                                            for(int i=0;i<cart.size();i++)
+                                                 {
+                                                     totalMoney += cart.get(i).getTotal();
+                                                 }
+                                           
+                                             }
+                                     %>
+                                     
+                                        <%
+                                            
+                                            if(cart!=null)
+                                             {
+                                             List<ItemCart> list=( List<ItemCart>)session.getAttribute("cart");
+                                             %>
+                                            
+                                            <%
+                                              for (ItemCart item:list)
+                                              {
+                                                  %>
                                 <tbody>
                                     <tr>
-                                        <td class="text-center"><a class="btn-remove" href="#"><span class="fa fa-trash-o"></span></a></td>
+                                        <td class="text-center"><a class="btn-remove" href="<c:url value="/cart/delete/${item.getId()}.html"/>"><span class="fa fa-trash-o"></span></a></td>
                                         <td><a class="product-image" title="Primis in faucibus" href="#">
-                                                <img alt="Primis in faucibus" src="images/products/12.jpg">
+                                                <img alt="Primis in faucibus" src="<%=item.getImage()%>">
                                             </a></td>
                                         <td>
-                                            <a href="#">Et harum quidem rerum</a>
+                                            <a href="#"><%=item.getName()%></a>
                                             <div class="text-muted">Size: 42<br>
                                                 Color: Red</div>
                                         </td>
@@ -108,16 +131,18 @@
                                                 <span class="input-group-btn">
                                                     <button class="btn" type="button">-</button>
                                                 </span>
-                                                <input type="text" class="form-control" value="3">
+                                                <input type="text" class="form-control" value="<%=item.getAmount()%>">
                                                 <span class="input-group-btn">
                                                     <button class="btn" type="button">+</button>
                                                 </span>
                                             </div><!-- /input-group -->
                                         </td>
-                                        <td class="subtotal">$250.00</td>
-                                        <td class="grandtotal">$250.00</td>
+                                        <td class="subtotal"><%=item.getTotal()%></td>
+                                        <td class="grandtotal"><%=item.getTotal()%></td>
                                     </tr>
                                 </tbody>
+                                   <%}
+                                                %>  <%}%>
                             </table>
                         </div>
                         <div class="text-right">
@@ -164,11 +189,11 @@
                                 <table class="table table-cart-total">
                                     <tr>
                                         <td>Subtotal:</td>
-                                        <td class="text-right">$250.00</td>
+                                        <td class="text-right"><%=totalMoney%></td>
                                     </tr>
                                     <tr>
                                         <td>Grandtotal:</td>
-                                        <td class="text-right">$250.00</td>
+                                        <td class="text-right"><%=totalMoney%></td>
                                     </tr>
                                 </table>
                                 <div class="text-right">
@@ -336,13 +361,64 @@
         </div><!-- /.footer -->
 
         <!-- Jquery Js -->
-        <script src="js/jquery-1.11.3.min.js"></script>
+     <script src="<c:url value="/resources/js/jquery-1.11.3.min.js"/>"></script>
         <!-- Bootstrap Js -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
         <!-- Owl Carousel Js -->
-        <script src="js/owl.carousel.min.js"></script>
+        <script src="<c:url value="/resources/js/owl.carousel.min.js"/>"></script>
+        <!-- Jquery ui Js -->
+        <script src="<c:url value="js/jquery-ui.min.js"/>"></script>
         <!-- Custom Js -->
-        <script src="js/custom.js"></script>
+                
+        <script src="<c:url value="/resources/js/dropdown.js"/>"></script>
+        <script src="<c:url value="/resources/js/custom.js"/>"></script>
+
+        <script type="text/javascript">
+
+                                        /* slider price */
+                                        var currencies = "$";
+                                        var toolbar_status = "1";
+                                        var rate = "1";
+                                        var min = "99"
+                                                min = Number(min);
+                                        var max = "999"
+                                                max = Number(max);
+                                        var currentMinPrice = "99"
+                                                currentMinPrice = Number(currentMinPrice);
+                                        var currentMaxPrice = "999"
+                                                //alert('min: '+min+'--max: '+ max+ 'currentMin: '+currentMinPrice);
+                                                currentMaxPrice = Number(currentMaxPrice);
+                                        var params = "";
+                                        params = $.trim(params);
+                                        //slider
+                                        $("#slider-range").slider({
+                                        range: true,
+                                                min: min,
+                                                max: max,
+                                                values: [currentMinPrice, currentMaxPrice],
+                                                slide: function (event, ui) {
+                                                $("#amount").val(currencies + ui.values[ 0 ] + " - " + currencies + ui.values[ 1 ]);
+                                                $('input[name="first_price"]').val(ui.values[0]);
+                                                $('input[name="last_price"]').val(ui.values[1]);
+                                                },
+                                                stop: function (event, ui) {
+                                                }
+                                        });
+                                        $("#amount").val(currencies + $("#slider-range").slider("values", 0) +
+                                                " - " + currencies + $("#slider-range").slider("values", 1));
+                                        $('input[name="first_price"]').val($("#slider-range").slider("values", 0));
+                                        $('input[name="last_price"]').val($("#slider-range").slider("values", 1));
+                                        //search price from input box
+                                        $('#search_price').each(function () {
+                                        $(this).live('click', function () {
+
+                                        return false;
+                                        })
+                                        });
+                                        $('#slider-range a:first').addClass('first_item');
+                                        $('#slider-range a:last').addClass('last_item');
+                                        });
+        </script>
     </body>
 </html>
 

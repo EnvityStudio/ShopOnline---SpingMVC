@@ -49,6 +49,10 @@ public class ProductController {
         List<Product> list = GsonUtil.newInstance().gson().fromJson(stringProducts, new TypeToken<List<Product>>() {
         }.getType());
             mm.addAttribute("allproduct", list);
+             String stringBrands = ProductController.brands();
+        List<Brand> listBrands = GsonUtil.newInstance().gson().fromJson(stringBrands, new TypeToken<List<Brand>>() {
+        }.getType());
+       mm.addAttribute("allbrand", listBrands);
         return "best_seller";
     }
     
@@ -68,6 +72,12 @@ public class ProductController {
         product.Product service = new product.Product();
         product.ProductService port = service.getProductServicePort();
         return port.bestSeller();
+    }
+
+    private static String brands() {
+        brand.BrandServices_Service service = new brand.BrandServices_Service();
+        brand.BrandServices port = service.getBrandServicesPort();
+        return port.brands();
     }
     
     

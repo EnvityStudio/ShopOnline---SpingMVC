@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.portlet.ModelAndView;
 import util.GsonUtil;
 
 /**
@@ -43,8 +44,7 @@ public class CartController {
 @SuppressWarnings("unchecked")
     @RequestMapping(value = "/add/{id}", method = RequestMethod.GET)
     public String add(@PathVariable(value = "id") int id, HttpSession session, ModelMap mm) {
-        System.out.println("thuan");
-        System.out.println("abc " + id);
+     
          String stringProducts = CartController.products();
         List<Product> list = GsonUtil.newInstance().gson().fromJson(stringProducts, new TypeToken<List<Product>>() {
         }.getType());
@@ -88,7 +88,7 @@ public class CartController {
             }
             session.setAttribute("cart", cart);
         }
-        return "cart";
+      return "cart";
 
     }
 

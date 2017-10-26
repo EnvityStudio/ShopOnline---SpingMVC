@@ -29,7 +29,12 @@ public class HomeController {
     
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index(ModelMap mm){
-        return "index";
+        
+         String stringBrands = HomeController.brands();
+        List<Brand> listBrands = GsonUtil.newInstance().gson().fromJson(stringBrands, new TypeToken<List<Brand>>() {
+        }.getType());
+       mm.addAttribute("allbrand", listBrands);
+       return "index";
     }
     
     @RequestMapping(value = "/grid", method = RequestMethod.GET)
@@ -44,7 +49,7 @@ public class HomeController {
         mm.addAttribute("allbrand", listBrands);
         return "grid";
     }
-    @RequestMapping (value ="/",method=RequestMethod.GET)
+    @RequestMapping (value ="/brand",method=RequestMethod.GET)
     public String brand(ModelMap mm)
     {
         String stringBrands = HomeController.brands();

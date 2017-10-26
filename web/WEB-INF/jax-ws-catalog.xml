@@ -8,4 +8,6 @@
     <system systemId="http://localhost:8080/ShopOnlineService/Product?xsd=1" uri="wsdl/localhost_8080/ShopOnlineService/Product.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/ShopOnlineService/BrandServices?wsdl" uri="wsdl/localhost_8080/ShopOnlineService/BrandServices.wsdl"/>
     <system systemId="http://localhost:8080/ShopOnlineService/BrandServices?xsd=1" uri="wsdl/localhost_8080/ShopOnlineService/BrandServices.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ShopOnlineService/CategoryServices?wsdl" uri="wsdl/localhost_8080/ShopOnlineService/CategoryServices.wsdl"/>
+    <system systemId="http://localhost:8080/ShopOnlineService/CategoryServices?xsd=1" uri="wsdl/localhost_8080/ShopOnlineService/CategoryServices.xsd_1.xsd"/>
 </catalog>

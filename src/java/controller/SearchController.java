@@ -48,7 +48,7 @@ public class SearchController {
         
         mm.addAttribute("namebrand",namebrand);
         mm.addAttribute("idbrand",idbrand);
-        return "grid";
+        return "product";
     }
 
     private static String search_1(java.lang.String key, int idbrand) {

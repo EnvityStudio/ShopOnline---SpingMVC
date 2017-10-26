@@ -58,5 +58,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/brand"/>
         <delete dir="${build.generated.dir}/jax-wsCache/BrandServices"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-Product, wsimport-client-BrandServices"/>
+    <target name="wsimport-client-CategoryServices" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CategoryServices"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CategoryServices" destdir="${build.generated.dir}/jax-wsCache/CategoryServices" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/CategoryServices/wsdl/localhost_8080/ShopOnlineService/CategoryServices.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ShopOnlineService/CategoryServices?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/CategoryServices/wsdl/localhost_8080/ShopOnlineService/CategoryServices.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CategoryServices"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CategoryServices">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CategoryServices" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/category"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/CategoryServices"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-Product, wsimport-client-BrandServices, wsimport-client-CategoryServices"/>
 </project>

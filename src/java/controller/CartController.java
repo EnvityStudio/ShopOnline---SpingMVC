@@ -5,6 +5,7 @@
  */
 package controller;
 
+import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import util.GsonUtil;
 
 /**
  *
@@ -30,11 +32,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CartController {
 
     @RequestMapping(value = "/cart", method = RequestMethod.GET)
-    public String cart(HttpServletRequest request, ModelMap mm) {
-        HttpSession session = request.getSession(true);
-        Cart cart = (Cart) (session.getAttribute("cart"));
+    public String cart(HttpSession session, ModelMap mm) {
+     
         List<ItemCart> listItemCart = (List<ItemCart>) session.getAttribute("cart");
-        if (cart != null) {
+        if (session.getAttribute("cart")!=null) {
             mm.addAttribute("listItemCart", listItemCart);
         }
         return "cart";
@@ -44,24 +45,43 @@ public class CartController {
     public String add(@PathVariable(value = "id") int id, HttpSession session, ModelMap mm) {
         System.out.println("thuan");
         System.out.println("abc " + id);
-
+         String stringProducts = CartController.products();
+        List<Product> list = GsonUtil.newInstance().gson().fromJson(stringProducts, new TypeToken<List<Product>>() {
+        }.getType());
+           Product product = new Product();
+           
         if (session.getAttribute("cart") == null) {
             List<ItemCart> cart = new ArrayList<ItemCart>();
+            for (int i=0;i<list.size();i++)
+            {
+                if(list.get(i).getId()==id)
+                {
+                      ItemCart item = new ItemCart(list.get(i).getId(), list.get(i).getName(),1, list.get(i).getPrice().doubleValue(), list.get(i).getImage1());
+                cart.add(item);
+                session.setAttribute("cart", cart);
 
-            Product product = new Product();
-            ItemCart item = new ItemCart(product.getId(), "samsung", 1, 10000, "/ShopOnline/resources/images/products/samsung-galaxy-j7-pro.png");
-            cart.add(item);
-            session.setAttribute("cart", cart);
-
+                }
+            }
+         
+          
         } else {
             int index = isExisting(id, session);
             System.out.println("index " +index);
             List<ItemCart> cart = (List<ItemCart>) session.getAttribute("cart");
             if (index == -1) {
 
-                Product product = new Product();
-                ItemCart item = new ItemCart(product.getId(), "thuan", 1, 10000, "/ShopOnline/resources/images/products/samsung-galaxy-j7-pro.png");
+             
+                for (int i=0;i<list.size();i++)
+            {
+                if(list.get(i).getId()==id)
+                {
+                      ItemCart item = new ItemCart(list.get(i).getId(), list.get(i).getName(),1, list.get(i).getPrice().doubleValue(), list.get(i).getImage1());
                 cart.add(item);
+                session.setAttribute("cart", cart);
+
+                }
+            }
+         
             } else {
                 int quantity = cart.get(index).getAmount() + 1;
                 cart.get(index).setAmount(quantity);
@@ -89,18 +109,21 @@ public class CartController {
         List<ItemCart> cart = (List<ItemCart>)session.getAttribute("cart");
         int a =-1;
         for (int i = 0; i < cart.size(); i++) {
-            System.out.println("size " +cart.size());
-            
-            System.out.println("cart.get(i)" +cart.get(i).getId() );
-          /*  if (cart.get(i).getProduct().getId() == id) {
+            if (cart.get(i).getId() == id) {
                 System.out.println("i " +i);
                 a=i;
             }
-*/
+
         }
       return a;
 
        
+    }
+
+    private static String products() {
+        product.Product service = new product.Product();
+        product.ProductService port = service.getProductServicePort();
+        return port.products();
     }
 
 }

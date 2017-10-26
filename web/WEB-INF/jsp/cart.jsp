@@ -116,7 +116,7 @@
                                                   %>
                                 <tbody>
                                     <tr>
-                                        <td class="text-center"><a class="btn-remove" href="<c:url value="/cart/delete/${item.getId()}.html"/>"><span class="fa fa-trash-o"></span></a></td>
+                                        <td class="text-center"><a class="btn-remove" href="/ShopOnline/cart/delete/<%=item.getId()%>.html"><span class="fa fa-trash-o"></span></a></td>
                                         <td><a class="product-image" title="Primis in faucibus" href="#">
                                                 <img alt="Primis in faucibus" src="<%=item.getImage()%>">
                                             </a></td>

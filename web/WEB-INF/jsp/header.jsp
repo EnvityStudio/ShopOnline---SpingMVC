@@ -136,12 +136,13 @@
                                             <%
                                               for (ItemCart item:list)
                                               {
+                                                  System.out.println("item cart: " + item.getId());
                                                   %>
                                             <div class="media">
                                                 <div class="media-left"><a href="#"><img src="<%=item.getImage()%>" class="img-responsive" alt=""></a></div>
                                                 <div class="media-body">
                                                   
-                                                    <a href="<c:url value="/cart/delete/${item.getId()}.html"/>"><button type="button" class="remove-cart-item" >&times;</button></a>
+                                                    <a href= "/ShopOnline/cart/delete/<%=item.getId()%>.html"><button type="button" class="remove-cart-item" >&times;</button></a>
                                                     <h4><%=item.getName()%></h4>
                                                     <div class="mini-cart-qty"><%=item.getAmount()%></div>
                                                     <div class="mini-cart-price"><%=item.getPrice()%></div>

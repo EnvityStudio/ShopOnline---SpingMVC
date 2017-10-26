@@ -6,6 +6,8 @@
 package model;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -13,6 +15,7 @@ import java.math.BigDecimal;
  */
 public class Product {
 
+    
     private int id;
     private String name;
     private int state;
@@ -42,6 +45,8 @@ public class Product {
         this.price = price;
         this.oldPrice = oldPrice;
     }
+    
+
     public Product() {
     }
 
@@ -164,5 +169,8 @@ public class Product {
         this.oldPrice = oldPrice;
     }
     
+
+   
+  
 
 }

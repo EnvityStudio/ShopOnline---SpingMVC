@@ -3,7 +3,18 @@
     Created on : Oct 25, 2017, 9:33:37 AM
     Author     : thuan
 --%>
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!doctype html>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="controller.CartController"%>
+<%@page import="model.Cart"%>
+<%@page import="model.ItemCart"%>
+<%@page import="model.Product"%>
+<%@page import="model.Brand"%>
+<%@page import="controller.HomeController" %>
         <div class="header">
             <div class="topbar">
                 <div class="container">
@@ -93,41 +104,63 @@
                                 </div>
                                 <button type="submit" class="btn btn-danger"><span class="fa fa-search"></span></button>
                             </form>
+                                     <%
+                                     double totalMoney=0;
+                                     List<ItemCart> cart =  (List<ItemCart>)(session.getAttribute("cart"));
+                                            if(cart!=null)
+                                             {
+                                                 for(int i=0;i<cart.size();i++)
+                                                 {
+                                                     totalMoney += cart.get(i).getTotal();
+                                                 }
+                                           
+                                             }
+                                     %>
+                                          
                             <div class="mini-cart">
                                 <div class="top-cart-title">
+                                      
                                     <a href="cart.html" class="dropdown-toggle" data-toggle="dropdown">
                                         your cart
-                                        <span class="price">$45.00</span>
+                                        <span class="price">$<%=totalMoney%></span>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <div class="cart-listing">
+                                               <%
+                                            
+                                            if(cart!=null)
+                                             {
+                                             List<ItemCart> list= (List<ItemCart>)(session.getAttribute("cart"));
+                                             %>
+                                            
+                                            <%
+                                              for (ItemCart item:list)
+                                              {
+                                                  System.out.println("item cart: " + item.getId());
+                                                  %>
                                             <div class="media">
-                                                <div class="media-left"><a href="#"><img src="/ShopOnline/resources/images/products/11.jpg" class="img-responsive" alt=""></a></div>
+                                                <div class="media-left"><a href="#"><img src="<%=item.getImage()%>" class="img-responsive" alt=""></a></div>
                                                 <div class="media-body">
-                                                    <button type="button" class="remove-cart-item" >&times;</button>
-                                                    <h4>Accumsan elit</h4>
-                                                    <div class="mini-cart-qty">Qty:2</div>
-                                                    <div class="mini-cart-price">$ 64.00</div>
+                                                  
+                                                    <a href= "/ShopOnline/cart/delete/<%=item.getId()%>.html"><button type="button" class="remove-cart-item" >&times;</button></a>
+                                                    <h4><%=item.getName()%></h4>
+                                                    <div class="mini-cart-qty"><%=item.getAmount()%></div>
+                                                    <div class="mini-cart-price"><%=item.getPrice()%></div>
                                                 </div>
                                             </div>
-                                            <div class="media">
-                                                <div class="media-left"><a href="#"><img src="/ShopOnline/resources/images/products/13.jpg" class="img-responsive" alt=""></a></div>
-                                                <div class="media-body">
-                                                    <button type="button" class="remove-cart-item" >&times;</button>
-                                                    <h4>Accumsan elit</h4>
-                                                    <div class="mini-cart-qty">Qty:2</div>
-                                                    <div class="mini-cart-price">$ 64.00</div>
-                                                </div>
-                                            </div>
+                                                <%}
+                                                %>  <%}%>
+                                        
                                         </div><!-- /.cart-listing -->
-                                        <div class="mini-cart-subtotal">Shipping: <span class="price">$5.00</span></div>
-                                        <div class="mini-cart-subtotal">Total: <span class="price">$200.00</span></div>
+                                        <div class="mini-cart-subtotal">Shipping: <span class="price">$0.00</span></div>
+                                        <div class="mini-cart-subtotal">Total: <span class="price"><%=totalMoney%></span></div>
                                         <div class="checkout-btn">
-                                            <a href="#" class="btn btn-default btn-md fwb">CHECK OUT</a>
+                                            <a href="/ShopOnline/cart/cart.html" class="btn btn-default btn-md fwb">CHECK OUT</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                          
                         </div>
                     </div>
                     <div class="row">

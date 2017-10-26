@@ -97,9 +97,18 @@ public class HomeController {
         String stringBrands = HomeController.brands();
         List<Brand> listBrands = GsonUtil.newInstance().gson().fromJson(stringBrands, new TypeToken<List<Brand>>() {
         }.getType());
-        mm.addAttribute("allproduct", list);
+       mm.addAttribute("allproduct", list);
         mm.addAttribute("allbrand", listBrands);
         return "product";
+    }
+    @RequestMapping (value ="/",method=RequestMethod.GET)
+    public String brand(ModelMap mm)
+    {
+        String stringBrands = HomeController.brands();
+        List<Brand> listBrands = GsonUtil.newInstance().gson().fromJson(stringBrands, new TypeToken<List<Brand>>() {
+        }.getType());
+       mm.addAttribute("allbrand", listBrands);
+        return "header";
     }
 
     @RequestMapping(value = "/price", method = RequestMethod.POST)

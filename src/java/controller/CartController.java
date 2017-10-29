@@ -43,12 +43,11 @@ public class CartController {
     }
 @SuppressWarnings("unchecked")
     @RequestMapping(value = "/add/{id}", method = RequestMethod.GET)
-    public String add(@PathVariable(value = "id") int id, HttpSession session, ModelMap mm) {
+    public String add(@PathVariable(value = "id") int id, HttpSession session, ModelMap mm,HttpServletRequest request) {
      
          String stringProducts = CartController.products();
         List<Product> list = GsonUtil.newInstance().gson().fromJson(stringProducts, new TypeToken<List<Product>>() {
         }.getType());
-           Product product = new Product();
            
         if (session.getAttribute("cart") == null) {
             List<ItemCart> cart = new ArrayList<ItemCart>();
@@ -88,8 +87,9 @@ public class CartController {
             }
             session.setAttribute("cart", cart);
         }
-      return "cart";
-
+        System.out.println("request" +request.getQueryString());
+      //  return request.getRequestURL().toString() + "?" + request.getQueryString();
+return "redirect:/home/grid.html";
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
@@ -99,7 +99,7 @@ public class CartController {
         int index = isExisting(id, session);
         cart.remove(index);
         session.setAttribute("cart", cart);
-        return "cart";
+        return "redirect:/home/grid.html";
     }
 
    

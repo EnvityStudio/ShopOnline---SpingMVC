@@ -28,7 +28,25 @@ public class Product {
     private int idBrand;
     private int quantity;
     private BigDecimal price;
+    private BigDecimal oldPrice;
+
+    public Product(int id, String name, int state, int special, String image1, String image2, String shortDescription, String description, int idCategory, int idBrand, int quantity, BigDecimal price, BigDecimal oldPrice) {
+        this.id = id;
+        this.name = name;
+        this.state = state;
+        this.special = special;
+        this.image1 = image1;
+        this.image2 = image2;
+        this.shortDescription = shortDescription;
+        this.description = description;
+        this.idCategory = idCategory;
+        this.idBrand = idBrand;
+        this.quantity = quantity;
+        this.price = price;
+        this.oldPrice = oldPrice;
+    }
     
+
     public Product() {
     }
 
@@ -142,6 +160,15 @@ public class Product {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+    
+    public BigDecimal getOldPrice() {
+        return oldPrice;
+    }
+
+    public void setOldPrice(BigDecimal oldPrice) {
+        this.oldPrice = oldPrice;
+    }
+    
 
    
   

@@ -15,6 +15,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import util.GsonUtil;
 
 /**
@@ -38,9 +39,9 @@ public class ProductController {
         return "detail";
     }
 
-    @RequestMapping(value = "/grid" ,method = RequestMethod.GET)
-    public String grid(){
-         return "forward:/home/grid.html";
+    @RequestMapping(value = "/product" ,method = RequestMethod.GET)
+    public String product(@RequestParam("idCategory") String idCategory){
+         return "forward:/home/product.html";
     }
     
     @RequestMapping(value = "/bestSeller" , method = RequestMethod.GET)

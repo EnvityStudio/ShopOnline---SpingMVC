@@ -55,7 +55,7 @@
     <body>
     <body>
 
-   <jsp:include page="header.jsp" /> 
+        <jsp:include page="header.jsp" /> 
         <div class="breadcrumbs">
             <div class="container">
                 <ul class="breadcrumb">
@@ -80,7 +80,7 @@
                                         <h2>Brand</h2>
                                         <div class="content-shopby">
                                             <ol>
-                                                <li> <a href="<c:url value="/home/grid.html" />" >All</a></li>
+                                                <li> <a href="<c:url value="/home/product.html" />" >All</a></li>
                                                     <c:forEach items="${allbrand}" var="brand">
                                                     <li> <a href="<c:url value="/home/brand/${brand.getIdbrand()}.html" />" >${brand.getName()}</a></li>
                                                     </c:forEach>
@@ -791,63 +791,64 @@
         </div><!-- /.footer -->
 
         <!-- Jquery Js -->
-        <script src="<c:url value="/resources/js/jquery-1.11.3.min.js"/>"></script>
+        <script src="<c:url value="/resources/js/jquery.min.js"/>"></script>
         <!-- Bootstrap Js -->
         <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
         <!-- Owl Carousel Js -->
         <script src="<c:url value="/resources/js/owl.carousel.min.js"/>"></script>
         <!-- Jquery ui Js -->
-        <script src="<c:url value="js/jquery-ui.min.js"/>"></script>
+        <script src="<c:url value="/resources/js/jquery-ui.min.js"/>"></script>
         <!-- Custom Js -->
-                
+
         <script src="<c:url value="/resources/js/dropdown.js"/>"></script>
         <script src="<c:url value="/resources/js/custom.js"/>"></script>
+        <script src="<c:url value="/resources/js/activeMenu.js"/>"></script>
 
         <script type="text/javascript">
 
-                                        /* slider price */
-                                        var currencies = "$";
-                                        var toolbar_status = "1";
-                                        var rate = "1";
-                                        var min = "99"
-                                                min = Number(min);
-                                        var max = "999"
-                                                max = Number(max);
-                                        var currentMinPrice = "99"
-                                                currentMinPrice = Number(currentMinPrice);
-                                        var currentMaxPrice = "999"
-                                                //alert('min: '+min+'--max: '+ max+ 'currentMin: '+currentMinPrice);
-                                                currentMaxPrice = Number(currentMaxPrice);
-                                        var params = "";
-                                        params = $.trim(params);
-                                        //slider
-                                        $("#slider-range").slider({
-                                        range: true,
-                                                min: min,
-                                                max: max,
-                                                values: [currentMinPrice, currentMaxPrice],
-                                                slide: function (event, ui) {
-                                                $("#amount").val(currencies + ui.values[ 0 ] + " - " + currencies + ui.values[ 1 ]);
-                                                $('input[name="first_price"]').val(ui.values[0]);
-                                                $('input[name="last_price"]').val(ui.values[1]);
-                                                },
-                                                stop: function (event, ui) {
-                                                }
-                                        });
-                                        $("#amount").val(currencies + $("#slider-range").slider("values", 0) +
-                                                " - " + currencies + $("#slider-range").slider("values", 1));
-                                        $('input[name="first_price"]').val($("#slider-range").slider("values", 0));
-                                        $('input[name="last_price"]').val($("#slider-range").slider("values", 1));
-                                        //search price from input box
-                                        $('#search_price').each(function () {
-                                        $(this).live('click', function () {
+            /* slider price */
+            var currencies = "$";
+            var toolbar_status = "1";
+            var rate = "1";
+            var min = "99"
+                    min = Number(min);
+            var max = "999"
+                    max = Number(max);
+            var currentMinPrice = "99"
+                    currentMinPrice = Number(currentMinPrice);
+            var currentMaxPrice = "999"
+                    //alert('min: '+min+'--max: '+ max+ 'currentMin: '+currentMinPrice);
+                    currentMaxPrice = Number(currentMaxPrice);
+            var params = "";
+            params = $.trim(params);
+            //slider
+            $("#slider-range").slider({
+            range: true,
+                    min: min,
+                    max: max,
+                    values: [currentMinPrice, currentMaxPrice],
+                    slide: function (event, ui) {
+                    $("#amount").val(currencies + ui.values[ 0 ] + " - " + currencies + ui.values[ 1 ]);
+                    $('input[name="first_price"]').val(ui.values[0]);
+                    $('input[name="last_price"]').val(ui.values[1]);
+                    },
+                    stop: function (event, ui) {
+                    }
+            });
+            $("#amount").val(currencies + $("#slider-range").slider("values", 0) +
+                    " - " + currencies + $("#slider-range").slider("values", 1));
+            $('input[name="first_price"]').val($("#slider-range").slider("values", 0));
+            $('input[name="last_price"]').val($("#slider-range").slider("values", 1));
+            //search price from input box
+            $('#search_price').each(function () {
+            $(this).live('click', function () {
 
-                                        return false;
-                                        })
-                                        });
-                                        $('#slider-range a:first').addClass('first_item');
-                                        $('#slider-range a:last').addClass('last_item');
-                                        });
+            return false;
+            })
+            });
+            $('#slider-range a:first').addClass('first_item');
+            $('#slider-range a:last').addClass('last_item');
+            });
         </script>
     </body>
 </html>

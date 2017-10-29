@@ -43,9 +43,13 @@ public class CartController {
     }
 @SuppressWarnings("unchecked")
     @RequestMapping(value = "/add/{id}", method = RequestMethod.GET)
-    public String add(@PathVariable(value = "id") int id, HttpSession session, ModelMap mm,HttpServletRequest request) {
-     
-         String stringProducts = CartController.products();
+
+
+    public String add(@PathVariable(value = "id") int id, HttpSession session, ModelMap mm) {
+        System.out.println("thuan");
+        System.out.println("abc " + id);
+         String stringProducts = CartController.products(null);
+
         List<Product> list = GsonUtil.newInstance().gson().fromJson(stringProducts, new TypeToken<List<Product>>() {
         }.getType());
            
@@ -87,9 +91,11 @@ public class CartController {
             }
             session.setAttribute("cart", cart);
         }
-        System.out.println("request" +request.getQueryString());
-      //  return request.getRequestURL().toString() + "?" + request.getQueryString();
-return "redirect:/home/grid.html";
+
+
+        return "redirect:/home/product.html";
+
+
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
@@ -99,7 +105,9 @@ return "redirect:/home/grid.html";
         int index = isExisting(id, session);
         cart.remove(index);
         session.setAttribute("cart", cart);
-        return "redirect:/home/grid.html";
+
+        return "redirect:/home/product.html";
+
     }
 
    
@@ -120,10 +128,16 @@ return "redirect:/home/grid.html";
        
     }
 
-    private static String products() {
+    private static String products(java.lang.String idCategory) {
         product.Product service = new product.Product();
         product.ProductService port = service.getProductServicePort();
-        return port.products();
+        return port.products(idCategory);
     }
+
+    
+
+    
+
+    
 
 }

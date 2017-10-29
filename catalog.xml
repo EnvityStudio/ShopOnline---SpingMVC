@@ -4,8 +4,10 @@
     <system systemId="http://localhost:8080/ShopOnlineServices/BrandServices?xsd=1" uri="src/conf/xml-resources/web-service-references/BrandServices/wsdl/localhost_8080/ShopOnlineServices/BrandServices.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/ShopOnlineServices/Product?wsdl" uri="src/conf/xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineServices/Product.wsdl"/>
     <system systemId="http://localhost:8080/ShopOnlineServices/Product?xsd=1" uri="src/conf/xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineServices/Product.xsd_1.xsd"/>
-    <system systemId="http://localhost:8080/ShopOnlineService/Product?wsdl" uri="src/conf/xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineService/Product.wsdl"/>
-    <system systemId="http://localhost:8080/ShopOnlineService/Product?xsd=1" uri="src/conf/xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineService/Product.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/ShopOnlineService/BrandServices?wsdl" uri="src/conf/xml-resources/web-service-references/BrandServices/wsdl/localhost_8080/ShopOnlineService/BrandServices.wsdl"/>
     <system systemId="http://localhost:8080/ShopOnlineService/BrandServices?xsd=1" uri="src/conf/xml-resources/web-service-references/BrandServices/wsdl/localhost_8080/ShopOnlineService/BrandServices.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ShopOnlineService/CategoryServices?wsdl" uri="src/conf/xml-resources/web-service-references/CategoryServices/wsdl/localhost_8080/ShopOnlineService/CategoryServices.wsdl"/>
+    <system systemId="http://localhost:8080/ShopOnlineService/CategoryServices?xsd=1" uri="src/conf/xml-resources/web-service-references/CategoryServices/wsdl/localhost_8080/ShopOnlineService/CategoryServices.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ShopOnlineService/Product?wsdl" uri="src/conf/xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineService/Product.wsdl"/>
+    <system systemId="http://localhost:8080/ShopOnlineService/Product?xsd=1" uri="src/conf/xml-resources/web-service-references/Product/wsdl/localhost_8080/ShopOnlineService/Product.xsd_1.xsd"/>
 </catalog>

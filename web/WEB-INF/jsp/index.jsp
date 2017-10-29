@@ -4,7 +4,7 @@
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html class="no-js" lang="en">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -34,34 +34,223 @@
         <!-- Font Awesome CSS -->
         <link href="<c:url value="/resources/css/font-awesome.min.css" />" rel="stylesheet">
         <!-- Bootstrap CSS -->
-        <!--<link href="../resource/css/bootstrap.min.css" rel="stylesheet">-->
         <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
         <!-- Nivo Slider CSS -->
-        <!--<link href="../resource/css/nivo-slider.css" rel="stylesheet">-->
         <link href="<c:url value="/resources/css/nivo-slider.css" />" rel="stylesheet">
         <!-- Animate CSS -->
-        <!--<link href="../resource/css/animate.css" rel="stylesheet">-->
         <link href="<c:url value="/resources/css/animate.css" />" rel="stylesheet">
         <!-- Owl Carousel CSS -->
-        <!--<link href="../resource/css/owl.carousel.css" rel="stylesheet">-->
         <link href="<c:url value="/resources/css/owl.carousel.css" />" rel="stylesheet">
         <!-- Main Style CSS -->
         <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
-        <!--<link href="../web/resource/css/style.css" rel="stylesheet">-->
         <!-- Boxed Style CSS -->
-        <!--<link href="../resource/css/style-boxed.css" rel="stylesheet">-->
         <link href="<c:url value="/resources/css/style-boxed.css" />" rel="stylesheet">
         <!-- Responsive CSS -->
-        <!--<link href="../resource/css/responsive.css" rel="stylesheet">-->
         <link href="<c:url value="/resources/css/responsive.css" />" rel="stylesheet">
-
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
     </head>
     <body>
- <jsp:include page="header.jsp" /> 
+        <div class="header">
+            <div class="container">
+                <div class="topbar">
+                    <div class="topbar-left">
+                        <ul class="topbar-nav clearfix">
+                            <li><span class="phone">0(123) 456 789</span></li>
+                            <li><span class="email">info@plazathemes.com</span></li>
+                        </ul>
+                    </div>
+                    <div class="topbar-right">
+                        <ul class="topbar-nav clearfix">
+                            <li><a href="#" class="login">Login</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="account dropdown-toggle" data-toggle="dropdown">My Account</a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a title="My Account" href="account.html">My Account</a></li>
+                                    <li><a title="My Wishlist" href="wishlist.html">My Wishlist</a></li>
+                                    <li><a title="My Cart" href="cart.html">My Cart</a></li>
+                                    <li><a title="Checkout" href="checkout.html">Checkout</a></li>
+                                    <li><a title="Testimonial" href="testimonial.html">Testimonial</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="currency dropdown-toggle" data-toggle="dropdown">USD</a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="#">Euro</a></li>
+                                    <li><a href="#">US Dollar</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="language dropdown-toggle" data-toggle="dropdown"><img src="images/flag-us.png" alt=""> English</a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="#"><img src="images/flag-us.png" alt=""> &nbsp;English</a></li>
+                                    <li><a href="#"><img src="images/flag-spain.png" alt=""> &nbsp;Spanish</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- /.topbar -->
+                <div class="header-bottom">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="support-client">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="box-container time">
+                                            <div class="box-inner">
+                                                <h2>working time</h2>
+                                                <p>Mon- Sun: 8.00 - 18.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="box-container free-shipping">
+                                            <div class="box-inner">
+                                                <h2>Free shipping</h2>
+                                                <p>On order over $199</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="box-container money-back">
+                                            <div class="box-inner">
+                                                <h2>Money back 100%</h2>
+                                                <p>Within 30 Days after delivery</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.support-client -->
+                            <form class="form-search">
+                                <input type="text" class="input-text" name="q" id="search" placeholder="Search products...">
+                                <div class="dropdown">
+                                    <button type="button" class="btn" data-toggle="dropdown">All category <span class="fa fa-angle-down"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">Computer</a></li>
+                                        <li><a href="#">Camera</a></li>
+                                        <li><a href="#">Smart Phone</a></li>
+                                        <li><a href="#">Electronic</a></li>
+                                    </ul>
+                                </div>
+                                <button type="submit" class="btn btn-danger"><span class="fa fa-search"></span></button>
+                            </form>
+                            <div class="mini-cart">
+                                <div class="top-cart-title">
+                                    <a href="cart.html" class="dropdown-toggle" data-toggle="dropdown">
+                                        your cart
+                                        <span class="price">$45.00</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <div class="cart-listing">
+                                            <div class="media">
+                                                <div class="media-left"><a href="#"><img src="images/products/11.jpg" class="img-responsive" alt=""></a></div>
+                                                <div class="media-body">
+                                                    <button type="button" class="remove-cart-item" >&times;</button>
+                                                    <h4>Accumsan elit</h4>
+                                                    <div class="mini-cart-qty">Qty:2</div>
+                                                    <div class="mini-cart-price">$ 64.00</div>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class="media-left"><a href="#"><img src="images/products/13.jpg" class="img-responsive" alt=""></a></div>
+                                                <div class="media-body">
+                                                    <button type="button" class="remove-cart-item" >&times;</button>
+                                                    <h4>Accumsan elit</h4>
+                                                    <div class="mini-cart-qty">Qty:2</div>
+                                                    <div class="mini-cart-price">$ 64.00</div>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.cart-listing -->
+                                        <div class="mini-cart-subtotal">Shipping: <span class="price">$5.00</span></div>
+                                        <div class="mini-cart-subtotal">Total: <span class="price">$200.00</span></div>
+                                        <div class="checkout-btn">
+                                            <a href="#" class="btn btn-default btn-md fwb">CHECK OUT</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="mega-container visible-lg visible-md">
+                                <div class="navleft-container">
+                                    <div class="mega-menu-title"><h3>Category</h3></div>
+                                    <div class="mega-menu-category">
+                                        <ul class="nav">
+                                            <c:forEach var="category" items="${allCategories}">
+                                                <li class="nosub"><a href="./product?idCategory=${category.idCategory}">${category.nameCategory}</a></li>
+                                                </c:forEach>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <ul class="menu clearfix visible-lg visible-md">
+                                <li class="active" id="index"><a href="../home/index">Home</a></li>
+                                <li id="bestSeller"><a href="../product/bestSeller">Best Seller</a></li>
+                                <li id="product"><a href="../home/product">Product</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-primary navbar-static-top hidden-lg hidden-md">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <h2 class="navbar-brand visible-xs">Menu</h2>
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Computer <span class="fa fa-angle-down"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Desktop PC</a></li>
+                                        <li><a href="#">Notebook</a></li>
+                                        <li><a href="#">Gaming</a></li>
+                                        <li><a href="#">Mouse &amp; Keyboard</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Camera <span class="fa fa-angle-down"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Walkera</a></li>
+                                        <li><a href="#">Fpv System &amp; Parts</a></li>
+                                        <li><a href="#">RC Cars &amp; Parts</a></li>
+                                        <li><a href="#">Helicopters &amp; Part</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Smart Phone <span class="fa fa-angle-down"></span></a>									<ul class="dropdown-menu">
+                                        <li><a href="#">Accessories for iPhone</a></li>
+                                        <li><a href="#">Accessories for iPad</a></li>
+                                        <li><a href="#">Accessories for Tablet PC</a></li>
+                                        <li><a href="#">Tablet PC</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Electtronic <span class="fa fa-angle-down"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Batteries &amp; Chargers</a></li>
+                                        <li><a href="#">Headphone, Headset</a></li>
+                                        <li><a href="#">Home Audio</a></li>
+                                        <li><a href="#">Mp3 Player Accessories</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">New Arrivals</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </nav>
+                </div><!-- /.header-bottom -->
+            </div><!-- /.container -->
+        </div><!-- /.header -->
 
         <div class="container">
             <div class="main">
@@ -70,8 +259,8 @@
                         <div class="flexslider ma-nivoslider">
                             <div class="ma-loading"></div>
                             <div id="ma-inivoslider-banner7" class="slides">
-                                <img src="/ShopOnline/resources//ShopOnline/resources/images/slider/slide-01.jpg" class="dn" alt="" title="#banner7-caption1"  />                           
-                                <img src="/ShopOnline/resources//ShopOnline/resources/images/slider/slide-02.jpg" class="dn" alt="" title="#banner7-caption2"  />
+                                <img src="../resources/images/slider/slide-01.jpg" class="dn" alt="" title="#banner7-caption1"  />                           
+                                <img src="../resources/images/slider/slide-02.jpg" class="dn" alt="" title="#banner7-caption2"  />
                             </div>
                             <div id="banner7-caption1" class="banner7-caption nivo-html-caption nivo-caption">
                                 <div class="timethai"></div>
@@ -92,7 +281,7 @@
                                             </div>
                                         </div>
                                     </div>																								
-                                    <img class="img1" src="/ShopOnline/resources//ShopOnline/resources/images/slider/img-04.png" alt="" />																				
+                                    <img class="img1" src="../resources/images/slider/img-04.png" alt="" />																				
                                 </div>
                             </div>						
                             <div id="banner7-caption2" class="banner7-caption nivo-html-caption nivo-caption">
@@ -108,559 +297,115 @@
                                             <h2>50% off</h2>
                                         </div>
                                     </div>																								
-                                    <img class="img1" src="/ShopOnline/resources//ShopOnline/resources/images/slider/img-05.png" alt="" />																					
+                                    <img class="img1" src="../resources/images/slider/img-05.png" alt="" />																					
                                 </div>
                             </div>
                         </div><!-- /.flexslider -->
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="banner-left"><a href="#"><img src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-01.jpg" alt=""></a>
-                            <div class="banner-content">
-                                <h1>sale up to</h1>
-                                <h2>20% off</h2>
-                                <p>on selected products</p>
-                                <a href="#">buy now</a>
+                <div class="row" style="margin-bottom: 30px;">
+                    <div class="col-sm-3 col-left">
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="row">
+                            <div class="col-sm-7 col-sms-12">
+                                <div class="banner banner-double banner-box-1"><a href="#"><img alt="" src="../resources/images/ads/ada_1.jpg"></a></div>
+                                <div class="banner banner-double"><a href="#"><img alt="" src="../resources/images/ads/ads_2.jpg"></a></div>
                             </div>
+                            <div class="col-sm-5 col-sms-12">
+                                <div class="banner banner-box-2"><a href="#"><img alt="" src="../resources/images/ads/ads_3.jpg"></a></div>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="col-sm-5">
-                        <div class="banner banner-double"><a href="#"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-02.jpg"></a></div>
-                        <div class="banner banner-double"><a href="#"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-03.jpg"></a></div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="banner"><a href="#"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-04.jpg"></a></div>
-                    </div>
+
                 </div><!-- /advertisement -->
                 <div class="row">
                     <div class="col-sm-3 col-left">
-                        <div class="timely">
-                            <div class="title-group"><h2>hot deals</h2></div>
-                            <div id="timely-owl" class="owl-container">
-                                <div class="owl">
-                                    <div class='timer-item item'>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <a href="#" title="Fusce aliquam" class="product-image"><img src="/ShopOnline/resources//ShopOnline/resources/images/products/1.jpg" alt="Fusce aliquam" /></a>
-                                                <div class="box-timer">
-                                                    <div class="countbox_1 timer-grid"></div>
-                                                </div>
-                                            </div>
-                                            <div class="content-box">
-                                                <h2 class="product-name"><a href="#" title="Fusce aliquam">Fusce aliquam</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$99.00</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span>
-                                                        <span class="price">$170.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='timer-item item'>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <a href="#" title="Quisque in arcu" class="product-image"><img src="/ShopOnline/resources//ShopOnline/resources/images/products/2.jpg" alt="Quisque in arcu" /></a>
-                                                <div class="box-timer">
-                                                    <div class="countbox_2 timer-grid"></div>
-                                                </div>
-                                            </div>
-                                            <div class="content-box">
-                                                <h2 class="product-name"><a href="#" title="Quisque in arcu">Quisque in arcu</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$699.00</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span>
-                                                        <span class="price">$800.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='timer-item item'>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <a href="#" title="pleasure rationally" class="product-image"><img src="/ShopOnline/resources//ShopOnline/resources/images/products/20.jpg" alt="pleasure rationally" /></a>
-                                                <div class="box-timer">
-                                                    <div class="countbox_3 timer-grid"></div>
-                                                </div>
-                                            </div>
-                                            <div class="content-box">
-                                                <h2 class="product-name"><a href="#" title="pleasure rationally">pleasure rationally</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$222.00</span>
-                                                    </p>
-                                                    <p class="old-price"><span class="price-label">Regular Price: </span><span class="price">$333.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.timely -->
                         <div class="block">
                             <div class="title-group"><h2>Special Offer</h2></div>
                             <div id="special-offer" class="owl-container">
                                 <div class="owl">
+
+
                                     <div class='sepecialoffer-item item'>
-                                        <div class="item-inner first">
-                                            <div class="images-container">
-                                                <a href="#" title="Primis in faucibus" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/15.jpg" alt="Primis in faucibus" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Primis in faucibus">Primis in faucibus</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
+                                        <c:forEach items="${specialOfferProduct1}" var="product">
+                                            <div class="item-inner">
+                                                <div class="images-container">
+                                                    <a href="../product/detail/${product.getId()}" title="Primis in faucibus" class="product-image">
+                                                        <img src="${product.getImage1()}" alt="Primis in faucibus" />
+                                                    </a>
                                                 </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:87%"></div>
+                                                <div class="des-container">
+                                                    <h2 class="product-name"><a href="../product/detail/${product.getId()}" title="Primis in faucibus">${product.getName()}</a></h2>
+                                                    <div class="price-box">
+                                                        <p class="special-price">
+                                                            <span class="price">$<span>${product.getPrice().toString()}</span></span>
+                                                        </p>
+                                                        <p class="old-price">
+                                                            <span class="price">$<span>${product.getOldPrice().toString()}</span></span>
+                                                        </p>
                                                     </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <a href="#" title="Accumsan elit " class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/14.jpg" alt="Accumsan elit " />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Accumsan elit ">Accumsan elit </a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
+                                                    <div class="ratings">
+                                                        <div class="rating-box">
+                                                            <div class="rating" style="width:87%"></div>
+                                                        </div>
+                                                        <span class="amount"><a href="#">1 Review(s)</a></span>
                                                     </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/5.jpg" alt="Nunc facilisis" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Nunc facilisis</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner last">
-                                            <div class="images-container">
-                                                <a href="#" title="Fusce aliquam" class="product-image">
-                                                    <img src="/resources//ShopOnline/resources//ShopOnline/resources/images/products/8.jpg" alt="Fusce aliquam" />
-                                                    <!--<img src="<c:url value="/ShopOnline/resources//ShopOnline/resources/images/products/8.jpg"/>">-->
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Fusce aliquam">Fusce aliquam</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </c:forEach>
                                     </div>
                                     <div class='sepecialoffer-item item'>
-                                        <div class="item-inner first">
-                                            <div class="images-container">
-                                                <a href="h#" title="consequences" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/9.jpg" alt="consequences" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="consequences">consequences</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
+                                        <c:forEach items="${specialOfferProduct2}" var="product">
+                                            <div class="item-inner">
+                                                <div class="images-container">
+                                                    <a href="../product/detail/${product.getId()}" title="Primis in faucibus" class="product-image">
+                                                        <img src="${product.getImage1()}" alt="Primis in faucibus" />
+                                                    </a>
                                                 </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:73%"></div>
+                                                <div class="des-container">
+                                                    <h2 class="product-name"><a href="../product/detail/${product.getId()}" title="Primis in faucibus">${product.getName()}</a></h2>
+                                                    <div class="price-box">
+                                                        <p class="special-price">
+                                                            <span class="price">$<span>${product.getPrice().toString()}</span></span>
+                                                        </p>
+                                                        <p class="old-price">
+                                                            <span class="price">$<span>${product.getOldPrice().toString()}</span></span>
+                                                        </p>
                                                     </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <a href="#" title="Cras neque metus" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/12.jpg" alt="Cras neque metus" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Cras neque metus">Cras neque metus</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
+                                                    <div class="ratings">
+                                                        <div class="rating-box">
+                                                            <div class="rating" style="width:87%"></div>
+                                                        </div>
+                                                        <span class="amount"><a href="#">1 Review(s)</a></span>
                                                     </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="item-inner ">
-                                            <div class="images-container">
-                                                <a href="#" title="Etiam gravida" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/4.jpg" alt="Etiam gravida" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Etiam gravida">Etiam gravida</a></h2>
-                                                <div class="price-box">
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span><span class="price">$432.00</span>
-                                                    </p>
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$321.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner last">
-                                            <div class="images-container">
-                                                <a href="#" title="Donec non est" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/9.jpg" alt="Donec non est" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Donec non est">Donec non est</a></h2>
-                                                <div class="price-box">
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span><span class="price">$721.00</span>
-                                                    </p>
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$631.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:73%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='sepecialoffer-item item'>
-                                        <div class="item-inner first">
-                                            <div class="images-container">
-                                                <a href="#" title="pleasure rationally" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/10.jpg" alt="pleasure rationally" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="pleasure rationally">pleasure rationally</a></h2>
-                                                <div class="price-box">
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span><span class="price">$333.00</span>
-                                                    </p>
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$222.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner ">
-                                            <div class="images-container">
-                                                <a href="#" title="Aliquam consequat" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/5.jpg" alt="Aliquam consequat" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Aliquam consequat">Aliquam consequat</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:60%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner ">
-                                            <div class="images-container">
-                                                <a href="#" title=" Donec ac tempus " class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/11.jpg" alt=" Donec ac tempus " />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title=" Donec ac tempus "> Donec ac tempus </a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:80%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-inner last">
-                                            <div class="images-container">
-                                                <a href="#" title="occaecati cupiditate" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/6.jpg" alt="occaecati cupiditate" />
-                                                </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="occaecati cupiditate">occaecati cupiditate</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </c:forEach>
                                     </div>
                                 </div>
                             </div><!-- /.owl-container -->
                         </div><!-- /.block - Special offer -->
-                        <div class="menu-recent block">
-                            <div class="title-group"><h2>Latest News</h2></div>
-                            <div id="latest-news" class="owl-container">
-                                <div class="owl">
-                                    <div>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <a href="#"> <img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/blog/blog-01.jpg" /> </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <div class="date-comments">
-                                                    <div class="time"><span class="date">August 04, 2015</span></div>
-                                                </div>
-                                                <div class="des">
-                                                    <h4><a href="#" class="title-blog"><span>swimwear for women</span></a></h4> 
-                                                    Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using...
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <a href="#"> <img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/blog/blog-02.jpg" /> </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <div class="date-comments">
-                                                    <div class="time"><span class="date">January 05, 2015</span></div>
-                                                </div>
-                                                <div class="des">
-                                                    <h4><a href="#" class="title-blog"><span>Burberry sport for men</span></a></h4>
-                                                    Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using...
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <a href="#"> <img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/blog/blog-01.jpg" /> </a>
-                                            </div>
-                                            <div class="des-container">
-                                                <div class="date-comments">
-                                                    <div class="time"><span class="date">August 04, 2015</span></div>
-                                                </div>
-                                                <div class="des">
-                                                    <h4><a href="#" class="title-blog"><span>swimwear for women</span></a></h4> 
-                                                    Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using...
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.block - Latest News -->
-                        <div class="block">
-                            <div class="title-group"><h2>Clients Say</h2></div>
-                            <div id="clients-say" class="owl-container">
-                                <div class="owl">
-                                    <div class='testimonial-list'>
-                                        <div class="testimonial-sidebar-content">
-                                            <div class="content">
-                                                <a href="#">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros...</a>
-                                            </div>
-                                            <div class="post-by">
-                                                <div class="testimonial-content-avatar">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/avatar/avatar-01.jpg" alt="test" />
-                                                </div>
-                                                <div class="box-author">
-                                                    <span class="testimonial-author">Mr rooney</span>
-                                                    <span class="testimonial-date">March 24, 2015</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='testimonial-list'>
-                                        <div class="testimonial-sidebar-content">
-                                            <div class="content">
-                                                <a href="#">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et...</a>
-                                            </div>
-                                            <div class="post-by">
-                                                <div class="testimonial-content-avatar">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/avatar/avatar-02.jpg" alt="test" />
-                                                </div>
-                                                <div class="box-author">
-                                                    <span class="testimonial-author">Robert Carlo</span>
-                                                    <span class="testimonial-date">January 30, 2015</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='testimonial-list'>
-                                        <div class="testimonial-sidebar-content">
-                                            <div class="content">
-                                                <a href="#">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et... </a>
-                                            </div>
-                                            <div class="post-by">
-                                                <div class="testimonial-content-avatar">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/avatar/avatar-03.jpg" alt="test" />
-                                                </div>
-                                                <div class="box-author">
-                                                    <span class="testimonial-author">mr Lee</span>
-                                                    <span class="testimonial-date">January 30, 2015</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.block - Latest News -->
                     </div><!-- /.col-left -->
                     <div class="col-sm-9 col-right">
                         <div class="featuredproductslider-container"> 
                             <div class="title-group1"><h2>Featured</h2></div>
                             <div id="featured-products" class="owl-container">
                                 <div class="owl">
-                                    <c:forEach items="${allproduct}" var="product">
+                                    <c:forEach var="product" items="${featureProduct}">
                                         <div class='productslider-item item'>
                                             <div class="item-inner">
                                                 <div class="images-container">
                                                     <div class="product_icon">
                                                         <div class='new-icon'><span>new</span></div>
                                                     </div>
-                                                    <a href="#" title="Nunc facilisis" class="product-image">
+                                                    <a href="../product/detail/${product.getId()}" title="Nunc facilisis" class="product-image">
                                                         <img src="${product.getImage1()}" alt="Nunc facilisis" />
                                                     </a>
                                                     <div class="box-hover">
                                                         <ul class="add-to-links">
-                                                            <li><a href="#" class="link-quickview">Quick View</a></li>
+                                                            <li><a href="../product/detail/${product.getId()}" class="link-quickview">Quick View</a></li>
                                                             <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
                                                             <li><a href="#" class="link-compare">Add to Compare</a></li>
                                                             <li><a href="#" class="link-cart">Add to Cart</a></li>
@@ -668,15 +413,15 @@
                                                     </div>
                                                 </div>
                                                 <div class="des-container">
-                                                    <h2 class="product-name"><a href="#" title="Nunc facilisis">${product.getName()}</a></h2>
+                                                    <h2 class="product-name"><a href="../product/detail/${product.getId()}" title="Nunc facilisis">${product.getName()}</a></h2>
                                                     <div class="price-box">
                                                         <p class="special-price">
                                                             <span class="price-label">Special Price</span>
-                                                            <span class="price">$ ${product.getPrice().toString()}</span>
+                                                            <span class="price">$<span>${product.getPrice()}</span></span>
                                                         </p>
                                                         <p class="old-price">
                                                             <span class="price-label">Regular Price: </span>
-                                                            <span class="price">$189.00</span>
+                                                            <span class="price">$<span>${product.getOldPrice().toString()}</span></span>
                                                         </p>
                                                     </div>
                                                     <div class="ratings">
@@ -689,853 +434,178 @@
                                             </div>
                                         </div>
                                     </c:forEach>
-                                    <!--                                <div class='productslider-item item'>
-                                                                        <div class="item-inner">
-                                                                            <div class="images-container">
-                                                                                <div class="product_icon">
-                                                                                    <div class='new-icon'><span>new</span></div>
-                                                                                </div>
-                                                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/3.jpg" alt="Nunc facilisis" />
-                                                                                </a>
-                                                                                <div class="box-hover">
-                                                                                    <ul class="add-to-links">
-                                                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="des-container">
-                                                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Nunc facilisis</a></h2>
-                                                                                <div class="price-box">
-                                                                                    <p class="special-price">
-                                                                                        <span class="price-label">Special Price</span>
-                                                                                        <span class="price">$169.99</span>
-                                                                                    </p>
-                                                                                    <p class="old-price">
-                                                                                        <span class="price-label">Regular Price: </span>
-                                                                                        <span class="price">$189.00</span>
-                                                                                    </p>
-                                                                                </div>
-                                                                                <div class="ratings">
-                                                                                    <div class="rating-box">
-                                                                                        <div class="rating" style="width:67%"></div>
-                                                                                    </div>
-                                                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class='productslider-item item'>
-                                                                        <div class="item-inner">
-                                                                            <div class="images-container">
-                                                                                <div class="product_icon">
-                                                                                    <div class='new-icon'><span>new</span></div>
-                                                                                </div>
-                                                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/21.jpg" alt="Nunc facilisis" />
-                                                                                </a>
-                                                                                <div class="box-hover">
-                                                                                    <ul class="add-to-links">
-                                                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="des-container">
-                                                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Nunc facilisis</a></h2>
-                                                                                <div class="price-box">
-                                                                                    <p class="special-price">
-                                                                                        <span class="price-label">Special Price</span>
-                                                                                        <span class="price">$169.99</span>
-                                                                                    </p>
-                                                                                    <p class="old-price">
-                                                                                        <span class="price-label">Regular Price: </span>
-                                                                                        <span class="price">$189.00</span>
-                                                                                    </p>
-                                                                                </div>
-                                                                                <div class="ratings">
-                                                                                    <div class="rating-box">
-                                                                                        <div class="rating" style="width:67%"></div>
-                                                                                    </div>
-                                                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class='productslider-item item'>
-                                                                        <div class="item-inner">
-                                                                            <div class="images-container">
-                                                                                <div class="product_icon">
-                                                                                    <div class='new-icon'><span>new</span></div>
-                                                                                </div>
-                                                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/6.jpg" alt="Nunc facilisis" />
-                                                                                </a>
-                                                                                <div class="box-hover">
-                                                                                    <ul class="add-to-links">
-                                                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="des-container">
-                                                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Nunc facilisis</a></h2>
-                                                                                <div class="price-box">
-                                                                                    <p class="special-price">
-                                                                                        <span class="price-label">Special Price</span>
-                                                                                        <span class="price">$169.99</span>
-                                                                                    </p>
-                                                                                    <p class="old-price">
-                                                                                        <span class="price-label">Regular Price: </span>
-                                                                                        <span class="price">$189.00</span>
-                                                                                    </p>
-                                                                                </div>
-                                                                                <div class="ratings">
-                                                                                    <div class="rating-box">
-                                                                                        <div class="rating" style="width:67%"></div>
-                                                                                    </div>
-                                                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class='productslider-item item'>
-                                                                        <div class="item-inner">
-                                                                            <div class="images-container">
-                                                                                <div class="product_icon">
-                                                                                    <div class='new-icon'><span>new</span></div>
-                                                                                </div>
-                                                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/10.jpg" alt="Nunc facilisis" />
-                                                                                </a>
-                                                                                <div class="box-hover">
-                                                                                    <ul class="add-to-links">
-                                                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="des-container">
-                                                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Nunc facilisis</a></h2>
-                                                                                <div class="price-box">
-                                                                                    <p class="special-price">
-                                                                                        <span class="price-label">Special Price</span>
-                                                                                        <span class="price">$169.99</span>
-                                                                                    </p>
-                                                                                    <p class="old-price">
-                                                                                        <span class="price-label">Regular Price: </span>
-                                                                                        <span class="price">$189.00</span>
-                                                                                    </p>
-                                                                                </div>
-                                                                                <div class="ratings">
-                                                                                    <div class="rating-box">
-                                                                                        <div class="rating" style="width:67%"></div>
-                                                                                    </div>
-                                                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class='productslider-item item'>
-                                                                        <div class="item-inner">
-                                                                            <div class="images-container">
-                                                                                <div class="product_icon">
-                                                                                    <div class='new-icon'><span>new</span></div>
-                                                                                </div>
-                                                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/14.jpg" alt="Nunc facilisis" />
-                                                                                </a>
-                                                                                <div class="box-hover">
-                                                                                    <ul class="add-to-links">
-                                                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="des-container">
-                                                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Nunc facilisis</a></h2>
-                                                                                <div class="price-box">
-                                                                                    <p class="special-price">
-                                                                                        <span class="price-label">Special Price</span>
-                                                                                        <span class="price">$169.99</span>
-                                                                                    </p>
-                                                                                    <p class="old-price">
-                                                                                        <span class="price-label">Regular Price: </span>
-                                                                                        <span class="price">$189.00</span>
-                                                                                    </p>
-                                                                                </div>
-                                                                                <div class="ratings">
-                                                                                    <div class="rating-box">
-                                                                                        <div class="rating" style="width:67%"></div>
-                                                                                    </div>
-                                                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class='productslider-item item'>
-                                                                        <div class="item-inner">
-                                                                            <div class="images-container">
-                                                                                <div class="product_icon">
-                                                                                    <div class='new-icon'><span>new</span></div>
-                                                                                </div>
-                                                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/20.jpg" alt="Nunc facilisis" />
-                                                                                </a>
-                                                                                <div class="box-hover">
-                                                                                    <ul class="add-to-links">
-                                                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="des-container">
-                                                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Nunc facilisis</a></h2>
-                                                                                <div class="price-box">
-                                                                                    <p class="special-price">
-                                                                                        <span class="price-label">Special Price</span>
-                                                                                        <span class="price">$169.99</span>
-                                                                                    </p>
-                                                                                    <p class="old-price">
-                                                                                        <span class="price-label">Regular Price: </span>
-                                                                                        <span class="price">$189.00</span>
-                                                                                    </p>
-                                                                                </div>
-                                                                                <div class="ratings">
-                                                                                    <div class="rating-box">
-                                                                                        <div class="rating" style="width:67%"></div>
-                                                                                    </div>
-                                                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>-->
+
                                 </div>
                             </div>
                         </div><!-- /.featuredproductslider-container -->
-                        <div class="banner">
-                            <a href="#"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-05.jpg"></a>
+                        <div class="clearfix"></div>
+                        <div class="banner" style="margin: 30px 0;">
+                            <a href="#"><img alt="" src="../resources/images/ads/ads_4.jpg"></a>
                         </div>
                         <div class="newproductslider-container"> 
                             <div class="title-group1"><h2>New Arrivals</h2></div>
                             <div id="new-products" class="owl-container">
                                 <div class="owl">
-                                    <div class='productslider-item item'>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <div class="product_icon">
-                                                    <div class='new-icon'><span>new</span></div>
-                                                    <div class="sale-icon"><span>sale</span></div>
-                                                </div>
-                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/1.jpg" alt="Nunc facilisis" />
-                                                </a>
-                                                <div class="box-hover">
-                                                    <ul class="add-to-links">
-                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Demonstraverunt lectores</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span>
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
+                                    <c:forEach items="${newProduct}" var="product">
+                                        <div class='productslider-item item'>
+                                            <div class="item-inner">
+                                                <div class="images-container">
+                                                    <div class="product_icon">
+                                                        <div class='new-icon'><span>new</span></div>
+                                                        <c:if test="${product.getSpecial() == 2}">
+                                                            <div class="sale-icon"><span>sale</span></div>  
+                                                        </c:if>
                                                     </div>
-                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
+                                                    <a href="../product/detail/${product.getId()}" title="Nunc facilisis" class="product-image">
+                                                        <img src="${product.getImage1()}" alt="Nunc facilisis" />
+                                                    </a>
+                                                    <div class="box-hover">
+                                                        <ul class="add-to-links">
+                                                            <li><a href="#" class="link-quickview">Quick View</a></li>
+                                                            <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
+                                                            <li><a href="#" class="link-compare">Add to Compare</a></li>
+                                                            <li><a href="#" class="link-cart">Add to Cart</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="des-container">
+                                                    <h2 class="product-name">
+                                                        <a href="../product/detail/${product.getId()}" title="Nunc facilisis">${product.getName()}</a>
+                                                        <div class="clearfix"></div>
+                                                    </h2>
+                                                    <div class="price-box">
+                                                        <p class="special-price">
+                                                            <span class="price-label">Special Price</span>
+                                                            <span class="price">$<span>${product.getPrice().toString()}</span></span>
+                                                        </p>
+                                                        <p class="old-price">
+                                                            <span class="price-label">Regular Price: </span>
+                                                            <span class="price">$<span>${product.getOldPrice().toString()}</span></span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="ratings">
+                                                        <div class="rating-box">
+                                                            <div class="rating" style="width:67%"></div>
+                                                        </div>
+                                                        <span class="amount"><a href="#">3 Review(s)</a></span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class='productslider-item item'>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <div class="product_icon">
-                                                    <div class='new-icon'><span>new</span></div>
-                                                    <div class="sale-icon"><span>sale</span></div>
-                                                </div>
-                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/2.jpg" alt="Nunc facilisis" />
-                                                </a>
-                                                <div class="box-hover">
-                                                    <ul class="add-to-links">
-                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Demonstraverunt lectores</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span>
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='productslider-item item'>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <div class="product_icon">
-                                                    <div class='new-icon'><span>new</span></div>
-                                                    <div class="sale-icon"><span>sale</span></div>
-                                                </div>
-                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/3.jpg" alt="Nunc facilisis" />
-                                                </a>
-                                                <div class="box-hover">
-                                                    <ul class="add-to-links">
-                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Demonstraverunt lectores</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span>
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='productslider-item item'>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <div class="product_icon">
-                                                    <div class='new-icon'><span>new</span></div>
-                                                    <div class="sale-icon"><span>sale</span></div>
-                                                </div>
-                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/4.jpg" alt="Nunc facilisis" />
-                                                </a>
-                                                <div class="box-hover">
-                                                    <ul class="add-to-links">
-                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Demonstraverunt lectores</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span>
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='productslider-item item'>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <div class="product_icon">
-                                                    <div class='new-icon'><span>new</span></div>
-                                                    <div class="sale-icon"><span>sale</span></div>
-                                                </div>
-                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/5.jpg" alt="Nunc facilisis" />
-                                                </a>
-                                                <div class="box-hover">
-                                                    <ul class="add-to-links">
-                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Demonstraverunt lectores</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span>
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='productslider-item item'>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <div class="product_icon">
-                                                    <div class='new-icon'><span>new</span></div>
-                                                </div>
-                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/6.jpg" alt="Nunc facilisis" />
-                                                </a>
-                                                <div class="box-hover">
-                                                    <ul class="add-to-links">
-                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Demonstraverunt lectores</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span>
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='productslider-item item'>
-                                        <div class="item-inner">
-                                            <div class="images-container">
-                                                <div class="product_icon">
-                                                    <div class='new-icon'><span>new</span></div>
-                                                </div>
-                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="/ShopOnline/resources//ShopOnline/resources/images/products/7.jpg" alt="Nunc facilisis" />
-                                                </a>
-                                                <div class="box-hover">
-                                                    <ul class="add-to-links">
-                                                        <li><a href="#" class="link-quickview">Quick View</a></li>
-                                                        <li><a href="#" class="link-wishlist">Add to Wishlist</a></li>
-                                                        <li><a href="#" class="link-compare">Add to Compare</a></li>
-                                                        <li><a href="#" class="link-cart">Add to Cart</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">Demonstraverunt lectores</a></h2>
-                                                <div class="price-box">
-                                                    <p class="special-price">
-                                                        <span class="price-label">Special Price</span>
-                                                        <span class="price">$169.99</span>
-                                                    </p>
-                                                    <p class="old-price">
-                                                        <span class="price-label">Regular Price: </span>
-                                                        <span class="price">$189.00</span>
-                                                    </p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating" style="width:67%"></div>
-                                                    </div>
-                                                    <span class="amount"><a href="#">3 Review(s)</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </c:forEach>
+
                                 </div>
                             </div>
-                        </div><!-- /.newproductslider-container -->
-                        <div class="row">
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="row" style="margin: 30px 0;">
                             <div class="col-smc-7">
                                 <div class="banner">
-                                    <a href="#"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-06.jpg"></a>
+                                    <a href="#"><img alt="" src="../resources/images/ads/ads_5.jpg"></a>
                                 </div>
+                                <div class="clearfix"></div>
                             </div>
                             <div class="col-smc-5">
                                 <div class="banner">
-                                    <a href="#"><img alt="" src="/ShopOnline/resources//ShopOnline/resources/images/ads/ads-07.jpg"></a>
+                                    <a href="#"><img alt="" src="../resources/images/ads/ads_6.jpg"></a>
                                 </div>
+                                <div class="clearfix"></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="title-group"><h2>Random</h2></div>
                                 <div class="product-list">
-                                    <div class="products-grid">
-                                        <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/21.jpg"></a>
-                                        </div>
-                                        <div class="des-container">
-                                            <h2 class="product-name"><a title="Accumsan elit " href="#">Accumsan elit </a></h2>
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div style="width:67%" class="rating"></div>
+                                    <c:forEach items="${randomProduct}" var="product">
+                                        <div class="products-grid">
+                                            <div class="images-container">
+                                                <a class="product-image" title="Accumsan elit " href="../product/detail/${product.getId()}">
+                                                    <img alt="Accumsan elit " src="${product.getImage1()}">
+                                                </a>
+                                            </div>
+                                            <div class="des-container">
+                                                <h2 class="product-name"><a title="Accumsan elit " href="../product/detail/${product.getId()}">${product.getName()} </a></h2>
+                                                <div class="ratings">
+                                                    <div class="rating-box">
+                                                        <div style="width:67%" class="rating"></div>
+                                                    </div>
+                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
                                                 </div>
-                                                <span class="amount"><a href="#">1 Review(s)</a></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price">$169.99</span>
-                                                </p>
-                                                <p class="old-price">
-                                                    <span class="price">$189.00</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="products-grid">
-                                        <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/20.jpg"></a>
-                                        </div>
-                                        <div class="des-container">
-                                            <h2 class="product-name"><a title="Accumsan elit " href="#">Accumsan elit </a></h2>
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div style="width:67%" class="rating"></div>
+                                                <div class="price-box">
+                                                    <p class="special-price">
+                                                        <span class="price">$<span>${product.getPrice()}</span></span>
+                                                    </p>
+
                                                 </div>
-                                                <span class="amount"><a href="#">1 Review(s)</a></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price">$169.99</span>
-                                                </p>
-                                                <p class="old-price">
-                                                    <span class="price">$189.00</span>
-                                                </p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="products-grid">
-                                        <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/19.jpg"></a>
-                                        </div>
-                                        <div class="des-container">
-                                            <h2 class="product-name"><a title="Accumsan elit " href="#">Accumsan elit </a></h2>
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div style="width:67%" class="rating"></div>
-                                                </div>
-                                                <span class="amount"><a href="#">1 Review(s)</a></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price">$169.99</span>
-                                                </p>
-                                                <p class="old-price">
-                                                    <span class="price">$189.00</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </c:forEach>
+
                                 </div><!-- /.product-list -->
                             </div>
                             <div class="col-sm-4">
                                 <div class="title-group"><h2>Bestseller</h2></div>
                                 <div class="product-list">
-                                    <div class="products-grid">
-                                        <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/18.jpg"></a>
-                                        </div>
-                                        <div class="des-container">
-                                            <h2 class="product-name"><a title="Accumsan elit " href="#">Demonstraverunt lectores</a></h2>
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div style="width:67%" class="rating"></div>
+                                    <c:forEach items="${limitBestSeller}" var="product">
+                                        <div class="products-grid">
+                                            <div class="images-container">
+                                                <a class="product-image" title="Accumsan elit " href="../product/detail/${product.getId()}">
+                                                    <img alt="Accumsan elit " src="${product.getImage1()}">
+                                                </a>
+                                            </div>
+                                            <div class="des-container">
+                                                <h2 class="product-name"><a title="Accumsan elit " href="../product/detail/${product.getId()}">${product.getName()}</a></h2>
+                                                <div class="ratings">
+                                                    <div class="rating-box">
+                                                        <div style="width:67%" class="rating"></div>
+                                                    </div>
+                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
                                                 </div>
-                                                <span class="amount"><a href="#">1 Review(s)</a></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price">$169.99</span>
-                                                </p>
-                                                <p class="old-price">
-                                                    <span class="price">$189.00</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="products-grid">
-                                        <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/17.jpg"></a>
-                                        </div>
-                                        <div class="des-container">
-                                            <h2 class="product-name"><a title="Accumsan elit " href="#">Demonstraverunt lectores</a></h2>
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div style="width:67%" class="rating"></div>
+                                                <div class="price-box">
+                                                    <p class="special-price">
+                                                        <span class="price">$<span>${product.getPrice()}</span></span>
+                                                    </p>
                                                 </div>
-                                                <span class="amount"><a href="#">1 Review(s)</a></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price">$169.99</span>
-                                                </p>
-                                                <p class="old-price">
-                                                    <span class="price">$189.00</span>
-                                                </p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="products-grid">
-                                        <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/16.jpg"></a>
-                                        </div>
-                                        <div class="des-container">
-                                            <h2 class="product-name"><a title="Accumsan elit " href="#">Demonstraverunt lectores</a></h2>
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div style="width:67%" class="rating"></div>
-                                                </div>
-                                                <span class="amount"><a href="#">1 Review(s)</a></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price">$169.99</span>
-                                                </p>
-                                                <p class="old-price">
-                                                    <span class="price">$189.00</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </c:forEach>
+
                                 </div><!-- /.product-list -->
                             </div>
                             <div class="col-sm-4">
                                 <div class="title-group"><h2>Hot sale</h2></div>
                                 <div class="product-list">
-                                    <div class="products-grid">
-                                        <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/15.jpg"></a>
-                                        </div>
-                                        <div class="des-container">
-                                            <h2 class="product-name"><a title="Accumsan elit " href="#">Accumsan elit </a></h2>
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div style="width:67%" class="rating"></div>
+                                    <c:forEach items="${hotSaleProduct}" var="product">
+                                        <div class="products-grid">
+                                            <div class="images-container">
+                                                <a class="product-image" title="Accumsan elit " href="../product/detail/${product.getId()}">
+                                                    <img alt="Accumsan elit " src="${product.getImage1()}">
+                                                </a>
+                                            </div>
+                                            <div class="des-container">
+                                                <h2 class="product-name"><a title="Accumsan elit " href="../product/detail/${product.getId()}">${product.getName()} </a></h2>
+                                                <div class="ratings">
+                                                    <div class="rating-box">
+                                                        <div style="width:67%" class="rating"></div>
+                                                    </div>
+                                                    <span class="amount"><a href="#">1 Review(s)</a></span>
                                                 </div>
-                                                <span class="amount"><a href="#">1 Review(s)</a></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price">$169.99</span>
-                                                </p>
-                                                <p class="old-price">
-                                                    <span class="price">$189.00</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="products-grid">
-                                        <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/14.jpg"></a>
-                                        </div>
-                                        <div class="des-container">
-                                            <h2 class="product-name"><a title="Accumsan elit " href="#">Accumsan elit </a></h2>
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div style="width:67%" class="rating"></div>
+                                                <div class="price-box">
+                                                    <p class="special-price">
+                                                        <span class="price">$<span>${product.getPrice()}</span></span>
+                                                    </p>
                                                 </div>
-                                                <span class="amount"><a href="#">1 Review(s)</a></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price">$169.99</span>
-                                                </p>
-                                                <p class="old-price">
-                                                    <span class="price">$189.00</span>
-                                                </p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="products-grid">
-                                        <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="/ShopOnline/resources//ShopOnline/resources/images/products/13.jpg"></a>
-                                        </div>
-                                        <div class="des-container">
-                                            <h2 class="product-name"><a title="Accumsan elit " href="#">Accumsan elit </a></h2>
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div style="width:67%" class="rating"></div>
-                                                </div>
-                                                <span class="amount"><a href="#">1 Review(s)</a></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price">$169.99</span>
-                                                </p>
-                                                <p class="old-price">
-                                                    <span class="price">$189.00</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </c:forEach>
+
                                 </div><!-- /.product-list -->
                             </div>
                         </div>
                     </div><!-- /.col-right -->
                 </div>
             </div><!-- /.main -->
-
-            <div class="catlist">
-                <div class="title-group1">
-                    <h2>Top Categories</h2>
-                </div> 
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources//ShopOnline/resources/images/products/img-05.jpg"></a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="name-cat"><h3>Electronics</h3></div>
-                                <a class="view-more" href="#">view more</a>
-                            </div>
-                        </div>
-                        <div class="list-cat">
-                            <ul>
-                                <li><a href="#">Batteries &amp; Chargers</a></li>
-                                <li><a href="#">Headphone, Headset</a></li>
-                                <li><a href="#">Home Audio</a></li>
-                                <li><a href="#">Mp3 Player Accessories</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources//ShopOnline/resources/images/products/img-06.jpg"></a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="name-cat"><h3>jewelry &amp; watches</h3></div>
-                                <a class="view-more" href="#">view more</a>
-                            </div>
-                        </div>
-                        <div class="list-cat">
-                            <ul>
-                                <li><a href="#">Men Watches</a></li>
-                                <li><a href="#">Wedding Rings</a></li>
-                                <li><a href="#">Earring</a></li>
-                                <li><a href="#">Necklaces</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources//ShopOnline/resources/images/products/img-07.jpg"></a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="name-cat"><h3>Smartphones &amp; tablets</h3></div>
-                                <a class="view-more" href="#">view more</a>
-                            </div>
-                        </div>
-                        <div class="list-cat">
-                            <ul>
-                                <li><a href="#">Accessories for iPhone</a></li>
-                                <li><a href="#">Accessories for iPad</a></li>
-                                <li><a href="#">Accessories for Tablet PC</a></li>
-                                <li><a href="#">Tablet PC</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="/ShopOnline/resources//ShopOnline/resources/images/products/img-08.jpg"></a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="name-cat"><h3>camera &amp; hobbies</h3></div>
-                                <a class="view-more" href="#">view more</a>
-                            </div>
-                        </div>
-                        <div class="list-cat">
-                            <ul>
-                                <li><a href="#">Walkera</a></li>
-                                <li><a href="#">Fpv System &amp; Parts</a></li>
-                                <li><a href="#">RC Cars &amp; Parts</a></li>
-                                <li><a href="#">Helicopters &amp; Part</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /.catlist -->
 
             <div class="brands">
                 <div class="title-group1">
@@ -1545,32 +615,27 @@
                     <div class="owl">
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="/ShopOnline/resources//ShopOnline/resources/images/brand/logo_brand5.png" alt="" /></a>
+                                <a href="#" title=""><img src="../resources/images/brand/logo_brands_1.png" alt="" /></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="/ShopOnline/resources//ShopOnline/resources/images/brand/logo_brand4.png" alt="" /></a>
+                                <a href="#" title=""><img src="../resources/images/brand/logo_brands_2.png" alt="" /></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="/ShopOnline/resources//ShopOnline/resources/images/brand/logo_brand3.png" alt="" /></a>
+                                <a href="#" title=""><img src="../resources/images/brand/logo_brands_3.png" alt="" /></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="/ShopOnline/resources//ShopOnline/resources/images/brand/logo_brand2.png" alt="" /></a>
+                                <a href="#" title=""><img src="../resources/images/brand/logo_brands_4.png" alt="" /></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="/ShopOnline/resources//ShopOnline/resources/images/brand/logo_brand1.png" alt="" /></a>
-                            </div>
-                        </div>
-                        <div class='item'>
-                            <div class="item-innner">
-                                <a href="#" title=""><img src="/ShopOnline/resources//ShopOnline/resources/images/brand/logo_brand3.png" alt="" /></a>
+                                <a href="#" title=""><img src="../resources/images/brand/logo_brands_5.png" alt="" /></a>
                             </div>
                         </div>
                     </div>
@@ -1678,7 +743,7 @@
                             <div class="copy">Copyright &copy; 2015 Plazathemes. All Rights Reserved</div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="payment"><img src="/ShopOnline/resources//ShopOnline/resources/images/payment.png" alt="" class="img-responsive"></div>
+                            <div class="payment"><img src="images/payment.png" alt="" class="img-responsive"></div>
                         </div>
                     </div>
                 </div>
@@ -1686,23 +751,19 @@
         </div><!-- /.footer -->
 
         <!-- Jquery Js -->
-        <!--<script src="../resource/js/jquery-1.11.3.min.js"></script>-->
-        <script src="<c:url value="/resources/js/jquery-1.11.3.min.js"/>"></script>
+        <script src="<c:url value="/resources/js/jquery.min.js" />"></script>
         <!-- Bootstrap Js -->
-        <!--<script src="../resource/js/bootstrap.min.js"></script>-->
-        <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
+        <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
         <!-- Nivo Slider Js -->
-        <!--<script src="../resource/js/jquery.nivo.slider.pack.js"></script>-->
-        <script src="<c:url value="/resources/js/jquery.nivo.slider.pack.js"/>"></script>
+        <script src="<c:url value="/resources/js/jquery.nivo.slider.pack.js" />"></script>
         <!-- Owl Carousel Js -->
-        <!--<script src="../resource/js/owl.carousel.min.js"></script>-->
-        <script src="<c:url value="/resources/js/owl.carousel.min.js"/>"></script>
+        <script src="<c:url value="/resources/js/owl.carousel.min.js" />"></script>
         <!-- Countdown Js -->
-        <!--<script src="../resource/js/countdown.js"></script>-->
-        <script src="<c:url value="/resources/js/countdown.js"/>"></script>
+        <script src="<c:url value="/resources/js/countdown.js" />"></script>
         <!-- Custom Js -->
-        <!--<script src="../resource/js/custom.js"></script>-->
-        <script src="<c:url value="/resources/js/custom.js"/>"></script>
+        <script src="<c:url value="/resources/js/dropdown.js" />"></script>
+        <script src="<c:url value="/resources/js/custom.js" />"></script>
+        <script src="<c:url value="/resources/js/activeMenu.js" />"></script>
         <script type="text/javascript">
             /* Main Slideshow */
             jQuery(window).load(function () {

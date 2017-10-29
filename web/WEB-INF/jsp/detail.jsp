@@ -69,7 +69,7 @@
             <div class="container">
                 <ul class="breadcrumb">
                 	<li><a href="#">Home</a></li>
-                    <li><a href="<c:url value="/home/grid.html" />">Product</a></li>
+                    <li><a href="<c:url value="/home/product.html" />">Product</a></li>
                     <li class="active">Detail Product</li>
                	</ul>
             </div>

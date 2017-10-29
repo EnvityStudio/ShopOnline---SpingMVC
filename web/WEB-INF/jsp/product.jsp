@@ -81,7 +81,7 @@
                                         <h2>Brand</h2>
                                         <div class="content-shopby">
                                             <ol>
-                                                <li> <a href="<c:url value="/home/grid.html" />" >All</a></li>
+                                                <li> <a href="<c:url value="/home/product.html" />" >All</a></li>
                                                     <c:forEach items="${allbrand}" var="brand">
                                                     <li> <a href="<c:url value="/home/brand/${brand.getIdbrand()}.html" />" >${brand.getName()}</a></li>
                                                     </c:forEach>
@@ -112,7 +112,7 @@
                                 <p class="empty">You have no items to compare.</p>
                             </div>
                         </div><!-- /.compare -->
-                        <div class="banner-left"><a href="#"><img src="/ShopOnline/resources/images/ads/ads-01.jpg" alt=""></a>
+                        <div class="banner-left"><a href="#"><img src="/ShopOnline/resources/images/ads/ads_2.jpg" alt=""></a>
                             <div class="banner-content">
                                 <h1>sale up to</h1>
                                 <h2>20% off</h2>
@@ -427,7 +427,7 @@
                     </div><!-- /.col-left -->
                     <div class="col-sm-9 col-right">
                         <div class="banner">
-                            <a href="#"><img alt="" src="/ShopOnline/resources/images/ads/ads-17.jpg"></a>
+                            <a href="#"><img alt="" src="../resources/images/ads/ads_2.jpg"></a>
                         </div>
                         <div class="page-title">
                             <h1>PRODUCT GRID</h1>
@@ -792,7 +792,7 @@
         </div><!-- /.footer -->
 
         <!-- Jquery Js -->
-        <script src="<c:url value="/resources/js/jquery-1.11.3.min.js"/>"></script>
+        <script src="<c:url value="/resources/js/jquery.min.js"/>"></script>
         <!-- Bootstrap Js -->
         <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
         <!-- Owl Carousel Js -->
@@ -803,6 +803,7 @@
                 
         <script src="<c:url value="/resources/js/dropdown.js"/>"></script>
         <script src="<c:url value="/resources/js/custom.js"/>"></script>
+         <script src="<c:url value="/resources/js/activeMenu.js"/>"></script>
 
         <script type="text/javascript">
 

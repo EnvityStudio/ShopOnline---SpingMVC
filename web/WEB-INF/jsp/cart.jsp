@@ -45,24 +45,24 @@
 
         <!-- Font Awesome CSS -->
         <link href="<c:url value="/resources/css/font-awesome.min.css" />" rel="stylesheet">
-		<!-- Bootstrap CSS -->
-		 <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
-		<!-- Animate CSS -->
-		   <link href="<c:url value="/resources/css/animate.css" />" rel="stylesheet">
-      <!-- Owl Carousel CSS -->
-	  <link href="<c:url value="/resources/css/owl.carousel.css" />" rel="stylesheet">
-      	<!-- Main Style CSS -->
-	   <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+        <!-- Animate CSS -->
+        <link href="<c:url value="/resources/css/animate.css" />" rel="stylesheet">
+        <!-- Owl Carousel CSS -->
+        <link href="<c:url value="/resources/css/owl.carousel.css" />" rel="stylesheet">
+        <!-- Main Style CSS -->
+        <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
         <!-- Responsive CSS -->
         <link href="<c:url value="/resources/css/responsive.css" />" rel="stylesheet">
-             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-                <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-              <![endif]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
     <body>
     <body>
 
-  <jsp:include page="header.jsp" /> 
+        <jsp:include page="header.jsp" /> 
         <div class="breadcrumbs">
             <div class="container">
                 <ul class="breadcrumb">
@@ -77,131 +77,126 @@
                 <div class="cart">
                     <form>
                         <div class="table-responsive">
-                            <table class="table custom-table">
-                                <thead>
-                                    <tr class="first last">
-                                        <th>Remove</th>
-                                        <th>Image</th>
-                                        <th>Product Name</th>
-                                        <th>Edit</th>
-                                        <th>Quantity</th>
-                                        <th>Subtotal</th>
-                                        <th>Grandtotal</th>
-                                    </tr>
-                                </thead>
-                                
-                                <%
-                                     double totalMoney=0;
-                                  List<ItemCart> cart =  (List<ItemCart>)(session.getAttribute("cart"));;
-                                            if(cart!=null)
-                                             {
-                                            for(int i=0;i<cart.size();i++)
-                                                 {
-                                                     totalMoney += cart.get(i).getTotal();
-                                                 }
-                                           
-                                             }
-                                     %>
-                                     
-                                        <%
-                                            
-                                            if(cart!=null)
-                                             {
-                                             List<ItemCart> list=( List<ItemCart>)session.getAttribute("cart");
-                                             %>
-                                            
-                                            <%
-                                              for (ItemCart item:list)
-                                              {
-                                                  %>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center"><a class="btn-remove" href="/ShopOnline/cart/delete/<%=item.getId()%>.html"><span class="fa fa-trash-o"></span></a></td>
-                                        <td><a class="product-image" title="Primis in faucibus" href="#">
-                                                <img alt="Primis in faucibus" src="<%=item.getImage()%>">
-                                            </a></td>
-                                        <td>
-                                            <a href="#"><%=item.getName()%></a>
-                                            <div class="text-muted">Size: 42<br>
-                                                Color: Red</div>
-                                        </td>
-                                        <td class="text-center"><a href="#">Edit</a></td>
-                                        <td class="qty">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button class="btn" type="button">-</button>
-                                                </span>
-                                                <input type="text" class="form-control" value="<%=item.getAmount()%>">
-                                                <span class="input-group-btn">
-                                                    <button class="btn" type="button">+</button>
-                                                </span>
-                                            </div><!-- /input-group -->
-                                        </td>
-                                        <td class="subtotal"><%=item.getTotal()%></td>
-                                        <td class="grandtotal"><%=item.getTotal()%></td>
-                                    </tr>
-                                </tbody>
-                                   <%}
-                                                %>  <%}%>
-                            </table>
+                            <form method="post" action ="${pageContext.request.serverName}/cart/update.html">             
+                                <table class="table custom-table">
+                                    <thead>
+                                        <tr class="first last">
+                                            <th>Remove</th>
+                                            <th>Image</th>
+                                            <th>Product Name</th>
+                                            <th>Edit</th>
+                                            <th>Quantity</th>
+                                            <th>Subtotal</th>
+                                            <th>Grandtotal</th>
+                                        </tr>
+                                    </thead>
+
+                                    <%
+                                        double totalMoney = 0;
+                                        List<ItemCart> cart = (List<ItemCart>) (session.getAttribute("cart"));;
+                                        if (cart != null) {
+                                            for (int i = 0; i < cart.size(); i++) {
+                                                totalMoney += cart.get(i).getTotal();
+                                            }
+
+                                        }
+                                    %>
+
+                                    <%
+                                        if (cart != null) {
+                                            List<ItemCart> list = (List<ItemCart>) session.getAttribute("cart");
+                                    %>
+
+                                    <%
+                                        for (ItemCart item : list) {
+                                    %>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center"><a class="btn-remove" href="/ShopOnline/cart/delete/<%=item.getId()%>.html"><span class="fa fa-trash-o"></span></a></td>
+                                            <td><a class="product-image" title="Primis in faucibus" href="#">
+                                                    <img alt="Primis in faucibus" src="<%=item.getImage()%>">
+                                                </a></td>
+                                            <td>
+                                                <a href="#"><%=item.getName()%></a>
+                                                <div class="text-muted">Size: 42<br>
+                                                    Color: Red</div>
+                                            </td>
+                                            <td class="text-center"><a href="#">Edit</a></td>
+                                            <td class="qty">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn" type="button">-</button>
+                                                    </span>
+                                                    <input type="text" class="form-control" name="quantity" value="<%=item.getAmount()%>">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn" type="button">+</button>
+                                                    </span>
+                                                </div><!-- /input-group -->
+                                            </td>
+                                            <td class="subtotal"><%=item.getPrice()%></td>
+                                            <td class="grandtotal"><%=item.getTotal()%></td>
+                                        </tr>
+                                    </tbody>
+                                    <%}
+                                    %>  <%}%>
+                                </table>
                         </div>
                         <div class="text-right">
                             <a href="#" class="btn btn-default btn-md">CONTINUE SHOPPING</a>
-                            <button type="submit" class="btn btn-danger btn-md">UPDATE SHOPPING CART</button>
+                            <button type="submit"class="btn btn-danger btn-md">UPDATE SHOPPING CART</button>
                         </div>
-                        <div class="line2"></div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h4>ESTIMATE SHIPPING AND TAX</h4>
+                    </form>
+                    <div class="line2"></div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <form action="" method="Post">
+                                <h4>CUSTOMER INFORMATION </h4>
                                 <p class="text-muted">Enter your destination to get shipping &amp; tax</p>
                                 <div class="form-group">
-                                    <label class="control-label">Country <em>*</em></label>
-                                    <select class="form-control">
-                                        <option>-- Select options  --</option>
-                                    </select>
+                                    <label class="control-label">Name <em>*</em></label>
+                                    <input name="name"type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">State/Province <em>*</em></label>
-                                    <select class="form-control">
-                                        <option>-- Select options  --</option>
-                                    </select>
+                                    <label class="control-label">Phone number <em>*</em></label>
+                                    <input name="phone"type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Zip/Postal Code</label>
-                                    <input type="text" class="form-control">
+                                    <label class="control-label">Address</label>
+                                    <input name="address" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-default btn-md">GET A QUOTE</button>
+                                    <button type="submit"  class="btn btn-danger btn-md">BY ALL ITEM WITH 1 CLICK</button>
                                 </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <h4>DISCOUNT CODE</h4>
+                            <p class="text-muted">Enter your coupon code if you have one</p>
+                            <div class="form-group">
+                                <label class="control-label">&nbsp;</label>
+                                <input type="text" class="form-control">
                             </div>
-                            <div class="col-sm-4">
-                                <h4>DISCOUNT CODE</h4>
-                                <p class="text-muted">Enter your coupon code if you have one</p>
-                                <div class="form-group">
-                                    <label class="control-label">&nbsp;</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <button type="button" class="btn btn-default btn-md">APPLY COUPON</button>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <table class="table table-cart-total">
-                                    <tr>
-                                        <td>Subtotal:</td>
-                                        <td class="text-right"><%=totalMoney%></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grandtotal:</td>
-                                        <td class="text-right"><%=totalMoney%></td>
-                                    </tr>
-                                </table>
-                                <div class="text-right">
-                                    <p><button type="button" class="btn btn-default btn-md fwb">PROCCED TO CHECKOUT</button></p>
-                                    <p><a href="#" class="text-muted">Checkout with multiples address</a></p>
-                                </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-default btn-md">APPLY COUPON</button>
                             </div>
                         </div>
+                        <div class="col-sm-4">
+                            <table class="table table-cart-total">
+                                <tr>
+                                    <td>Subtotal:</td>
+                                    <td class="text-right"><%=totalMoney%></td>
+                                </tr>
+                                <tr>
+                                    <td>Grandtotal:</td>
+                                    <td class="text-right"><%=totalMoney%></td>
+                                </tr>
+                            </table>
+                            <div class="text-right">
+                                <p><button type="button" class="btn btn-default btn-md fwb">PROCCED TO CHECKOUT</button></p>
+                                <p><a href="#" class="text-muted">Checkout with multiples address</a></p>
+                            </div>
+                        </div>
+                    </div>
                     </form>
                 </div>
             </div>
@@ -361,7 +356,7 @@
         </div><!-- /.footer -->
 
         <!-- Jquery Js -->
-     <script src="<c:url value="/resources/js/jquery-1.11.3.min.js"/>"></script>
+        <script src="<c:url value="/resources/js/jquery-1.11.3.min.js"/>"></script>
         <!-- Bootstrap Js -->
         <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
         <!-- Owl Carousel Js -->
@@ -369,55 +364,55 @@
         <!-- Jquery ui Js -->
         <script src="<c:url value="js/jquery-ui.min.js"/>"></script>
         <!-- Custom Js -->
-                
+
         <script src="<c:url value="/resources/js/dropdown.js"/>"></script>
         <script src="<c:url value="/resources/js/custom.js"/>"></script>
 
         <script type="text/javascript">
 
-                                        /* slider price */
-                                        var currencies = "$";
-                                        var toolbar_status = "1";
-                                        var rate = "1";
-                                        var min = "99"
-                                                min = Number(min);
-                                        var max = "999"
-                                                max = Number(max);
-                                        var currentMinPrice = "99"
-                                                currentMinPrice = Number(currentMinPrice);
-                                        var currentMaxPrice = "999"
-                                                //alert('min: '+min+'--max: '+ max+ 'currentMin: '+currentMinPrice);
-                                                currentMaxPrice = Number(currentMaxPrice);
-                                        var params = "";
-                                        params = $.trim(params);
-                                        //slider
-                                        $("#slider-range").slider({
-                                        range: true,
-                                                min: min,
-                                                max: max,
-                                                values: [currentMinPrice, currentMaxPrice],
-                                                slide: function (event, ui) {
-                                                $("#amount").val(currencies + ui.values[ 0 ] + " - " + currencies + ui.values[ 1 ]);
-                                                $('input[name="first_price"]').val(ui.values[0]);
-                                                $('input[name="last_price"]').val(ui.values[1]);
-                                                },
-                                                stop: function (event, ui) {
-                                                }
-                                        });
-                                        $("#amount").val(currencies + $("#slider-range").slider("values", 0) +
-                                                " - " + currencies + $("#slider-range").slider("values", 1));
-                                        $('input[name="first_price"]').val($("#slider-range").slider("values", 0));
-                                        $('input[name="last_price"]').val($("#slider-range").slider("values", 1));
-                                        //search price from input box
-                                        $('#search_price').each(function () {
-                                        $(this).live('click', function () {
+            /* slider price */
+            var currencies = "$";
+            var toolbar_status = "1";
+            var rate = "1";
+            var min = "99"
+                    min = Number(min);
+            var max = "999"
+                    max = Number(max);
+            var currentMinPrice = "99"
+                    currentMinPrice = Number(currentMinPrice);
+            var currentMaxPrice = "999"
+                    //alert('min: '+min+'--max: '+ max+ 'currentMin: '+currentMinPrice);
+                    currentMaxPrice = Number(currentMaxPrice);
+            var params = "";
+            params = $.trim(params);
+            //slider
+            $("#slider-range").slider({
+            range: true,
+                    min: min,
+                    max: max,
+                    values: [currentMinPrice, currentMaxPrice],
+                    slide: function (event, ui) {
+                    $("#amount").val(currencies + ui.values[ 0 ] + " - " + currencies + ui.values[ 1 ]);
+                    $('input[name="first_price"]').val(ui.values[0]);
+                    $('input[name="last_price"]').val(ui.values[1]);
+                    },
+                    stop: function (event, ui) {
+                    }
+            });
+            $("#amount").val(currencies + $("#slider-range").slider("values", 0) +
+                    " - " + currencies + $("#slider-range").slider("values", 1));
+            $('input[name="first_price"]').val($("#slider-range").slider("values", 0));
+            $('input[name="last_price"]').val($("#slider-range").slider("values", 1));
+            //search price from input box
+            $('#search_price').each(function () {
+            $(this).live('click', function () {
 
-                                        return false;
-                                        })
-                                        });
-                                        $('#slider-range a:first').addClass('first_item');
-                                        $('#slider-range a:last').addClass('last_item');
-                                        });
+            return false;
+            })
+            });
+            $('#slider-range a:first').addClass('first_item');
+            $('#slider-range a:last').addClass('last_item');
+            });
         </script>
     </body>
 </html>

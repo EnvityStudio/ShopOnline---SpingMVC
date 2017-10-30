@@ -426,7 +426,7 @@
                     </div><!-- /.col-left -->
                     <div class="col-sm-9 col-right">
                         <div class="banner">
-                            <a href="#"><img alt="" src="/ShopOnline/resources/images/ads/ads-17.jpg"></a>
+                            <a href="#"><img alt="" src="../resources/images/ads/ads_2.jpg"></a>
                         </div>
                         <div class="page-title">
                             <h1>BEST SELLER</h1>
@@ -507,37 +507,7 @@
                                 </div>
                             </c:forEach>
                         </div><!-- /.product -->
-                        <div class="toolbar">
-                            <div class="sorter">
-                                <p class="view-mode">
-                                    <label>View as:</label>
-                                    <strong class="grid" title="Grid">Grid</strong>&nbsp;
-                                    <a class="list" title="List" href="#">List</a>&nbsp;
-                                </p>
-                            </div><!-- /.sorter -->
-                            <div class="pager">
-                                <div class="sort-by hidden-xs">
-                                    <label>Sort By:</label>
-                                    <select class="form-control input-sm">
-                                        <option selected="selected">Position</option>
-                                        <option>Name</option>
-                                        <option>Price</option>
-                                    </select>
-                                    <a title="Set Descending Direction" href="#"><span class="fa fa-sort-amount-desc"></span></a>
-                                </div>
-                                <div class="limiter hidden-xs">
-                                    <label>Show:</label>
-                                    <div class="limiter-inner">
-                                        <select class="form-control input-sm">
-                                            <option>9</option>
-                                            <option selected="selected">12</option>
-                                            <option>24</option>
-                                            <option>36</option>
-                                        </select> 
-                                    </div>
-                                </div>
-                            </div><!-- /.pager -->
-                        </div><!-- /.toolbar -->
+      
                     </div><!-- /.col-right -->
                 </div>
             </div>

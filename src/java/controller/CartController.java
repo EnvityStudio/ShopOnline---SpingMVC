@@ -109,7 +109,33 @@ public class CartController {
         return "redirect:/home/product.html";
 
     }
+    
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public String update( HttpServletRequest request,HttpSession session) {
+          List<ItemCart> cart = (List<ItemCart>) session.getAttribute("cart");
+          
+          String []quantity = request.getParameterValues("quantity");
+          for (int i =0;i<cart.size();i++)
+          {
+              System.out.println("quantity" +quantity[i]);
+              cart.get(i).setAmount(Integer.parseInt(quantity[i]));
+          }
+          
+          session.setAttribute("cart", cart);
 
+        return "redirect:/home/product.html";
+
+    }
+    
+     @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String pay(@PathVariable (value="name") String name, @PathVariable (value="address") String address,@PathVariable (value="phone") String phone, ModelMap mm)
+    {
+        System.out.println("name" +name);
+        System.out.println("address"+address);
+        System.out.println("phone"+phone);
+        
+        return "";
+    }
    
 
     private int isExisting(int id, HttpSession session) {
@@ -124,9 +150,9 @@ public class CartController {
 
         }
       return a;
-
        
     }
+
 
     private static String products(java.lang.String idCategory) {
         product.Product service = new product.Product();

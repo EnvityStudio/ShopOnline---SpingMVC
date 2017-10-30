@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.portlet.ModelAndView;
 import util.GsonUtil;
 
 /**
@@ -42,13 +43,15 @@ public class CartController {
     }
 @SuppressWarnings("unchecked")
     @RequestMapping(value = "/add/{id}", method = RequestMethod.GET)
+
+
     public String add(@PathVariable(value = "id") int id, HttpSession session, ModelMap mm) {
         System.out.println("thuan");
         System.out.println("abc " + id);
          String stringProducts = CartController.products(null);
+
         List<Product> list = GsonUtil.newInstance().gson().fromJson(stringProducts, new TypeToken<List<Product>>() {
         }.getType());
-           Product product = new Product();
            
         if (session.getAttribute("cart") == null) {
             List<ItemCart> cart = new ArrayList<ItemCart>();
@@ -88,7 +91,10 @@ public class CartController {
             }
             session.setAttribute("cart", cart);
         }
+
+
         return "redirect:/home/product.html";
+
 
     }
 
@@ -99,9 +105,37 @@ public class CartController {
         int index = isExisting(id, session);
         cart.remove(index);
         session.setAttribute("cart", cart);
-        return "redirect:/home/product.html";
-    }
 
+        return "redirect:/home/product.html";
+
+    }
+    
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public String update( HttpServletRequest request,HttpSession session) {
+          List<ItemCart> cart = (List<ItemCart>) session.getAttribute("cart");
+          
+          String []quantity = request.getParameterValues("quantity");
+          for (int i =0;i<cart.size();i++)
+          {
+              System.out.println("quantity" +quantity[i]);
+              cart.get(i).setAmount(Integer.parseInt(quantity[i]));
+          }
+          
+          session.setAttribute("cart", cart);
+
+        return "redirect:/home/product.html";
+
+    }
+    
+     @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String pay(@PathVariable (value="name") String name, @PathVariable (value="address") String address,@PathVariable (value="phone") String phone, ModelMap mm)
+    {
+        System.out.println("name" +name);
+        System.out.println("address"+address);
+        System.out.println("phone"+phone);
+        
+        return "";
+    }
    
 
     private int isExisting(int id, HttpSession session) {
@@ -116,9 +150,9 @@ public class CartController {
 
         }
       return a;
-
        
     }
+
 
     private static String products(java.lang.String idCategory) {
         product.Product service = new product.Product();

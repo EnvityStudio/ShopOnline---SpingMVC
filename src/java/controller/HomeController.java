@@ -32,6 +32,7 @@ import util.GsonUtil;
 public class HomeController {
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
+
     public String index(ModelMap mm) {
 
 //        get all category
@@ -87,6 +88,7 @@ public class HomeController {
         mm.addAttribute("specialOfferProduct1", listSpecial1);
         mm.addAttribute("specialOfferProduct2", listSpecial2);
         return "index";
+
     }
 
     @RequestMapping(value = "/product", method = RequestMethod.GET)
@@ -101,7 +103,7 @@ public class HomeController {
         mm.addAttribute("allbrand", listBrands);
         return "product";
     }
-    @RequestMapping (value ="/",method=RequestMethod.GET)
+    @RequestMapping (value ="/brand",method=RequestMethod.GET)
     public String brand(ModelMap mm)
     {
         String stringBrands = HomeController.brands();

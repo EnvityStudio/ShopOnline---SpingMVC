@@ -153,7 +153,9 @@
                                         
                                         </div><!-- /.cart-listing -->
                                         <div class="mini-cart-subtotal">Shipping: <span class="price">$0.00</span></div>
+
                                         <div class="mini-cart-subtotal">Total: <span class="price"><%=totalMoney%></span></div>
+
                                         <div class="checkout-btn">
                                             <a href="/ShopOnline/cart/cart.html" class="btn btn-default btn-md fwb">CHECK OUT</a>
                                         </div>

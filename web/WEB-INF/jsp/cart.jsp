@@ -75,9 +75,9 @@
         <div class="main">
             <div class="container">
                 <div class="cart">
-                    <form>
+                    
                         <div class="table-responsive">
-                            <form method="post" action ="${pageContext.request.serverName}/cart/update.html">             
+                            <form method="post" action ="../cart/update.html">             
                                 <table class="table custom-table">
                                     <thead>
                                         <tr class="first last">
@@ -143,7 +143,7 @@
                         </div>
                         <div class="text-right">
                             <a href="#" class="btn btn-default btn-md">CONTINUE SHOPPING</a>
-                            <button type="submit"class="btn btn-danger btn-md">UPDATE SHOPPING CART</button>
+                            <button type="submit" class="btn btn-danger btn-md">UPDATE SHOPPING CART</button>
                         </div>
                     </form>
                     <div class="line2"></div>
@@ -197,7 +197,7 @@
                             </div>
                         </div>
                     </div>
-                    </form>
+                    
                 </div>
             </div>
         </div><!-- /.main -->

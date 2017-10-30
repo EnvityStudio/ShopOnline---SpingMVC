@@ -112,6 +112,7 @@ public class CartController {
     
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public String update( HttpServletRequest request,HttpSession session) {
+        System.out.println("update");
           List<ItemCart> cart = (List<ItemCart>) session.getAttribute("cart");
           
           String []quantity = request.getParameterValues("quantity");
@@ -123,7 +124,7 @@ public class CartController {
           
           session.setAttribute("cart", cart);
 
-        return "redirect:/home/product.html";
+        return "cart";
 
     }
     

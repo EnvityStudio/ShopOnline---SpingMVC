@@ -149,7 +149,7 @@
                     <div class="line2"></div>
                     <div class="row">
                         <div class="col-sm-4">
-                            <form action="" method="Post">
+                            <form action="../cart/pay.html" method="Post">
                                 <h4>CUSTOMER INFORMATION </h4>
                                 <p class="text-muted">Enter your destination to get shipping &amp; tax</p>
                                 <div class="form-group">
@@ -191,6 +191,7 @@
                                     <td class="text-right"><%=totalMoney%></td>
                                 </tr>
                             </table>
+                                
                             <div class="text-right">
                                 <p><button type="button" class="btn btn-default btn-md fwb">PROCCED TO CHECKOUT</button></p>
                                 <p><a href="#" class="text-muted">Checkout with multiples address</a></p>

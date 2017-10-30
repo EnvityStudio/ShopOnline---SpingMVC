@@ -128,19 +128,23 @@ public class CartController {
 
     }
     
-     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String pay(@PathVariable (value="name") String name, @PathVariable (value="address") String address,@PathVariable (value="phone") String phone, ModelMap mm)
+     @RequestMapping(value = "/pay", method = RequestMethod.POST)
+    public String pay( HttpSession session,HttpServletRequest request,ModelMap mm)
     {
-        System.out.println("name" +name);
-        System.out.println("address"+address);
-        System.out.println("phone"+phone);
-        
+          List<ItemCart> cart = (List<ItemCart>) session.getAttribute("cart");
+          String address = request.getParameter("address");
+          String phone = request.getParameter("phone");
+          String name = request.getParameter("name");
+          System.out.println("address, phone, name " + address + phone + name);
+          
+          
         return "";
+        
     }
    
 
     private int isExisting(int id, HttpSession session) {
-            System.out.println("id thuan " +id);
+            
         List<ItemCart> cart = (List<ItemCart>)session.getAttribute("cart");
         int a =-1;
         for (int i = 0; i < cart.size(); i++) {

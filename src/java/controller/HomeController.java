@@ -64,7 +64,7 @@ public class HomeController {
         }.getType());
 
 //        get special offer product
-        String stringSpecialOfferProduct = HomeController.specialOfferProduct();
+        String stringSpecialOfferProduct = HomeController.offerProduct();
         List<Product> listSpecialOfferProduct = GsonUtil.newInstance().gson().fromJson(stringSpecialOfferProduct, new TypeToken<List<Product>>() {
         }.getType());
         Map<String, List<Product>> map = new HashMap<String, List<Product>>();
@@ -217,10 +217,12 @@ public class HomeController {
         return port.hotSaleProduct();
     }
 
-    private static String specialOfferProduct() {
+    private static String offerProduct() {
         product.Product service = new product.Product();
         product.ProductService port = service.getProductServicePort();
-        return port.specialOfferProduct();
+        return port.offerProduct();
     }
+
+   
 
 }

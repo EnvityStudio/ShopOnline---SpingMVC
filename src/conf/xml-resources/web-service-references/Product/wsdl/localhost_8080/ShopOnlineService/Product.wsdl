@@ -10,11 +10,23 @@
 <message name="searchResponse">
 <part name="parameters" element="tns:searchResponse"/>
 </message>
-<message name="specialOfferProduct">
-<part name="parameters" element="tns:specialOfferProduct"/>
+<message name="productDetail">
+<part name="parameters" element="tns:productDetail"/>
 </message>
-<message name="specialOfferProductResponse">
-<part name="parameters" element="tns:specialOfferProductResponse"/>
+<message name="productDetailResponse">
+<part name="parameters" element="tns:productDetailResponse"/>
+</message>
+<message name="filterbrand">
+<part name="parameters" element="tns:filterbrand"/>
+</message>
+<message name="filterbrandResponse">
+<part name="parameters" element="tns:filterbrandResponse"/>
+</message>
+<message name="bestSeller">
+<part name="parameters" element="tns:bestSeller"/>
+</message>
+<message name="bestSellerResponse">
+<part name="parameters" element="tns:bestSellerResponse"/>
 </message>
 <message name="products">
 <part name="parameters" element="tns:products"/>
@@ -28,30 +40,6 @@
 <message name="helloResponse">
 <part name="parameters" element="tns:helloResponse"/>
 </message>
-<message name="hotSaleProduct">
-<part name="parameters" element="tns:hotSaleProduct"/>
-</message>
-<message name="hotSaleProductResponse">
-<part name="parameters" element="tns:hotSaleProductResponse"/>
-</message>
-<message name="featureProducts">
-<part name="parameters" element="tns:featureProducts"/>
-</message>
-<message name="featureProductsResponse">
-<part name="parameters" element="tns:featureProductsResponse"/>
-</message>
-<message name="limitBestSeller">
-<part name="parameters" element="tns:limitBestSeller"/>
-</message>
-<message name="limitBestSellerResponse">
-<part name="parameters" element="tns:limitBestSellerResponse"/>
-</message>
-<message name="randomProducts">
-<part name="parameters" element="tns:randomProducts"/>
-</message>
-<message name="randomProductsResponse">
-<part name="parameters" element="tns:randomProductsResponse"/>
-</message>
 <message name="filterprice">
 <part name="parameters" element="tns:filterprice"/>
 </message>
@@ -64,32 +52,52 @@
 <message name="newProductsResponse">
 <part name="parameters" element="tns:newProductsResponse"/>
 </message>
-<message name="filterbrand">
-<part name="parameters" element="tns:filterbrand"/>
+<message name="limitBestSeller">
+<part name="parameters" element="tns:limitBestSeller"/>
 </message>
-<message name="filterbrandResponse">
-<part name="parameters" element="tns:filterbrandResponse"/>
+<message name="limitBestSellerResponse">
+<part name="parameters" element="tns:limitBestSellerResponse"/>
 </message>
-<message name="productDetail">
-<part name="parameters" element="tns:productDetail"/>
+<message name="featureProducts">
+<part name="parameters" element="tns:featureProducts"/>
 </message>
-<message name="productDetailResponse">
-<part name="parameters" element="tns:productDetailResponse"/>
+<message name="featureProductsResponse">
+<part name="parameters" element="tns:featureProductsResponse"/>
 </message>
-<message name="bestSeller">
-<part name="parameters" element="tns:bestSeller"/>
+<message name="hotSaleProduct">
+<part name="parameters" element="tns:hotSaleProduct"/>
 </message>
-<message name="bestSellerResponse">
-<part name="parameters" element="tns:bestSellerResponse"/>
+<message name="hotSaleProductResponse">
+<part name="parameters" element="tns:hotSaleProductResponse"/>
+</message>
+<message name="randomProducts">
+<part name="parameters" element="tns:randomProducts"/>
+</message>
+<message name="randomProductsResponse">
+<part name="parameters" element="tns:randomProductsResponse"/>
+</message>
+<message name="offerProduct">
+<part name="parameters" element="tns:offerProduct"/>
+</message>
+<message name="offerProductResponse">
+<part name="parameters" element="tns:offerProductResponse"/>
 </message>
 <portType name="ProductService">
 <operation name="search">
 <input wsam:Action="http://product/ProductService/searchRequest" message="tns:search"/>
 <output wsam:Action="http://product/ProductService/searchResponse" message="tns:searchResponse"/>
 </operation>
-<operation name="specialOfferProduct">
-<input wsam:Action="http://product/ProductService/specialOfferProductRequest" message="tns:specialOfferProduct"/>
-<output wsam:Action="http://product/ProductService/specialOfferProductResponse" message="tns:specialOfferProductResponse"/>
+<operation name="productDetail">
+<input wsam:Action="http://product/ProductService/productDetailRequest" message="tns:productDetail"/>
+<output wsam:Action="http://product/ProductService/productDetailResponse" message="tns:productDetailResponse"/>
+</operation>
+<operation name="filterbrand">
+<input wsam:Action="http://product/ProductService/filterbrandRequest" message="tns:filterbrand"/>
+<output wsam:Action="http://product/ProductService/filterbrandResponse" message="tns:filterbrandResponse"/>
+</operation>
+<operation name="bestSeller">
+<input wsam:Action="http://product/ProductService/bestSellerRequest" message="tns:bestSeller"/>
+<output wsam:Action="http://product/ProductService/bestSellerResponse" message="tns:bestSellerResponse"/>
 </operation>
 <operation name="products">
 <input wsam:Action="http://product/ProductService/productsRequest" message="tns:products"/>
@@ -99,22 +107,6 @@
 <input wsam:Action="http://product/ProductService/helloRequest" message="tns:hello"/>
 <output wsam:Action="http://product/ProductService/helloResponse" message="tns:helloResponse"/>
 </operation>
-<operation name="hotSaleProduct">
-<input wsam:Action="http://product/ProductService/hotSaleProductRequest" message="tns:hotSaleProduct"/>
-<output wsam:Action="http://product/ProductService/hotSaleProductResponse" message="tns:hotSaleProductResponse"/>
-</operation>
-<operation name="featureProducts">
-<input wsam:Action="http://product/ProductService/featureProductsRequest" message="tns:featureProducts"/>
-<output wsam:Action="http://product/ProductService/featureProductsResponse" message="tns:featureProductsResponse"/>
-</operation>
-<operation name="limitBestSeller">
-<input wsam:Action="http://product/ProductService/limitBestSellerRequest" message="tns:limitBestSeller"/>
-<output wsam:Action="http://product/ProductService/limitBestSellerResponse" message="tns:limitBestSellerResponse"/>
-</operation>
-<operation name="randomProducts">
-<input wsam:Action="http://product/ProductService/randomProductsRequest" message="tns:randomProducts"/>
-<output wsam:Action="http://product/ProductService/randomProductsResponse" message="tns:randomProductsResponse"/>
-</operation>
 <operation name="filterprice">
 <input wsam:Action="http://product/ProductService/filterpriceRequest" message="tns:filterprice"/>
 <output wsam:Action="http://product/ProductService/filterpriceResponse" message="tns:filterpriceResponse"/>
@@ -123,17 +115,25 @@
 <input wsam:Action="http://product/ProductService/newProductsRequest" message="tns:newProducts"/>
 <output wsam:Action="http://product/ProductService/newProductsResponse" message="tns:newProductsResponse"/>
 </operation>
-<operation name="filterbrand">
-<input wsam:Action="http://product/ProductService/filterbrandRequest" message="tns:filterbrand"/>
-<output wsam:Action="http://product/ProductService/filterbrandResponse" message="tns:filterbrandResponse"/>
+<operation name="limitBestSeller">
+<input wsam:Action="http://product/ProductService/limitBestSellerRequest" message="tns:limitBestSeller"/>
+<output wsam:Action="http://product/ProductService/limitBestSellerResponse" message="tns:limitBestSellerResponse"/>
 </operation>
-<operation name="productDetail">
-<input wsam:Action="http://product/ProductService/productDetailRequest" message="tns:productDetail"/>
-<output wsam:Action="http://product/ProductService/productDetailResponse" message="tns:productDetailResponse"/>
+<operation name="featureProducts">
+<input wsam:Action="http://product/ProductService/featureProductsRequest" message="tns:featureProducts"/>
+<output wsam:Action="http://product/ProductService/featureProductsResponse" message="tns:featureProductsResponse"/>
 </operation>
-<operation name="bestSeller">
-<input wsam:Action="http://product/ProductService/bestSellerRequest" message="tns:bestSeller"/>
-<output wsam:Action="http://product/ProductService/bestSellerResponse" message="tns:bestSellerResponse"/>
+<operation name="hotSaleProduct">
+<input wsam:Action="http://product/ProductService/hotSaleProductRequest" message="tns:hotSaleProduct"/>
+<output wsam:Action="http://product/ProductService/hotSaleProductResponse" message="tns:hotSaleProductResponse"/>
+</operation>
+<operation name="randomProducts">
+<input wsam:Action="http://product/ProductService/randomProductsRequest" message="tns:randomProducts"/>
+<output wsam:Action="http://product/ProductService/randomProductsResponse" message="tns:randomProductsResponse"/>
+</operation>
+<operation name="offerProduct">
+<input wsam:Action="http://product/ProductService/offerProductRequest" message="tns:offerProduct"/>
+<output wsam:Action="http://product/ProductService/offerProductResponse" message="tns:offerProductResponse"/>
 </operation>
 </portType>
 <binding name="ProductServicePortBinding" type="tns:ProductService">
@@ -147,7 +147,25 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="specialOfferProduct">
+<operation name="productDetail">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="filterbrand">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="bestSeller">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -174,42 +192,6 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="hotSaleProduct">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="featureProducts">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="limitBestSeller">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="randomProducts">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="filterprice">
 <soap:operation soapAction=""/>
 <input>
@@ -228,7 +210,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="filterbrand">
+<operation name="limitBestSeller">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -237,7 +219,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="productDetail">
+<operation name="featureProducts">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -246,7 +228,25 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="bestSeller">
+<operation name="hotSaleProduct">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="randomProducts">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="offerProduct">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

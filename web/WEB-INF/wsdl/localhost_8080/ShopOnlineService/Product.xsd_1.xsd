@@ -32,6 +32,10 @@
 
 <xs:element name="newProductsResponse" type="tns:newProductsResponse"/>
 
+<xs:element name="offerProduct" type="tns:offerProduct"/>
+
+<xs:element name="offerProductResponse" type="tns:offerProductResponse"/>
+
 <xs:element name="productDetail" type="tns:productDetail"/>
 
 <xs:element name="productDetailResponse" type="tns:productDetailResponse"/>
@@ -47,10 +51,6 @@
 <xs:element name="search" type="tns:search"/>
 
 <xs:element name="searchResponse" type="tns:searchResponse"/>
-
-<xs:element name="specialOfferProduct" type="tns:specialOfferProduct"/>
-
-<xs:element name="specialOfferProductResponse" type="tns:specialOfferProductResponse"/>
 
 <xs:complexType name="productDetail">
 <xs:sequence>
@@ -106,11 +106,11 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="specialOfferProduct">
+<xs:complexType name="offerProduct">
 <xs:sequence/>
 </xs:complexType>
 
-<xs:complexType name="specialOfferProductResponse">
+<xs:complexType name="offerProductResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
@@ -176,21 +176,21 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="featureProducts">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="featureProductsResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="limitBestSeller">
 <xs:sequence/>
 </xs:complexType>
 
 <xs:complexType name="limitBestSellerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="featureProducts">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="featureProductsResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
